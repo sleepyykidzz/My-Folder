@@ -1,0 +1,459 @@
+1
+00:00:00,870 --> 00:00:06,630
+Welcome back, students, and this video, I'm going to introduce you to the function in JavaScript
+
+2
+00:00:06,960 --> 00:00:12,870
+as applied to Google Earth Engine, and we will start with mapping the function and calculating the
+
+3
+00:00:12,870 --> 00:00:16,080
+function of Maximum and Dibia as an example.
+
+4
+00:00:16,560 --> 00:00:23,750
+So basically, we are still working in the U.S. with the same Landsat image.
+
+5
+00:00:23,760 --> 00:00:29,340
+I have shifted it to another study area, but we can also go back to Las Vegas.
+
+6
+00:00:29,340 --> 00:00:30,500
+Doesn't matter.
+
+7
+00:00:30,960 --> 00:00:37,810
+And here there is new function for you.
+
+8
+00:00:38,280 --> 00:00:44,430
+Well, basically, we already we are talked already about prebuilt inbuilt functions in Google Earth
+
+9
+00:00:44,430 --> 00:00:50,400
+engine that were pieces of code that were created for us by Google Earth engine developers.
+
+10
+00:00:50,610 --> 00:00:54,900
+But also you can ride functions by yourself for your analysis.
+
+11
+00:00:54,900 --> 00:00:57,120
+And this is also often needed.
+
+12
+00:00:57,480 --> 00:01:03,690
+And here this is an example of such a basically
+
+13
+00:01:06,180 --> 00:01:06,940
+such a case.
+
+14
+00:01:07,530 --> 00:01:16,260
+So what we are doing here, we are declaring a variable, which is an DBI and we use a function map.
+
+15
+00:01:16,530 --> 00:01:19,050
+But this is be careful.
+
+16
+00:01:19,060 --> 00:01:28,770
+This is quite the elegant way of writing the script because we are using the clear in a variable, which
+
+17
+00:01:28,770 --> 00:01:33,920
+is a function and we pass into as an argument of this function and other function.
+
+18
+00:01:33,930 --> 00:01:34,190
+Yeah.
+
+19
+00:01:34,470 --> 00:01:42,480
+So basically this piece of script could have been written in two separate pieces.
+
+20
+00:01:42,720 --> 00:01:51,930
+First, we would calculate the function image and where we would calculate normalized different vegetation
+
+21
+00:01:51,930 --> 00:01:53,610
+index and then we would map it.
+
+22
+00:01:53,610 --> 00:02:01,670
+But this is a one one nice way, elegant way to write this kind of function.
+
+23
+00:02:01,680 --> 00:02:03,570
+So let's see what it does.
+
+24
+00:02:05,310 --> 00:02:06,300
+LANSAT map.
+
+25
+00:02:06,300 --> 00:02:12,930
+It's basically your mapping the function and what kind of on on the land set and what kind of function
+
+26
+00:02:12,930 --> 00:02:13,380
+it is.
+
+27
+00:02:13,380 --> 00:02:23,270
+Function applies to the image and we basically calculate normalized different vegetation index and we
+
+28
+00:02:23,850 --> 00:02:26,450
+using bench five and four.
+
+29
+00:02:26,460 --> 00:02:28,590
+So this is already, you know, just function.
+
+30
+00:02:28,590 --> 00:02:33,510
+We did it in in a previous video and we rename it.
+
+31
+00:02:33,510 --> 00:02:41,280
+So we rename that because Difford in Google Earth Engine, it's not in Dubai but something like India
+
+32
+00:02:41,290 --> 00:02:41,960
+or something.
+
+33
+00:02:42,210 --> 00:02:48,570
+So and we want this band to be called in Dubai and we return as a part of this function.
+
+34
+00:02:48,570 --> 00:02:54,870
+We return an image which adds a band of individual to our image.
+
+35
+00:02:55,110 --> 00:02:58,710
+I can show you this, but what is a result of this?
+
+36
+00:02:59,070 --> 00:03:11,070
+Basically a step in order if you want to, to inspect something you always can't, uh, basically print.
+
+37
+00:03:12,540 --> 00:03:16,710
+So let us run this piece of code.
+
+38
+00:03:16,710 --> 00:03:22,020
+And I mean here I will just very fast.
+
+39
+00:03:22,380 --> 00:03:26,730
+I will comment all the lines and run it.
+
+40
+00:03:28,200 --> 00:03:32,550
+So let's see what the results of this piece of code here.
+
+41
+00:03:32,610 --> 00:03:40,890
+The result is a collection which has features, 24, uh, images.
+
+42
+00:03:41,220 --> 00:03:45,720
+And each of this image, if you click on it, has 13 bands.
+
+43
+00:03:46,410 --> 00:03:54,780
+There is basically ten bands, one quality band and the new band that we have just created, which is
+
+44
+00:03:54,780 --> 00:03:55,850
+NDB Bent.
+
+45
+00:03:55,870 --> 00:03:56,150
+Yeah.
+
+46
+00:03:56,400 --> 00:04:04,950
+So basically by this small piece of code here, we have calculated and divide and attach this and divide
+
+47
+00:04:04,950 --> 00:04:06,930
+to our Landsat images.
+
+48
+00:04:07,450 --> 00:04:13,680
+Don't worry, you can also write it as a tool in the two steps at the beginning and this basically the
+
+49
+00:04:13,680 --> 00:04:14,050
+same.
+
+50
+00:04:14,820 --> 00:04:15,590
+All right.
+
+51
+00:04:15,600 --> 00:04:22,470
+Um, then let's move to the, uh, calculation of maximum and divide.
+
+52
+00:04:22,480 --> 00:04:28,470
+So often we want to create a map where we would take a maximum in Dubai.
+
+53
+00:04:29,070 --> 00:04:31,140
+So maximum value for the pixel.
+
+54
+00:04:31,140 --> 00:04:32,310
+How can we do it?
+
+55
+00:04:32,640 --> 00:04:39,700
+We declare our variable maximum often divided and we use the function, Max.
+
+56
+00:04:40,020 --> 00:04:48,810
+So basically what it will do this is the maximum value of Devi, which is available for this, uh,
+
+57
+00:04:48,990 --> 00:04:50,940
+for the for the for the pixel.
+
+58
+00:04:50,940 --> 00:04:55,140
+For the certain pixel over the time will be mapped.
+
+59
+00:04:55,320 --> 00:04:55,780
+Yeah.
+
+60
+00:04:55,800 --> 00:04:57,000
+So let's run it.
+
+61
+00:04:58,110 --> 00:04:59,490
+And, uh, you see.
+
+62
+00:04:59,790 --> 00:05:06,210
+Is this as a result of conceptualisation is not the best one, because we just using the random visualization,
+
+63
+00:05:06,480 --> 00:05:12,300
+but you can use an inspector and click on basically a.
+
+64
+00:05:13,550 --> 00:05:20,120
+When they show these pictures and what you will see, you will see all the values in the bands as well
+
+65
+00:05:20,120 --> 00:05:22,190
+as the band and the value of an.
+
+66
+00:05:23,070 --> 00:05:28,190
+And this would be a maximum effort and dibby.
+
+67
+00:05:29,300 --> 00:05:38,580
+Well, there is also sometimes what is very valuable or something that you can do.
+
+68
+00:05:38,990 --> 00:05:45,710
+You can basically map I will just
+
+69
+00:05:48,680 --> 00:05:49,370
+again
+
+70
+00:05:53,060 --> 00:05:58,550
+command center around it and we return to our calculation of divine.
+
+71
+00:05:59,830 --> 00:06:10,090
+And we will map their layout by just a right and map at Leja and DBI, this is the result.
+
+72
+00:06:11,140 --> 00:06:14,100
+Just we have to wait a little bit.
+
+73
+00:06:14,110 --> 00:06:15,350
+It's still calculating.
+
+74
+00:06:15,880 --> 00:06:19,960
+And once it is calculated.
+
+75
+00:06:28,200 --> 00:06:34,290
+You can always, yeah, click on any of the point on the map.
+
+76
+00:06:37,170 --> 00:06:45,780
+And there is, as you can see in inspector, the TAP series, if you click on the series, you would
+
+77
+00:06:45,780 --> 00:06:48,870
+see what kind of series are available here.
+
+78
+00:06:48,870 --> 00:06:53,970
+And basically here there is also a graph representation.
+
+79
+00:06:53,980 --> 00:07:01,190
+So basically for the pixel that you are clicking now on the map, you can see the graph, how they're
+
+80
+00:07:01,200 --> 00:07:12,120
+all the values for all the bands here will look like this could be quite, quite a good way to visualize
+
+81
+00:07:12,600 --> 00:07:16,020
+the values for a targeted pixel that you are interested in.
+
+82
+00:07:16,800 --> 00:07:25,500
+And when you don't want to look at all the other bands, but you are interested on the on the values
+
+83
+00:07:25,650 --> 00:07:32,790
+of Endevour, you use the same function map at Leya and DIBBY and you select.
+
+84
+00:07:32,820 --> 00:07:38,850
+So we basically will select only and divide from all these images.
+
+85
+00:07:39,000 --> 00:07:39,330
+Yeah.
+
+86
+00:07:39,330 --> 00:07:41,760
+So we don't, we don't want to see other bands.
+
+87
+00:07:41,760 --> 00:07:43,680
+We want only to see and.
+
+88
+00:07:45,480 --> 00:07:47,250
+And when you click on it.
+
+89
+00:07:49,960 --> 00:07:53,120
+You see only the series of individual here.
+
+90
+00:07:53,260 --> 00:08:01,000
+So basically now you can see and inspect for the selected pixels, let's say here you have some agricultural
+
+91
+00:08:01,000 --> 00:08:01,560
+fields.
+
+92
+00:08:02,620 --> 00:08:05,680
+We can see that in Dubai World.
+
+93
+00:08:05,680 --> 00:08:08,080
+Well, how they were changing over the time.
+
+94
+00:08:08,680 --> 00:08:18,460
+There is another way to to display charts in Google or Sanj, and they have quite a nice chateaus.
+
+95
+00:08:18,790 --> 00:08:25,050
+And for this, you can use this chart in which a function youm.
+
+96
+00:08:26,620 --> 00:08:34,660
+So basically the output of this function here will be a graph which looks like this and this graph you
+
+97
+00:08:34,660 --> 00:08:44,350
+can basically open in a new window and download a sweeping Djay and use it as a visualization for your
+
+98
+00:08:44,350 --> 00:08:45,010
+analysis.
+
+99
+00:08:45,010 --> 00:08:47,850
+And this does quite nicely develop in Google or Sinjin.
+
+100
+00:08:48,130 --> 00:08:58,540
+So you basically could dig it in in case you are interested in the Chaton charts and figures with a
+
+101
+00:08:58,540 --> 00:08:59,450
+Google search engine.
+
+102
+00:09:00,700 --> 00:09:09,030
+Well, that's basically a very fast introduction to the main components of JavaScript, JavaScript.
+
+103
+00:09:09,040 --> 00:09:18,790
+Of course, the whole thing is much more broader and in order to learn it, the best way is to practice.
+
+104
+00:09:18,790 --> 00:09:21,430
+But what and where to get help.
+
+105
+00:09:21,670 --> 00:09:24,350
+Let me show you guys before we wrap up.
+
+106
+00:09:24,790 --> 00:09:33,580
+Basically, if you go to again to the Google Earth Engine website and we want to go to the home.
+
+107
+00:09:39,170 --> 00:09:47,490
+I'm in the platform menu of Google or Assange, and there is a documentation tab, and as you can see
+
+108
+00:09:47,490 --> 00:09:54,930
+here is a really a very comprehensive guide with a lot of a lot of resources and a.
+
+109
+00:09:56,990 --> 00:10:03,860
+One, the first in which the court was the documentation, the Google Earth engine starts with is basically
+
+110
+00:10:04,220 --> 00:10:09,500
+with introduction to the editor and how to deal with this.
+
+111
+00:10:09,810 --> 00:10:14,160
+And basically there is also introduction to JavaScript.
+
+112
+00:10:14,180 --> 00:10:15,170
+So if we just.
+
+113
+00:10:18,460 --> 00:10:20,110
+Google for JavaScript.
+
+114
+00:10:22,660 --> 00:10:30,430
+Yeah, there is an overview of the JavaScript map, JavaScript API, where you could basically read
+
+115
+00:10:30,430 --> 00:10:37,660
+in detail about all the components of the JavaScript that is used in Google Earth and.

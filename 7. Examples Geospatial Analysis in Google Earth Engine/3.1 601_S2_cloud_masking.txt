@@ -1,0 +1,29 @@
+// CLouds masking S2 images
+
+// Code Link: https://code.earthengine.google.com/8dc183504e6ad544bd906f31d6e1f8f9
+
+
+// import the sub basins as a shape file (zip folder)
+var s2 = ee.ImageCollection("COPERNICUS/S2"),
+    Ca = ee.FeatureCollection("YourSTudyArea"), // Here should be file of your study area of the study area provided by me
+    Pars = {"opacity":1,"bands":["B8","B4","B3"],"min":986.4082909924596,"max":1751.8063982730769,"gamma":1};
+// Import / Create your study area (adjust name when needed).
+
+Map.centerObject(Ca);
+
+// filter data and location
+var images = s2.filterDate('2016-02-01', '2016-03-31')
+                     .filterBounds(Ca);
+                     
+// Clouds masking of S2 images
+function cloudMask(im) {
+  // Opaque and cirrus cloud masks cause bits 10 and 11 in QA60 to be set,
+  // so values less than 1024 are cloud-free
+  var mask = ee.Image(0).where(im.select('QA60').gte(1024), 1).not();
+  return im.updateMask(mask);
+}
+
+// remove clouds for all images
+var images2 = images.map(cloudMask);
+print(images);
+Map.addLayer(images2, Pars);

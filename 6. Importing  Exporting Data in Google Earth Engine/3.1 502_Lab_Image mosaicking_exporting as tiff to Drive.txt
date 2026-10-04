@@ -1,0 +1,47 @@
+ // Lab: Image mosaicking, clipping, reprojecting and exporting as tiff to Drive
+// Code Link: https://code.earthengine.google.com/44f62e8895c70ab6fe26505ff35131dc
+
+// Imports
+var s2toa = ee.ImageCollection("COPERNICUS/S2"),
+    geometry = 
+    /* color: #d63000 */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[0.7157895807873604, 49.2914621860271],
+          [0.7157895807873604, 47.7784732314115],
+          [4.31930520578736, 47.7784732314115],
+          [4.31930520578736, 49.2914621860271]]], null, false);
+
+// Create a geometry representing an export region.
+
+Map.centerObject(geometry);
+
+var s2 = s2toa.filterDate('2020-04-01', '2020-06-25')
+.filterBounds(geometry);
+//print(s2);
+
+var bands = ['B1','B2','B3','B4','B5','B6','B7','B8','B8A','B9','B10','B11','B12'];
+
+var image = s2.mosaic().select('B1','B2','B3','B4','B5','B6','B7','B8','B8A','B9','B10','B11','B12');
+//print(image);
+
+var vizParams = {'bands': 'B8,B4,B3', 'min': 0, 'max': 4000};
+Map.addLayer(image.clip(geometry), vizParams);
+
+var reprojected = image.clip(geometry)
+    .reproject('EPSG:32632', null, 10);
+
+//Export image to tiff
+Export.image.toDrive({
+  image: reprojected, 
+  description: 's2_UTM',
+  scale: 10,
+  region:geometry,
+  maxPixels: 6000000000
+}); 
+

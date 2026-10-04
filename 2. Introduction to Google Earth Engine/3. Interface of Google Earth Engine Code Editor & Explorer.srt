@@ -1,0 +1,375 @@
+1
+00:00:00,300 --> 00:00:07,230
+Welcome back, students, in this video I'm going to introduce to you to Google Earth Engine Code editor
+
+2
+00:00:07,230 --> 00:00:14,990
+code editor is a part of Google Earth engine platform as it allows a number of well, actually, it
+
+3
+00:00:15,000 --> 00:00:22,440
+allows a number of features, such as writing and JavaScript code map displayed for visualization,
+
+4
+00:00:22,440 --> 00:00:31,710
+geospatial data set access in reference documentation, accessing based git based group manager, etc.
+
+5
+00:00:31,710 --> 00:00:35,100
+and etc. but prerequisite to access.
+
+6
+00:00:36,300 --> 00:00:43,170
+Google Earth Code editor is basically have us sending in information.
+
+7
+00:00:44,040 --> 00:00:47,910
+So to sign up for Google or Engine and to good to get approved.
+
+8
+00:00:48,610 --> 00:00:54,510
+This can take several days, so please don't be disappointed.
+
+9
+00:00:54,510 --> 00:00:59,380
+If it is positive, approval does not come immediately.
+
+10
+00:00:59,940 --> 00:01:10,410
+So in order to come to the code editor, you have to go to the platform code editor or in for the future.
+
+11
+00:01:10,410 --> 00:01:16,470
+Maybe you can just type code dot also engine dot, Google dot com.
+
+12
+00:01:17,100 --> 00:01:19,560
+And here you can see the window.
+
+13
+00:01:19,560 --> 00:01:29,670
+Basically how to code Ed is looks like it is a web based idea for the Earth engine JavaScript API code
+
+14
+00:01:29,670 --> 00:01:35,850
+editor features and designed to make developing complex your special workflows fast and easy.
+
+15
+00:01:36,510 --> 00:01:40,920
+So basically, what are the main features of code editor here?
+
+16
+00:01:40,920 --> 00:01:44,180
+We have on the left hand side script manager.
+
+17
+00:01:44,430 --> 00:01:47,700
+So basically this is where you store your script.
+
+18
+00:01:48,330 --> 00:01:50,800
+The next step is a docs.
+
+19
+00:01:51,180 --> 00:01:58,230
+So basically this is an access to the documentation where you can access all the documentation related
+
+20
+00:01:58,560 --> 00:02:03,440
+to a script and the API.
+
+21
+00:02:03,750 --> 00:02:11,610
+And here you have a cup, a map, a type assets where you actually store your assets.
+
+22
+00:02:11,620 --> 00:02:19,200
+So basically, for example, you can import and load your own vector data or Rasta images into Google
+
+23
+00:02:19,200 --> 00:02:19,930
+or Ascencion.
+
+24
+00:02:20,820 --> 00:02:33,150
+Well, here is a script window where basically we can write script and here we have a default default
+
+25
+00:02:33,420 --> 00:02:42,990
+repository where there's code provided by Google or search engine and start by git in the Google infrastructure
+
+26
+00:02:43,170 --> 00:02:44,340
+could be assessed.
+
+27
+00:02:44,410 --> 00:02:44,820
+Yeah.
+
+28
+00:02:45,850 --> 00:02:46,500
+Why?
+
+29
+00:02:46,500 --> 00:02:52,740
+One of the very important and nice features of Google Earth engine is that you can basically share your
+
+30
+00:02:52,740 --> 00:02:58,190
+code code with anyone using this getlin function.
+
+31
+00:02:58,200 --> 00:03:07,140
+So when you're type getlin, then there will be a link provided that you can share with another person
+
+32
+00:03:07,140 --> 00:03:10,060
+or multiple people, by the way.
+
+33
+00:03:10,380 --> 00:03:13,430
+This will not affect your version of the code.
+
+34
+00:03:13,440 --> 00:03:19,890
+So basically you can share this link and the person will get the will be able to access the code and
+
+35
+00:03:19,890 --> 00:03:22,010
+run it on his computer.
+
+36
+00:03:22,020 --> 00:03:27,060
+But afterwards, if you would change the code, then the person would not see it.
+
+37
+00:03:27,060 --> 00:03:32,910
+He would only get a later later version of your code.
+
+38
+00:03:33,450 --> 00:03:40,700
+OK, Ron, Ron is to run a code, for example, when I ran it, you can see that we have a different
+
+39
+00:03:40,700 --> 00:03:44,100
+things appearing in the console.
+
+40
+00:03:44,100 --> 00:03:54,270
+So console is basically the place that of where the output of the print function here when you see print
+
+41
+00:03:54,570 --> 00:03:56,560
+will be displayed.
+
+42
+00:03:56,580 --> 00:04:06,120
+Yeah, well we have here on the right hand side is also Inspecteur, so you can click on any place on
+
+43
+00:04:06,120 --> 00:04:13,110
+your map and then it will be it will provide you the information about this place.
+
+44
+00:04:13,770 --> 00:04:17,460
+And you can also hear switch from Mapu or satellite to your.
+
+45
+00:04:17,490 --> 00:04:17,730
+Yeah.
+
+46
+00:04:17,760 --> 00:04:26,100
+So basically with a satellite view then you can assess their view based on their very high resolution
+
+47
+00:04:26,100 --> 00:04:26,580
+images.
+
+48
+00:04:26,580 --> 00:04:28,650
+And it's also scale dependent.
+
+49
+00:04:28,650 --> 00:04:33,670
+When you zoom out, different images are shown.
+
+50
+00:04:33,690 --> 00:04:42,750
+So here it's a very high resolution, images from Google from or from Google Earth and then Landsat
+
+51
+00:04:42,750 --> 00:04:48,900
+models and so on, depending on special resolution of of the images.
+
+52
+00:04:50,040 --> 00:04:59,940
+So this is Inspecter console as well as the printing results are shown and also here.
+
+53
+00:04:59,980 --> 00:05:09,150
+We have a tough task, so, for example, when you run a task to export the results of your Langoulant
+
+54
+00:05:09,430 --> 00:05:13,700
+classification, the progress bar will be available here.
+
+55
+00:05:14,770 --> 00:05:18,600
+The last window that I want to introduce to you is a map.
+
+56
+00:05:18,610 --> 00:05:31,150
+Basically, the map is there is a window which shows an object, a map object, and the API that refers
+
+57
+00:05:31,150 --> 00:05:33,700
+to the map display in the code editor.
+
+58
+00:05:33,730 --> 00:05:43,330
+And it will be, for example, if you use a function map that can bounce brackets will return to geographic
+
+59
+00:05:43,330 --> 00:05:46,220
+region visible in the code editor.
+
+60
+00:05:46,510 --> 00:05:54,420
+So basically your results are going to also be mapped into the map window.
+
+61
+00:05:54,430 --> 00:06:00,640
+And just to show you an example, I'll show you maybe I ran a small code.
+
+62
+00:06:02,820 --> 00:06:11,190
+So this is an unsupervised classification, I'm going to to run it and I'm going to show you the results
+
+63
+00:06:11,640 --> 00:06:14,400
+that you basically would see.
+
+64
+00:06:17,950 --> 00:06:19,040
+How it looks like.
+
+65
+00:06:19,060 --> 00:06:29,650
+Yeah, so basically with this in the map, we can see our area, we can see the results of our analysis
+
+66
+00:06:30,010 --> 00:06:31,750
+and hear exactly this.
+
+67
+00:06:32,260 --> 00:06:36,000
+This is a nice example because I can introduce two different layers.
+
+68
+00:06:36,310 --> 00:06:40,120
+You can basically hear either.
+
+69
+00:06:42,440 --> 00:06:43,340
+Either
+
+70
+00:06:45,890 --> 00:06:53,810
+turn off or turn on different layers, which you would like to show on your map, on your map as a result.
+
+71
+00:06:54,110 --> 00:06:57,800
+So here we have basically a three components.
+
+72
+00:06:57,800 --> 00:07:03,710
+We have this based this classification is based on landside.
+
+73
+00:07:04,340 --> 00:07:12,580
+And so the images that you see below the northern part of Germany are Lanzetta images.
+
+74
+00:07:12,920 --> 00:07:15,680
+And this is a Madian composite for this.
+
+75
+00:07:15,980 --> 00:07:18,800
+And we have also geometry, Amatzia.
+
+76
+00:07:18,810 --> 00:07:20,480
+So we have a geometry.
+
+77
+00:07:20,480 --> 00:07:24,560
+So there was a region which was drawn by this geometry tool.
+
+78
+00:07:24,560 --> 00:07:30,080
+And we can hear if you want to to blind's this.
+
+79
+00:07:30,080 --> 00:07:31,460
+This is a polygon feature.
+
+80
+00:07:31,460 --> 00:07:35,330
+So vector file, you have to turn it off here.
+
+81
+00:07:35,870 --> 00:07:43,130
+And you also what is a really nice you probably now could recognize the power of Google Earth engine
+
+82
+00:07:43,130 --> 00:07:49,340
+because it took me basically one click to run this unsupervised classification based on the Allanson
+
+83
+00:07:49,340 --> 00:07:50,300
+composite here.
+
+84
+00:07:50,570 --> 00:07:57,260
+So once you have a code, it really could be very efficient using the power of Google or Ascencion,
+
+85
+00:07:57,860 --> 00:08:05,130
+another dose which are very important for you, the vector tools on the left hand side.
+
+86
+00:08:05,360 --> 00:08:16,610
+So with these tools, you can draw different features that could be used directly in your code.
+
+87
+00:08:16,660 --> 00:08:16,960
+Yes.
+
+88
+00:08:16,960 --> 00:08:26,560
+So, for example, if you want to show the boundaries of your study area, you can basically use it.
+
+89
+00:08:27,200 --> 00:08:31,100
+And then if you don't need it, you can also delete it.
+
+90
+00:08:32,300 --> 00:08:35,800
+Yeah, I will delete it because I don't I don't need it.
+
+91
+00:08:36,170 --> 00:08:43,910
+And here on the right, you can switch off, switch on the different output that you have created.
+
+92
+00:08:43,950 --> 00:08:44,210
+Yeah.
+
+93
+00:08:44,720 --> 00:08:53,180
+So basically this was in short, the main interface features of Google Earth Engine Code editor, soon
+
+94
+00:08:53,180 --> 00:08:54,140
+the next video.

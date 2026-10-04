@@ -1,0 +1,683 @@
+1
+00:00:00,150 --> 00:00:01,440
+Welcome back, students.
+
+2
+00:00:01,650 --> 00:00:09,180
+And in this video, I'm going to show you how to conduct supervised classification in Google Earth engine
+
+3
+00:00:10,020 --> 00:00:14,010
+using sentinel images and random forest classifier.
+
+4
+00:00:14,130 --> 00:00:16,440
+We will start with random forest classifier.
+
+5
+00:00:16,710 --> 00:00:22,980
+And then I can also show you how to change it to any other classifiers that are implemented on this
+
+6
+00:00:22,980 --> 00:00:23,530
+platform.
+
+7
+00:00:24,360 --> 00:00:33,420
+So we start from the point where we have finished our analysis last time, what it means.
+
+8
+00:00:34,040 --> 00:00:38,100
+We have already inputted our sentinel image.
+
+9
+00:00:38,110 --> 00:00:42,720
+We are working with the same sentinel image as in the previous video.
+
+10
+00:00:42,760 --> 00:00:48,660
+So if you forgot how to do it, please go back and watch previous video.
+
+11
+00:00:49,260 --> 00:00:52,420
+So this is our Sentinel image over Dubai.
+
+12
+00:00:53,190 --> 00:01:03,420
+If you zoom in to our view, you can see basically the team and surrounded by David.
+
+13
+00:01:03,840 --> 00:01:11,730
+And now our task is to create training data, to train our classifier on it.
+
+14
+00:01:12,600 --> 00:01:15,380
+I will work with the following classes.
+
+15
+00:01:15,390 --> 00:01:19,620
+We have classes, water, vegetation, Orben and sand.
+
+16
+00:01:21,230 --> 00:01:29,450
+Well, you can actually have more classes, I have prepared some samples already, but I'm going to
+
+17
+00:01:29,450 --> 00:01:32,630
+demonstrate to you how easy it is to do so.
+
+18
+00:01:32,630 --> 00:01:46,940
+Let's add another layer, another class to this training sample, set a set and call it, for example,
+
+19
+00:01:46,940 --> 00:01:52,610
+mountains or rock rock class.
+
+20
+00:01:55,280 --> 00:02:03,260
+So for this, you you click on a new layer and then you go to the properties at their properties, and
+
+21
+00:02:03,260 --> 00:02:05,300
+here we add the name
+
+22
+00:02:07,940 --> 00:02:14,630
+that's put it rocks, and here you have to change input as feature collection.
+
+23
+00:02:14,780 --> 00:02:18,400
+So what we are now doing is creating a new feature collection.
+
+24
+00:02:18,410 --> 00:02:23,420
+So it's you you should put feature collection and add properties here.
+
+25
+00:02:23,420 --> 00:02:28,580
+The properties should be the same as was in my previous classes.
+
+26
+00:02:28,580 --> 00:02:34,770
+So which I have procreated for for you.
+
+27
+00:02:35,480 --> 00:02:36,110
+So.
+
+28
+00:02:38,360 --> 00:02:51,770
+The first property will be a land dive, and it is rocks, and I also will add property, which is called
+
+29
+00:02:52,290 --> 00:03:03,320
+land class, and in the Ravello for this land class will be five because I have already a class one,
+
+30
+00:03:03,320 --> 00:03:06,270
+two, three, four created previously for you.
+
+31
+00:03:06,380 --> 00:03:13,610
+Now, what I need is to create a training set photo to collect the training points for my new class,
+
+32
+00:03:13,610 --> 00:03:15,260
+which is called contract.
+
+33
+00:03:15,620 --> 00:03:24,200
+For this, I go to the part of the image which will contain mountains this year and I basically just
+
+34
+00:03:25,370 --> 00:03:29,450
+create uses to America.
+
+35
+00:03:29,900 --> 00:03:35,030
+And you see my my new class Rog's highlighted and I'm basically just.
+
+36
+00:03:40,870 --> 00:03:41,860
+Click on this.
+
+37
+00:03:45,940 --> 00:03:52,950
+And now you can see how many points are inside of this class I could have used, for example, also
+
+38
+00:03:52,990 --> 00:04:00,640
+instead of point to I could I could have used also polygon tool for training.
+
+39
+00:04:02,290 --> 00:04:08,530
+So let me highlight all the other points that you just see there, the distribution.
+
+40
+00:04:08,530 --> 00:04:09,550
+You can see that here.
+
+41
+00:04:09,560 --> 00:04:11,290
+I almost have no point.
+
+42
+00:04:11,530 --> 00:04:14,270
+So let me collect for send for class.
+
+43
+00:04:14,280 --> 00:04:16,930
+Send a little bit more points for this.
+
+44
+00:04:16,930 --> 00:04:24,250
+I look all others, all other layers that they are not active.
+
+45
+00:04:24,250 --> 00:04:32,350
+And I zoom into the sand areas in the middle part of my image and I add a marker.
+
+46
+00:04:36,220 --> 00:04:38,780
+It's yellow, it's sand, so it's correct.
+
+47
+00:04:39,820 --> 00:04:45,820
+So let me add a few points here in the middle of the image.
+
+48
+00:05:08,700 --> 00:05:09,220
+Mm hmm.
+
+49
+00:05:09,960 --> 00:05:10,510
+OK.
+
+50
+00:05:12,870 --> 00:05:15,950
+Basically, if you want to add more classes, you do it.
+
+51
+00:05:16,350 --> 00:05:17,610
+The procedure is the same.
+
+52
+00:05:17,610 --> 00:05:21,870
+You create a new layer and add the classes when you want to.
+
+53
+00:05:22,470 --> 00:05:30,870
+To add it to class, you have to go to this small button on the left, added layer properties.
+
+54
+00:05:31,260 --> 00:05:39,750
+And if you want to add more points, you have to look at the layers which you actually don't want to
+
+55
+00:05:39,900 --> 00:05:44,610
+add points to, and unlock the layer for which you want to add points to.
+
+56
+00:05:45,490 --> 00:05:45,960
+OK.
+
+57
+00:05:45,990 --> 00:05:50,160
+I think this is our class is water, vegetation, urban sand and drugs.
+
+58
+00:05:50,160 --> 00:05:59,310
+And now we can basically go to the quote and I'll show you what steps we have to do, what kind of lines
+
+59
+00:05:59,310 --> 00:06:00,600
+of the code we should write.
+
+60
+00:06:01,560 --> 00:06:10,350
+So first of all, this is where we finished, where we mapped out that image.
+
+61
+00:06:10,650 --> 00:06:19,950
+And the next step will be to send the selection bands and well, basically, we want to use all the
+
+62
+00:06:19,950 --> 00:06:20,390
+bands.
+
+63
+00:06:21,390 --> 00:06:27,120
+You can also print this variable.
+
+64
+00:06:34,580 --> 00:06:38,990
+To make sure what actually you selected good.
+
+65
+00:06:41,170 --> 00:06:42,100
+I rounded.
+
+66
+00:06:52,530 --> 00:06:56,790
+Hmm, since syntax rella error.
+
+67
+00:06:59,270 --> 00:07:08,090
+OK, yes, so basically we are using all the bands, the band, 13, 14, 15, we don't need we could
+
+68
+00:07:08,090 --> 00:07:10,030
+have excluded it.
+
+69
+00:07:10,040 --> 00:07:10,400
+Yeah.
+
+70
+00:07:11,990 --> 00:07:22,340
+Then we go to a next step, which is basically merge in our training points that we have created.
+
+71
+00:07:24,390 --> 00:07:30,480
+It into one feature set, and here we have to add our new class.
+
+72
+00:07:30,500 --> 00:07:34,440
+So basically we use function water much, much.
+
+73
+00:07:34,910 --> 00:07:38,480
+We start with water and vegetation, urban sand.
+
+74
+00:07:38,480 --> 00:07:44,270
+And let's add our newly created class, which is called Mirch.
+
+75
+00:07:47,240 --> 00:07:49,160
+Rocks, rocks.
+
+76
+00:07:53,570 --> 00:07:55,040
+And we are going to run it.
+
+77
+00:08:06,630 --> 00:08:12,480
+Then we have to subsamples the region, so basically, uh.
+
+78
+00:08:16,890 --> 00:08:26,310
+Based on the samples points that we have created, I'm going to unload, unlock and commences and here
+
+79
+00:08:26,310 --> 00:08:36,060
+we have two to select our image and prediction bands and select our training data.
+
+80
+00:08:36,060 --> 00:08:45,360
+And in properties, we have to classify the property of our training data where that unique class value
+
+81
+00:08:45,360 --> 00:08:46,250
+is located.
+
+82
+00:08:46,260 --> 00:08:48,030
+And here you can see it.
+
+83
+00:08:49,200 --> 00:08:51,550
+It is land class.
+
+84
+00:08:51,660 --> 00:08:53,760
+So I'm not land time, but land class.
+
+85
+00:08:56,440 --> 00:09:00,270
+And scale basically through the of sentinel data.
+
+86
+00:09:02,140 --> 00:09:10,120
+In Iran, so everything is fine, there is no mistakes, so when you will be more confident in JavaScript
+
+87
+00:09:10,120 --> 00:09:17,110
+and then you don't need actually to run your code after each and every step, I'm doing it just as a
+
+88
+00:09:17,110 --> 00:09:22,660
+matter of demonstration, then what we need now to do is to train a classifier.
+
+89
+00:09:24,800 --> 00:09:26,410
+So let me uncommented.
+
+90
+00:09:41,210 --> 00:09:43,460
+Then this is a small, random forest.
+
+91
+00:09:43,490 --> 00:09:50,390
+This is a name of a random forest and in the brackets are different options, which you can specify
+
+92
+00:09:50,390 --> 00:09:52,160
+for random forest.
+
+93
+00:09:52,580 --> 00:09:54,450
+Here I choose 10 trees.
+
+94
+00:09:54,470 --> 00:09:57,200
+We can also have like 300 trees.
+
+95
+00:09:57,200 --> 00:10:03,530
+But you can also have a look on the specification of this function in documentation of Google Earth
+
+96
+00:10:03,620 --> 00:10:07,600
+engine to know what you actually can put inside of this function.
+
+97
+00:10:08,180 --> 00:10:16,680
+Then we select our train and future class property again and input properties.
+
+98
+00:10:16,690 --> 00:10:17,900
+His prediction bend's.
+
+99
+00:10:20,860 --> 00:10:21,030
+It.
+
+100
+00:10:21,120 --> 00:10:22,350
+There is no mistakes.
+
+101
+00:10:22,370 --> 00:10:31,190
+Everything works, and now what we want to do is to explore, uh, extrapolate our training model,
+
+102
+00:10:31,200 --> 00:10:36,080
+which we have created here in this line to our image.
+
+103
+00:10:37,010 --> 00:10:45,440
+For this, we create a new variable, which is called classified, and we use function image, select
+
+104
+00:10:45,440 --> 00:10:54,050
+prediction patterns and classifier is an input to this overall variable classifier will be input inside
+
+105
+00:10:54,050 --> 00:10:58,040
+of this variable in the function of classify.
+
+106
+00:10:59,030 --> 00:11:04,880
+So basically by this we create our new image.
+
+107
+00:11:06,830 --> 00:11:10,500
+Which is called Reibel, which is called classified now.
+
+108
+00:11:11,390 --> 00:11:13,520
+For now, we don't have actually
+
+109
+00:11:17,060 --> 00:11:22,540
+the pilot to visualize our image.
+
+110
+00:11:22,940 --> 00:11:31,340
+So here I have a pilot prepared for you for only for four classes, because previously I was testing
+
+111
+00:11:31,700 --> 00:11:40,460
+this for four glasses, water, vegetation or bonnets in their sequence, as you have created your glasses
+
+112
+00:11:40,460 --> 00:11:41,750
+from one to five.
+
+113
+00:11:41,760 --> 00:11:47,900
+And we need to or to add to the code for the Polet, the color code.
+
+114
+00:11:47,900 --> 00:11:54,680
+And basically then we can we we have to write this for works for this.
+
+115
+00:11:55,880 --> 00:11:59,140
+Of course, there are different conventions, how to call it.
+
+116
+00:11:59,480 --> 00:12:07,340
+There is very nice HelpAge in or Sangin, which is called image visualization.
+
+117
+00:12:07,340 --> 00:12:13,300
+Here you can read everything about how to visualize images in Google Earth engine.
+
+118
+00:12:13,560 --> 00:12:22,550
+And here's an example from land cover maps, where there is already code for war pilot, which is predefined.
+
+119
+00:12:22,550 --> 00:12:25,800
+So I can just, for example, take a
+
+120
+00:12:28,730 --> 00:12:31,180
+gala for Biron and to use it for our.
+
+121
+00:12:33,440 --> 00:12:39,560
+That could be how you can also do and select your your colors.
+
+122
+00:12:39,560 --> 00:12:42,890
+But you can also use, for example, my brother.
+
+123
+00:12:43,190 --> 00:12:47,510
+This is our online tool where you can select nice palette.
+
+124
+00:12:47,510 --> 00:12:54,530
+And also there are codes for those colors available so you can use them directly to your mind to make
+
+125
+00:12:54,530 --> 00:12:55,460
+your maps nice.
+
+126
+00:12:56,900 --> 00:12:59,780
+OK, you run it.
+
+127
+00:13:02,800 --> 00:13:12,010
+OK, I forgot to put here comma, and I forgot to comment here, so this is always a good to have a
+
+128
+00:13:12,010 --> 00:13:12,760
+syntax zero.
+
+129
+00:13:12,840 --> 00:13:22,750
+They give you a good reminder that you have to do or correct temps in the final step is add our classified
+
+130
+00:13:22,750 --> 00:13:24,190
+image to our map.
+
+131
+00:13:24,190 --> 00:13:28,330
+For this we have to on command the line.
+
+132
+00:13:28,480 --> 00:13:34,540
+So my, uh, my pedley function, the input is variable classified.
+
+133
+00:13:34,540 --> 00:13:42,400
+So our classified image here, you have to mention the range of your values for your land, land use,
+
+134
+00:13:42,400 --> 00:13:43,990
+land cover, classis.
+
+135
+00:13:43,990 --> 00:13:52,460
+Then another option is your ballot to have to specify that you have that there should be balut used
+
+136
+00:13:52,480 --> 00:13:53,950
+in the name of your image.
+
+137
+00:13:54,430 --> 00:13:55,480
+That's Krahn.
+
+138
+00:13:59,680 --> 00:14:04,120
+And here is the result of our classification.
+
+139
+00:14:07,530 --> 00:14:15,450
+Well, we can already see that there is some misclassification so that the rocks were quite well classified
+
+140
+00:14:15,450 --> 00:14:15,990
+here.
+
+141
+00:14:16,010 --> 00:14:22,950
+There is a sand, but we have a huge portion of the desert which was classified as not as
+
+142
+00:14:25,470 --> 00:14:30,690
+basically a desert, but as urban area.
+
+143
+00:14:30,740 --> 00:14:45,150
+So what we can do, we can, for example, unlock sand and to add some samples here on the fly on the
+
+144
+00:14:45,150 --> 00:14:47,460
+areas which are misclassified.
+
+145
+00:14:47,470 --> 00:14:50,730
+So for sure it is sand because if I put.
+
+146
+00:14:57,060 --> 00:14:59,850
+You mentioned in Newsweek and see that it's not urban.
+
+147
+00:15:00,260 --> 00:15:09,480
+The problem is here that there is different, quite different, I think, soils or rocks.
+
+148
+00:15:09,990 --> 00:15:11,530
+So the desert is different.
+
+149
+00:15:11,550 --> 00:15:13,200
+It's a sandy desert.
+
+150
+00:15:13,200 --> 00:15:20,880
+But also there is mountains and maybe probably rocks, rocks, rocks and desert.
+
+151
+00:15:21,180 --> 00:15:31,790
+And this makes the spectral variability of this backlash quite, quite variable.
+
+152
+00:15:32,070 --> 00:15:34,790
+And, of course, it influence our classification.
+
+153
+00:15:35,100 --> 00:15:46,770
+So it means that in such cases, we have to be able to cover all these areas, which actually all the
+
+154
+00:15:46,770 --> 00:15:49,560
+spectrum of spectrum variability.
+
+155
+00:15:49,590 --> 00:15:56,340
+OK, I have added some points for sand, though it's not concretely maybe sand.
+
+156
+00:15:56,350 --> 00:16:00,390
+I see that there is this quite reddish color.
+
+157
+00:16:00,390 --> 00:16:08,220
+Maybe it's a rocky desert that had to say that's what this is a beauty of Google Earth engine.
+
+158
+00:16:08,220 --> 00:16:15,450
+We can just fly at some training data and just basically run our classifier and see what would be the
+
+159
+00:16:15,450 --> 00:16:18,900
+results, whether the result will be improved or not.
+
+160
+00:16:26,870 --> 00:16:33,530
+OK, actually, yes, if you compare it with the previous map, you can see that it is the area which
+
+161
+00:16:33,530 --> 00:16:38,880
+is here is worth classified as urban and actually is not urban, has reduced significantly.
+
+162
+00:16:39,080 --> 00:16:47,090
+So my suggestion for you would be that you can work further with this example and add better training
+
+163
+00:16:47,420 --> 00:16:49,900
+data sets for each of these classes.
+
+164
+00:16:49,910 --> 00:16:55,200
+Maybe you can also add a new class to improve our classification results.
+
+165
+00:16:55,490 --> 00:16:59,180
+So this was a classification was done with random forest.
+
+166
+00:16:59,180 --> 00:17:05,480
+But in Google Earth, Engine ran a variety of machine learning algorithms which are implemented starting
+
+167
+00:17:05,480 --> 00:17:12,090
+with support vector machines, random forest to maximum likelihood decision trees.
+
+168
+00:17:12,890 --> 00:17:21,890
+So there are plenty of options that you can use, which will actually mean that only one line of the
+
+169
+00:17:21,890 --> 00:17:25,170
+classifier should be changed.
+
+170
+00:17:25,190 --> 00:17:31,460
+So basically here should be instead of random forest should be support vector machines, for example,
+
+171
+00:17:31,460 --> 00:17:34,790
+which makes this pretty straightforward application.

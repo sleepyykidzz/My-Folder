@@ -1,0 +1,37 @@
+https://code.earthengine.google.com/5265d4cf3e7a77ff8bfbc0e3270a5e81
+
+Filtering Image Collections and Displaying Image Data
+
+// Imports
+var L8 = ee.ImageCollection("LANDSAT/LC08/C01/T1_TOA"),
+    region = 
+    /* color: #98ff00 */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[35.91227604954444, 32.064377236024306],
+          [35.91227604954444, 30.657243564613967],
+          [38.16447331516944, 30.657243564613967],
+          [38.16447331516944, 32.064377236024306]]], null, false),
+    imageVisParam = {"opacity":1,"bands":["B5","B2","B3"],"min":-0.11627322919749453,"max":0.5422723495038532,"gamma":1};
+
+
+//print(L8.size());
+
+var filtered_region = L8.filterBounds(region);
+print(filtered_region.size());
+Map.addLayer(filtered_region);
+
+var filtered_region_date = filtered_region.filterDate('2020-01-01', '2020-07-01');
+print(filtered_region_date.size());
+
+var region_fin = L8.filterBounds(region)
+                 .filterDate('2020-01-01', '2020-07-01');
+print(region_fin.size());
+
+var Median_Image = region_fin.median();
+Map.addLayer(Median_Image, imageVisParam, 'Study_Area');

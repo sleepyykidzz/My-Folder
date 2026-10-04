@@ -1,0 +1,175 @@
+1
+00:00:00,060 --> 00:00:02,520
+Welcome back, students, in this video.
+
+2
+00:00:02,550 --> 00:00:10,350
+I'm going to show you how to import assets from external sources to Google Earth engine.
+
+3
+00:00:10,740 --> 00:00:19,830
+Well, basically, it often it could be that you want to use datasets that are already were created
+
+4
+00:00:20,070 --> 00:00:26,070
+by you or by someone else and import them into a Google search engine for your analysis.
+
+5
+00:00:26,400 --> 00:00:28,520
+That's done fairly easy.
+
+6
+00:00:28,530 --> 00:00:31,590
+And I'm going to show you in a few steps.
+
+7
+00:00:31,980 --> 00:00:40,260
+First of all, what kind of one type of data you can import and how to do it in order to import a new
+
+8
+00:00:40,260 --> 00:00:45,900
+asset to your first engine account, you have to go to ascites and click, can you?
+
+9
+00:00:46,650 --> 00:00:54,320
+Here you will see the different options that are supported currently by AWS engine.
+
+10
+00:00:54,330 --> 00:01:02,060
+So you can if you are if you are interested in upload image, you have to have a duty file.
+
+11
+00:01:02,700 --> 00:01:10,640
+So there are different tools where you can change your format of your offshore your Rasta data.
+
+12
+00:01:10,650 --> 00:01:18,060
+For example, in Kuzyayev there is very nice conversion Rasta conversion tools where you basically could
+
+13
+00:01:18,420 --> 00:01:24,520
+change your Rasta format from almost a few different
+
+14
+00:01:28,200 --> 00:01:37,330
+like not hundreds, but several several different Rasta formats to, uh, to Joseph.
+
+15
+00:01:39,170 --> 00:01:48,620
+And if you want to upload a shapefile or recto data, it should be as a shapefile and from the different
+
+16
+00:01:49,280 --> 00:01:55,930
+types of the well, if you if you know, when you have a shapefile, it's basically a vector file.
+
+17
+00:01:55,940 --> 00:01:58,630
+It's several it consists of several files.
+
+18
+00:01:58,940 --> 00:02:05,540
+So at least you have to have this three or you can also see them together.
+
+19
+00:02:05,580 --> 00:02:05,920
+Yeah.
+
+20
+00:02:06,440 --> 00:02:08,090
+So that's important to know.
+
+21
+00:02:08,090 --> 00:02:12,240
+And you can also import through your file.
+
+22
+00:02:12,270 --> 00:02:15,960
+So let's say I would like to impart joy to you.
+
+23
+00:02:15,960 --> 00:02:25,640
+If I click on it and I have to select the file, which I want to upload, you have to basically to select
+
+24
+00:02:25,640 --> 00:02:30,170
+a file which will not have spaces in their name.
+
+25
+00:02:30,470 --> 00:02:37,030
+So is this something to be to to to bear in mind, if you will, have spaces in the name of your files
+
+26
+00:02:37,490 --> 00:02:43,490
+there, you will get an arrow and or Ascencion would say that you need to remove the space?
+
+27
+00:02:44,420 --> 00:02:47,540
+Well, for example, I want to upload this file.
+
+28
+00:02:47,540 --> 00:02:48,590
+I will click on it.
+
+29
+00:02:48,590 --> 00:02:49,970
+I will click open.
+
+30
+00:02:49,970 --> 00:03:00,200
+And while there is an arrow, because indeed I have already added this file before, but in your case,
+
+31
+00:03:00,200 --> 00:03:02,570
+it would be no error.
+
+32
+00:03:02,570 --> 00:03:04,700
+And then you just can click upload here.
+
+33
+00:03:05,310 --> 00:03:07,520
+I just will say cancel.
+
+34
+00:03:07,520 --> 00:03:16,160
+And once your input this data and say upload in the tasks, you would see that the new task will have
+
+35
+00:03:16,160 --> 00:03:20,930
+fear of it, which will start upload your new asset.
+
+36
+00:03:20,930 --> 00:03:22,550
+You can also refresh it.
+
+37
+00:03:22,550 --> 00:03:30,470
+And once it is finished, you would see it in your asset list.
+
+38
+00:03:30,590 --> 00:03:30,920
+Yeah.
+
+39
+00:03:31,130 --> 00:03:33,470
+So here we can do.
+
+40
+00:03:34,820 --> 00:03:36,350
+Create a new file.
+
+41
+00:03:51,890 --> 00:04:01,160
+Go to assets and I can directly using this small button here, you put my asset to.
+
+42
+00:04:03,790 --> 00:04:13,900
+To my script, yeah, and start working with this, the same logic applies for vector file and in such
+
+43
+00:04:13,900 --> 00:04:23,470
+a simple way you can also input and the data, both Rasta data and vector data to your Google Earth
+
+44
+00:04:23,470 --> 00:04:24,280
+engine code.

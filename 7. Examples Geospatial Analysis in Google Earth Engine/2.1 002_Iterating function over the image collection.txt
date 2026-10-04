@@ -1,0 +1,25 @@
+// Iterating function over the image collection
+
+// Code Linke https://code.earthengine.google.com/24dc268a31350fdfe5e1b6ea7a0039c4
+
+var PERSIANN = ee.ImageCollection("NOAA/PERSIANN-CDR"),
+    Pars = {"opacity":0.87,"bands":["precipitation"],"min":0,"max":176,"palette":["289d51","f5ff5a","ff482b"]};
+
+var Data = PERSIANN.filterDate('2019-01-01', '2020-01-01'); // Import P data and filtering it
+var Init = ee.Image.constant(0)                             
+                   .rename('precipitation')
+                   .cast ({'precipitation':'long'})
+                   
+
+// Step 1  - Image as a result                                // Function to be used in the iteration function
+function CalcDryDays(current, previous){
+  var Mask = current.remap([0], [1], 0)
+  var LastImage = ee.Image(previous);
+  var Updated = LastImage.add(Mask).multiply(Mask);
+  
+  return Updated
+}
+
+var result = ee.Image(Data.iterate(CalcDryDays, Init)); // to receive an image as a result
+
+Map.addLayer(result, Pars);

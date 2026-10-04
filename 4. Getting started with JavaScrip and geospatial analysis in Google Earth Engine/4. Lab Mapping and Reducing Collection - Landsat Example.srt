@@ -1,0 +1,559 @@
+1
+00:00:00,360 --> 00:00:02,500
+Welcome back, students, in this video.
+
+2
+00:00:02,520 --> 00:00:04,810
+We will start with LANSAT Composites.
+
+3
+00:00:04,820 --> 00:00:12,120
+So in previous video, we were talking how to declare variables in JavaScript, in Google Earth engine.
+
+4
+00:00:12,120 --> 00:00:19,320
+And in this video I'm shown, I'm going already to show you how we can do it, how we can start working
+
+5
+00:00:19,320 --> 00:00:25,530
+with imagery and how we can basically manipulate collections.
+
+6
+00:00:25,900 --> 00:00:34,650
+So as you remember from the video on data sets in Google Earth engine, all the data sets in in Google
+
+7
+00:00:34,650 --> 00:00:43,050
+Earth engine are arranged in collections and in those different operations that we can perform on those
+
+8
+00:00:43,050 --> 00:00:43,680
+collections.
+
+9
+00:00:43,680 --> 00:00:48,650
+And those collections are usually available at different specialist scale.
+
+10
+00:00:48,660 --> 00:00:55,490
+But for example, for satellite images as Landsat Sentinel models, those are global data sets.
+
+11
+00:00:55,500 --> 00:01:01,020
+So if you will, for example, here we have a variable that is declared.
+
+12
+00:01:01,020 --> 00:01:07,070
+It's called LANSAT, and we are calling LANSAT collection, basically.
+
+13
+00:01:07,080 --> 00:01:17,550
+And when we when we are working with LANSAT collection and we want to we are going to call it by declaring
+
+14
+00:01:17,550 --> 00:01:25,320
+the variable and for example, by mapping it here on the map, we without any manipulations to this
+
+15
+00:01:25,320 --> 00:01:26,000
+variable.
+
+16
+00:01:27,580 --> 00:01:34,560
+The thing which we will get is a fool, like the full collection available for LANSAT and what is inside
+
+17
+00:01:34,560 --> 00:01:38,310
+of this collection you can do by like basically search here.
+
+18
+00:01:38,550 --> 00:01:48,450
+If you if you're just, for example, search Landsat eight here, you will see a different raster dataset
+
+19
+00:01:48,450 --> 00:01:50,610
+collections that are available.
+
+20
+00:01:50,610 --> 00:01:55,380
+And in this example, we are working with our.
+
+21
+00:02:00,710 --> 00:02:04,510
+That's the surge, this collection immediately that will be easier.
+
+22
+00:02:08,000 --> 00:02:16,430
+For example, this collection LANSAT collection one to one top of Masferrer reflectance, if you click
+
+23
+00:02:16,430 --> 00:02:19,300
+on the bands, you will see a very nice description.
+
+24
+00:02:19,310 --> 00:02:23,220
+What kind of bands are available?
+
+25
+00:02:23,240 --> 00:02:24,290
+What are the ranges?
+
+26
+00:02:24,300 --> 00:02:26,660
+What does a special resolution then?
+
+27
+00:02:26,660 --> 00:02:33,170
+You can also say they're part of their how to call this collection, how to put it in your script.
+
+28
+00:02:33,380 --> 00:02:39,830
+And you can also there is a button here which is called import.
+
+29
+00:02:40,070 --> 00:02:46,850
+So if you click on it, this collection will be automatically imported into into your script.
+
+30
+00:02:48,620 --> 00:02:59,600
+Basically and here so as I have said, if we just write it as it is without any other
+
+31
+00:03:02,210 --> 00:03:08,750
+additions to this piece of script, then we will call the whole collection of LANSAT.
+
+32
+00:03:09,290 --> 00:03:09,540
+Yeah.
+
+33
+00:03:09,620 --> 00:03:11,720
+Which could be available if today.
+
+34
+00:03:12,020 --> 00:03:16,670
+So will be available from the beginning of the show on Saturday to nowadays.
+
+35
+00:03:17,120 --> 00:03:18,910
+And this is often not the case.
+
+36
+00:03:18,920 --> 00:03:27,070
+Often we are actually targeting our analysis by for specific dates, for specific regions.
+
+37
+00:03:27,080 --> 00:03:36,080
+And this so what we need, we have to reduce our image collection to a specific timestep.
+
+38
+00:03:36,350 --> 00:03:40,010
+So this is written here and a specific location.
+
+39
+00:03:40,040 --> 00:03:40,360
+Yeah.
+
+40
+00:03:40,790 --> 00:03:42,230
+So what is here?
+
+41
+00:03:42,230 --> 00:03:51,110
+What we are doing here, we are reducing the whole onesided collection to a specific timestep, let's
+
+42
+00:03:51,110 --> 00:03:54,050
+put it like from 2017.
+
+43
+00:03:54,170 --> 00:04:06,260
+So from the beginning of 2000, um, sorry, 2016, uh, to let's say we want just to have a few months
+
+44
+00:04:06,260 --> 00:04:11,680
+from beginning of 2016 to say to let's say to their um.
+
+45
+00:04:15,350 --> 00:04:27,800
+To the south, to the June 2016, and here we have what we can also filter by by bounders, by geometry.
+
+46
+00:04:27,980 --> 00:04:31,240
+So we are also not interested in the whole area.
+
+47
+00:04:31,250 --> 00:04:36,020
+We're interested in only in this specific area in San Francisco.
+
+48
+00:04:36,030 --> 00:04:45,770
+And for example, if I'm now interested in in Kansas, I can put this point the suspect of future and
+
+49
+00:04:45,770 --> 00:04:46,880
+drag it and drop it.
+
+50
+00:04:47,060 --> 00:04:53,310
+And then my target area will be, let's say, Kansas City.
+
+51
+00:04:53,660 --> 00:05:00,610
+Let me run in that you will see basically the result of these manipulations.
+
+52
+00:05:00,620 --> 00:05:03,760
+It takes some time because, um, yeah.
+
+53
+00:05:04,230 --> 00:05:07,970
+Uh, we are mapping it function over the map.
+
+54
+00:05:08,450 --> 00:05:18,500
+But, uh, here you can see already that our, uh, for our targeted area for Kansas City, uh, we
+
+55
+00:05:18,500 --> 00:05:24,800
+have created the LANSAT Composite Youm, for example.
+
+56
+00:05:24,800 --> 00:05:33,260
+If you want to change this area, you can easily click on this, uh, geometry feature and put it into
+
+57
+00:05:33,260 --> 00:05:36,350
+San Luis and run your code.
+
+58
+00:05:36,970 --> 00:05:43,160
+Yeah, well, while it's running, you will see that now you'll get reduced.
+
+59
+00:05:43,160 --> 00:05:49,210
+Your Landsat image collection, Landsat eight only to the area in San Luis.
+
+60
+00:05:49,220 --> 00:05:55,790
+How to how to create this feature for which you would like to like, uh, point feature for which you
+
+61
+00:05:55,790 --> 00:05:59,840
+would like to create a boundary for your area of interest.
+
+62
+00:05:59,890 --> 00:06:03,560
+This is you are doing by uh, at the marker at all.
+
+63
+00:06:03,560 --> 00:06:05,500
+Or you can also draw polygons.
+
+64
+00:06:05,510 --> 00:06:06,770
+It's very, very easy.
+
+65
+00:06:07,220 --> 00:06:10,910
+So if you want, you can put, uh, for example, um.
+
+66
+00:06:15,720 --> 00:06:19,810
+More points here, I'm going to delete them because we don't need but it's very easy.
+
+67
+00:06:20,820 --> 00:06:26,040
+OK, so and what will happen if your comment is a line?
+
+68
+00:06:26,050 --> 00:06:33,050
+So if you don't want a piece of script to be implemented, you have to comment, just line that comment
+
+69
+00:06:33,180 --> 00:06:37,490
+and run and it will take some time.
+
+70
+00:06:37,500 --> 00:06:45,480
+And you know, why it's going to take some time is because now we don't filter our collection by geometry.
+
+71
+00:06:45,960 --> 00:06:49,560
+I will zoom out and you will see what what we have.
+
+72
+00:06:49,770 --> 00:06:55,350
+We are filtering only our collection by time steps, but not for the geometry.
+
+73
+00:06:55,380 --> 00:07:00,890
+So now the Google Earth engine is returning for me.
+
+74
+00:07:00,900 --> 00:07:12,240
+The whole Google LANSAT composite available for this collection specific, which for all Jamad geographical
+
+75
+00:07:12,240 --> 00:07:14,280
+areas in the world.
+
+76
+00:07:14,350 --> 00:07:14,550
+Yes.
+
+77
+00:07:14,560 --> 00:07:16,820
+So that's why it takes a little bit of time.
+
+78
+00:07:17,130 --> 00:07:19,800
+So that's important to remember.
+
+79
+00:07:19,800 --> 00:07:25,440
+And this is what you are going to use a lot because this is a reducer
+
+80
+00:07:28,350 --> 00:07:29,340
+of the collection.
+
+81
+00:07:29,350 --> 00:07:35,950
+So you probably if you haven't heard this term before, it's called reducers.
+
+82
+00:07:35,950 --> 00:07:44,340
+So when you really reduce your analysis to some geographic areas, you see it's still loading because
+
+83
+00:07:44,340 --> 00:07:45,600
+it's take some time.
+
+84
+00:07:45,600 --> 00:07:46,830
+But you understood the point.
+
+85
+00:07:46,840 --> 00:07:49,100
+So I will run it again on the percent.
+
+86
+00:07:49,110 --> 00:08:00,230
+Lluis Well, then we have another variable here, which is called which is called VAR Composite.
+
+87
+00:08:00,240 --> 00:08:08,940
+And basically this is very in remote sensing is one of the commonly applied methods when we actually
+
+88
+00:08:08,940 --> 00:08:14,100
+create a cloud free composite for the area of our interest.
+
+89
+00:08:14,820 --> 00:08:26,940
+So what basically this algorithm, this function does, it's basically a calculator of of of top of
+
+90
+00:08:27,090 --> 00:08:34,290
+atmosphere reflectance, then sort out all the images in the collection by the cloud coverage and then
+
+91
+00:08:34,680 --> 00:08:40,410
+we map only that less cloudy pixels on our map here.
+
+92
+00:08:40,440 --> 00:08:41,640
+So it's very common.
+
+93
+00:08:41,640 --> 00:08:49,740
+And for all of you who work with remote sensing before satellite images, then this concept should be
+
+94
+00:08:49,830 --> 00:08:50,490
+familiar.
+
+95
+00:08:50,490 --> 00:08:57,900
+If you're having to work with remote sensing before then, I encourage you to look for fundamentals
+
+96
+00:08:57,960 --> 00:09:01,740
+of my for my coersion fundamentals of remote sensing.
+
+97
+00:09:03,360 --> 00:09:12,650
+And the final function that is and please also have a look here, what is in curly, curly brackets?
+
+98
+00:09:12,690 --> 00:09:20,960
+This is basically a dictionary which we were talking about in a previous in a previous video.
+
+99
+00:09:20,970 --> 00:09:28,200
+So basically, we are passing in a dictionary as to our functions.
+
+100
+00:09:28,200 --> 00:09:37,070
+It would say, given a key words, which is collection and as flawed and specify arguments.
+
+101
+00:09:37,380 --> 00:09:43,640
+So basically in JavaScript, usually there is no all those keywords and and arguments.
+
+102
+00:09:43,860 --> 00:09:50,700
+And this was an invention by Google or Ascencion team that they took it from Python and they found it
+
+103
+00:09:50,700 --> 00:09:51,570
+very useful.
+
+104
+00:09:51,590 --> 00:09:56,850
+Yeah, because then you can actually specify and make your functions more precise.
+
+105
+00:09:57,480 --> 00:10:06,330
+This is also a very important function that you would use a lot in your in your future analysis, because
+
+106
+00:10:06,330 --> 00:10:11,150
+it's basically the function that maps the results on the map.
+
+107
+00:10:11,160 --> 00:10:12,630
+So if I just, uh.
+
+108
+00:10:13,140 --> 00:10:18,890
+Yeah, if I do like this then and run it, then you would not see any results here.
+
+109
+00:10:18,920 --> 00:10:30,690
+So this basic function is need you need to to map our results of our Landsat composite on on the map.
+
+110
+00:10:31,290 --> 00:10:37,440
+And here we have basically we that as a variable that we want to map.
+
+111
+00:10:37,440 --> 00:10:46,350
+And here those ones arguments shows us the specifics of how of visualization.
+
+112
+00:10:46,380 --> 00:10:51,900
+So if you don't know well, basically this first we specify the bands which we want to map.
+
+113
+00:10:51,900 --> 00:11:00,750
+You can also change this and how to stretch and should be done and what kind of basically that it is.
+
+114
+00:11:00,750 --> 00:11:15,720
+LGB, if you don't know this, if you don't know or how to how to best basically visualize, visualize
+
+115
+00:11:15,720 --> 00:11:17,490
+your results, it's not a problem.
+
+116
+00:11:17,670 --> 00:11:25,560
+You have to click here on layers and on this symbol here and what you will see is a small visualization
+
+117
+00:11:25,560 --> 00:11:26,130
+parameter.
+
+118
+00:11:26,130 --> 00:11:29,400
+So here for example, we can uh change.
+
+119
+00:11:31,410 --> 00:11:31,820
+Yeah.
+
+120
+00:11:32,070 --> 00:11:32,910
+The bands.
+
+121
+00:11:32,910 --> 00:11:33,360
+Yeah.
+
+122
+00:11:33,360 --> 00:11:38,670
+And apply and immediately you would see the effect of this change in the bands.
+
+123
+00:11:40,940 --> 00:11:50,660
+So now I have changed my true color composite to the false color composite, somewhere near infrared,
+
+124
+00:11:50,660 --> 00:11:57,980
+BANT is assigned to Red Channel on the screen and immediately what you can see that all of our area
+
+125
+00:11:57,980 --> 00:12:08,720
+is becoming quite red, which means we have quite a vigorous, vigorous vegetation within within basically
+
+126
+00:12:08,720 --> 00:12:09,850
+the study area.
+
+127
+00:12:09,860 --> 00:12:15,270
+And here you have also different options for stretching your data.
+
+128
+00:12:15,290 --> 00:12:22,670
+So how you would like visualize remote sensing data and you can also really apply with this here and
+
+129
+00:12:22,880 --> 00:12:28,010
+see what will be the best visualization parameters for your area.
+
+130
+00:12:28,310 --> 00:12:35,810
+Let's say you are happy with this visualization and you want to keep and we want also to pass it to
+
+131
+00:12:35,810 --> 00:12:39,670
+your code and to later on to use it how to do it.
+
+132
+00:12:39,980 --> 00:12:43,310
+Basically, there is a button which is called inpart.
+
+133
+00:12:43,310 --> 00:12:50,330
+And, you know, when when you click it, you hear here this appear.
+
+134
+00:12:50,330 --> 00:12:59,210
+And this is to basically input the first is the geometry, basically the point point that we just created
+
+135
+00:12:59,510 --> 00:13:03,780
+and another one is the visualization.
+
+136
+00:13:03,800 --> 00:13:12,680
+So if you're safe now, the code as it is like like now, then later on, if you open it up, the visualization
+
+137
+00:13:12,680 --> 00:13:15,890
+would be done in this way.
+
+138
+00:13:15,890 --> 00:13:25,520
+So it's very also basically very, very handy function or available and Google Earth engine that you
+
+139
+00:13:25,520 --> 00:13:34,160
+could put the pieces of priority and pieces of script already in your script and reuse it for your own
+
+140
+00:13:34,160 --> 00:13:34,360
+and.

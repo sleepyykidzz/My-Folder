@@ -1,0 +1,39 @@
+1
+00:00:00,180 --> 00:00:02,550
+Welcome back, students, in this short video.
+
+2
+00:00:02,580 --> 00:00:06,590
+I would like to give you a task for Section six of our course.
+
+3
+00:00:06,960 --> 00:00:16,020
+So in this section, I would like to ask you to find some image data so it could be a to data or image
+
+4
+00:00:16,020 --> 00:00:19,230
+images that you probably work with in another project.
+
+5
+00:00:19,590 --> 00:00:23,230
+Or you can also probably have some vector data.
+
+6
+00:00:23,520 --> 00:00:28,500
+So find some vector data set or image data set that you would like to use.
+
+7
+00:00:28,500 --> 00:00:34,530
+Or you can also use some of the data set that I have provided to you previously and please import them
+
+8
+00:00:34,530 --> 00:00:36,810
+as an assets to Google Earth engine.
+
+9
+00:00:37,110 --> 00:00:43,950
+This is important for you to understand the process by yourself as well as to train your new skills
+
+10
+00:00:43,950 --> 00:00:50,610
+in importing and exporting the data sets to and in Google Earth engine.

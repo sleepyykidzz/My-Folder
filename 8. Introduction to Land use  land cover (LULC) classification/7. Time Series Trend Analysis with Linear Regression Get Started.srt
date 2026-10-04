@@ -1,0 +1,347 @@
+1
+00:00:00,270 --> 00:00:07,290
+Welcome back, students in this video, I'm going to show you how to map linear regression over the
+
+2
+00:00:07,290 --> 00:00:09,780
+image collection in Google Earth engine.
+
+3
+00:00:09,810 --> 00:00:10,770
+Let's get started.
+
+4
+00:00:11,490 --> 00:00:17,400
+Currently in Google Earth Engine, there are several methods that are implemented for linear regression,
+
+5
+00:00:17,760 --> 00:00:23,550
+namely linear feet, linear regression, robust linear regression and reach regression.
+
+6
+00:00:24,060 --> 00:00:30,960
+Among all, for four methods, linear fit is the simplest method, and this is what we are getting to
+
+7
+00:00:30,990 --> 00:00:31,830
+learn today.
+
+8
+00:00:32,310 --> 00:00:37,350
+We are going to start with the simplest method, and once you feel comfortable about it and you understand
+
+9
+00:00:37,350 --> 00:00:42,150
+it, you can also apply a more complex method and algorithms.
+
+10
+00:00:42,750 --> 00:00:50,850
+So the linear fit function in Google Earth Engine requires a two band input image or image dataset,
+
+11
+00:00:50,850 --> 00:00:58,150
+where the first band is an independent variable and the second band is in is a dependent variable.
+
+12
+00:00:58,170 --> 00:01:02,460
+So the first is independent probe of the second is dependent variable.
+
+13
+00:01:02,850 --> 00:01:10,980
+And in this following example, I'm going to show you how to compute it using that image data set from
+
+14
+00:01:11,400 --> 00:01:16,380
+Noor or Separation Group on night nighttime light time series.
+
+15
+00:01:17,100 --> 00:01:28,360
+Those are images that show the cloud free composites made using all available data from the SBA or my
+
+16
+00:01:28,440 --> 00:01:30,720
+mission for calendar years.
+
+17
+00:01:31,170 --> 00:01:44,220
+And basically, it shows that it has an annual composites of cloud free images for a nightlight for
+
+18
+00:01:44,220 --> 00:01:49,380
+the planet, and you can says it's a data available from 1992.
+
+19
+00:01:49,530 --> 00:01:58,460
+OK, so we need to do a two step approach the first step approach we are going to the declare and at
+
+20
+00:01:58,470 --> 00:02:00,570
+time both function.
+
+21
+00:02:00,570 --> 00:02:08,220
+We are going to define a function that compute a time bound and then we are going to impart collection
+
+22
+00:02:08,220 --> 00:02:16,440
+and apply this function to our inputted collection to include an independent variable, which is our
+
+23
+00:02:16,440 --> 00:02:22,370
+time dependent variable will be the nighttime light collection.
+
+24
+00:02:22,380 --> 00:02:28,410
+And finally, we are going to compute linear feet over the series of values at each pixel.
+
+25
+00:02:29,460 --> 00:02:32,550
+All right, so let's get started.
+
+26
+00:02:32,910 --> 00:02:39,630
+First, we are going to add a band containing image data as years since nineteen ninety one.
+
+27
+00:02:39,660 --> 00:02:49,980
+You can also copy this the name of this data set here and search for it in Google or Sangin, where
+
+28
+00:02:49,980 --> 00:02:58,950
+you could see was a data set start to have a bit of data sets that it's in 1992.
+
+29
+00:02:59,760 --> 00:03:03,620
+And you can also read about this program.
+
+30
+00:03:03,630 --> 00:03:10,020
+The Defense Meteorological Program Operation Line Scan System has a unique capability to detect visible
+
+31
+00:03:10,020 --> 00:03:12,160
+and near-infrared emission source at night.
+
+32
+00:03:12,600 --> 00:03:19,440
+And this version forms a product consist of cloud free composites, made use and also available archived
+
+33
+00:03:20,460 --> 00:03:22,890
+smallest resolution data for calendar years.
+
+34
+00:03:23,190 --> 00:03:28,380
+In cases where two satellites were collected data, two composites were produced basically the same
+
+35
+00:03:28,710 --> 00:03:34,260
+information that they have just retrieved from you from our official web page.
+
+36
+00:03:34,470 --> 00:03:42,990
+Then you can go to the bands and you can expect we can see what kind of bands are available here.
+
+37
+00:03:42,990 --> 00:03:49,980
+And we are going to use a stable lights band because this is a clean band, contains the lights from
+
+38
+00:03:49,980 --> 00:03:54,960
+cities, towns and does asides as persistent lighting, including gas flares.
+
+39
+00:03:55,500 --> 00:03:57,870
+And that's what we are interested in.
+
+40
+00:03:58,060 --> 00:04:01,620
+Yeah, it's always you can have a collection snippet.
+
+41
+00:04:01,920 --> 00:04:08,730
+So how you can directly imported into your Earth's engine code or you can hit here input.
+
+42
+00:04:08,940 --> 00:04:18,500
+But first, we are going to do a function that creates a band and adds it containing images as years
+
+43
+00:04:18,510 --> 00:04:26,070
+function, create a time band image and we declare a variable year which gets this.
+
+44
+00:04:26,760 --> 00:04:36,360
+And the start date from our dataset gets a year and we subtract make two ninety one to get the first
+
+45
+00:04:36,360 --> 00:04:45,600
+year from 1998 tool and this function done an image which this year image, which we are going to for
+
+46
+00:04:45,630 --> 00:04:48,210
+that at and map of our collection.
+
+47
+00:04:48,900 --> 00:04:50,580
+The first line of the code.
+
+48
+00:04:50,700 --> 00:04:58,380
+The second line of the code to map the time band creation over the nighttime light collection.
+
+49
+00:04:58,380 --> 00:04:59,220
+So first what?
+
+50
+00:04:59,250 --> 00:05:07,100
+We do HIV in our day of images, and we select the band to stabilize.
+
+51
+00:05:07,230 --> 00:05:09,210
+So we have just read about it.
+
+52
+00:05:09,540 --> 00:05:19,470
+And then what we do, we map the function, which we declared here over our map image collection to
+
+53
+00:05:19,770 --> 00:05:22,710
+grades, a student image datasets which we need.
+
+54
+00:05:23,730 --> 00:05:30,390
+And what we do here in this final piece of code is we are computing a linear feet over the series of
+
+55
+00:05:30,390 --> 00:05:38,670
+values that -- you pixel with our lives, visualizing that intercept in green and positive and negative
+
+56
+00:05:38,670 --> 00:05:41,310
+slobs as red and blue.
+
+57
+00:05:41,760 --> 00:05:50,510
+So let me run this I might take some time dependent on your internet connection, but since there is
+
+58
+00:05:50,850 --> 00:05:55,920
+much data said, the South is not very, very big.
+
+59
+00:05:55,920 --> 00:06:02,700
+You can get it quite fast the results, and we can zoom out to see the whole globe.
+
+60
+00:06:03,300 --> 00:06:09,860
+So basically, if you go to the settings and the layers, this will become more understandable.
+
+61
+00:06:09,870 --> 00:06:15,180
+Our visualization you says that we are using a red green blue composite.
+
+62
+00:06:15,480 --> 00:06:20,390
+And scale is basically the slope of our linear regression.
+
+63
+00:06:20,400 --> 00:06:31,470
+Yeah, so that red band shows the negative slopes intercept is in the middle, is as green with our
+
+64
+00:06:31,470 --> 00:06:33,210
+allies, for example, slope.
+
+65
+00:06:33,210 --> 00:06:42,990
+So you could change this and use one band image and input scale.
+
+66
+00:06:43,320 --> 00:06:53,070
+And here you can customize, and you can also use that original values available and you can apply this
+
+67
+00:06:53,070 --> 00:06:55,290
+and see how that this will change.
+
+68
+00:06:55,650 --> 00:07:06,330
+So you can also use a ballot, for example, and we can show negative values in red, positive values
+
+69
+00:07:06,330 --> 00:07:14,160
+in yellow and negative values in and positive values in in in green.
+
+70
+00:07:14,310 --> 00:07:24,870
+For instance, we can use this visualization to see where most of the positive trends and negative trends
+
+71
+00:07:24,870 --> 00:07:26,610
+in light pollution can be observed.
+
+72
+00:07:26,940 --> 00:07:34,590
+Basically, a similar visualization as previous ones may be not that beautiful, but what we can again
+
+73
+00:07:34,590 --> 00:07:44,590
+see that most of Europe shows basically a positive trend positive to a neutral trend.
+
+74
+00:07:45,060 --> 00:07:47,430
+While if we can come back here
+
+75
+00:07:50,090 --> 00:07:55,110
+while negative trend was observed mainly in Eastern Europe, right?
+
+76
+00:07:55,680 --> 00:08:00,330
+So and over this year, it's mostly neutral.
+
+77
+00:08:00,570 --> 00:08:03,120
+No, no, no trend slopes zero.
+
+78
+00:08:03,870 --> 00:08:07,770
+Well, if you go to the U.S., this is the opposite.
+
+79
+00:08:07,770 --> 00:08:18,390
+We have a negative trend here in the East and our system, but positive trends in most of the eastern
+
+80
+00:08:18,390 --> 00:08:24,150
+and central part, some negative trends in that west western coast.
+
+81
+00:08:24,570 --> 00:08:30,540
+So that's maybe a visualization is more interesting from interpretation, but it's more straightforward
+
+82
+00:08:30,540 --> 00:08:32,880
+compared to the arguably composite.
+
+83
+00:08:33,150 --> 00:08:38,190
+So you can play with this and see what suits best for you.
+
+84
+00:08:38,490 --> 00:08:42,760
+So this was a nutshell how to get started with our linear regression analysis.
+
+85
+00:08:42,780 --> 00:08:49,560
+Of course, this is very basic and straightforward program in here, but it is important to understand
+
+86
+00:08:49,560 --> 00:08:59,910
+and to be able to correctly interpret as a linear regression field in order to start applying more sophisticated,
+
+87
+00:08:59,910 --> 00:09:03,320
+more complex algorithms in Google Earth Engine.

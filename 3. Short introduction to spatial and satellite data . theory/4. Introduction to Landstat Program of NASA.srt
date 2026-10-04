@@ -1,0 +1,219 @@
+1
+00:00:00,150 --> 00:00:02,260
+Welcome back, students, in this video.
+
+2
+00:00:02,280 --> 00:00:07,920
+I'm going to speak about Lundestad Senser as we are going to use the data from the sensors in our applied
+
+3
+00:00:07,990 --> 00:00:09,360
+remote sensing analysis.
+
+4
+00:00:09,720 --> 00:00:15,000
+Thus, you should understand basic characteristics of these sensors as well as the main characteristics
+
+5
+00:00:15,000 --> 00:00:16,980
+of the data that they deliver.
+
+6
+00:00:17,310 --> 00:00:18,660
+So let's get started.
+
+7
+00:00:19,680 --> 00:00:26,870
+Landside program of NASA heads a long time series of civil remote sensing since 1972.
+
+8
+00:00:27,000 --> 00:00:33,430
+Here they're send in numbers, stand for satellite missions with sensors that continue to exist in them
+
+9
+00:00:33,450 --> 00:00:41,040
+series since 1972 and incorporate more and more technical innovations and set one, two and three are
+
+10
+00:00:41,040 --> 00:00:47,520
+very similar models with four spectral channels and a special resolution of 80 meters and said four
+
+11
+00:00:47,520 --> 00:00:53,130
+and five then have a new sensor is seven channel surveillance at five flow unexpectedly long.
+
+12
+00:00:53,400 --> 00:00:56,490
+And that was like for the continuous time series.
+
+13
+00:00:57,390 --> 00:01:04,040
+The Landsat six had a failed launch and was lost violence at seven on the works, mostly for four years.
+
+14
+00:01:04,380 --> 00:01:11,370
+You remember that all LANSAT sensors up to number seven were viewed from sensors, while Landsat eight
+
+15
+00:01:11,370 --> 00:01:12,090
+is alays.
+
+16
+00:01:12,090 --> 00:01:18,780
+The latest installment of the U.S. Landsat satellite series operated by National Aeronautics and Space
+
+17
+00:01:18,780 --> 00:01:23,640
+Administration NASA and the United States Geological Survey USGS.
+
+18
+00:01:24,030 --> 00:01:29,910
+The LANSAT program represents the world's longest continuously acquired collection of spaceborne data
+
+19
+00:01:29,910 --> 00:01:30,720
+in history.
+
+20
+00:01:31,020 --> 00:01:39,540
+And since late 2008, all data were made available to all users free of charge, which made a revolution
+
+21
+00:01:39,540 --> 00:01:42,930
+in satellite remote sensing and its applications.
+
+22
+00:01:43,530 --> 00:01:51,120
+The Landsat eight satellite was launched on February 11, 2003, as part of the long term or so observation
+
+23
+00:01:51,120 --> 00:01:52,680
+system programs of NASA.
+
+24
+00:01:53,070 --> 00:01:59,730
+Like its predecessors, Landsat eight is a passive satellite with a multispectral optical sensor for
+
+25
+00:01:59,730 --> 00:02:01,980
+the first time in the LANSAT program.
+
+26
+00:02:01,980 --> 00:02:10,680
+The payload consists of to put broom instruments on board the operational and imagery or I Óli also
+
+27
+00:02:10,680 --> 00:02:14,040
+it's called and the thermal infrared sensor Tiara's.
+
+28
+00:02:15,570 --> 00:02:24,960
+Together they can they can scan the electromagnetic spectrum in 11 separate bands in the moderate geometric
+
+29
+00:02:24,960 --> 00:02:27,450
+resolution of 15 to 30 meters.
+
+30
+00:02:28,530 --> 00:02:33,810
+Each of those channels has been designed to perform certain tasks, for example, retrieving atmospheric
+
+31
+00:02:33,810 --> 00:02:38,970
+Aradale properties and detect circus clouds for correction of atmospheric distortions.
+
+32
+00:02:39,300 --> 00:02:42,600
+Those are, for example, band one and band nine.
+
+33
+00:02:43,860 --> 00:02:50,880
+Here are measured in measuring thermal energy emitted by objects from open land, surface temperatures
+
+34
+00:02:50,880 --> 00:02:53,320
+absorbance 10 and 11.
+
+35
+00:02:54,180 --> 00:03:00,000
+There are two main data products which differ in the previous level of preprocessing, one without an
+
+36
+00:03:00,000 --> 00:03:01,370
+atmospheric correction.
+
+37
+00:03:01,410 --> 00:03:09,140
+That's called a product level one and another one with atmospheric correction product level to information.
+
+38
+00:03:09,150 --> 00:03:15,060
+The process and level can be found in the metadata file of LANSAT product.
+
+39
+00:03:15,090 --> 00:03:24,090
+This file is called MTel and has always extension of text that is delivered with the Landsat eight product
+
+40
+00:03:24,720 --> 00:03:25,260
+standard.
+
+41
+00:03:25,260 --> 00:03:33,630
+Landsat eight data products consist of CUENTA sized and calibrated scaled digital numbers representing
+
+42
+00:03:33,630 --> 00:03:42,470
+the multispectral image acquired by O'Reilley and Tiara's sensors that can be converted to top of atmosphere,
+
+43
+00:03:42,720 --> 00:03:49,530
+reflectance and regencies values by using the radiometric rescaling coefficients as described in the
+
+44
+00:03:49,530 --> 00:03:58,110
+LANSAT USGS guide Level one LANSAT since it was the highest available data quality and declared Estevan
+
+45
+00:03:58,710 --> 00:04:01,980
+11 tipi product here on the site slide.
+
+46
+00:04:03,010 --> 00:04:09,190
+And are considered suitable for time series analysis, so those are top of atmosphere, reflectance
+
+47
+00:04:09,190 --> 00:04:17,950
+product, USGS offers on demand service, reflectance data product or level two product service reflectance
+
+48
+00:04:17,950 --> 00:04:23,800
+products provide an estimate of the surface spectrum reflectance as it would be measured at ground level
+
+49
+00:04:24,040 --> 00:04:30,310
+in the absence of atmospheric scattering absorption, surface reflectance values are scaled between
+
+50
+00:04:30,310 --> 00:04:31,600
+zero and 100.
+
+51
+00:04:31,810 --> 00:04:41,350
+But we can also use this level one Tier one product and applied Masferrer correction in gas, for example,
+
+52
+00:04:41,830 --> 00:04:49,490
+as we will learn during this course to scale our digital no values to surface reflectance.
+
+53
+00:04:50,080 --> 00:04:56,440
+In general, I recommend you to use the level two products, especially if you walk molted in parallel.
+
+54
+00:04:56,470 --> 00:05:02,620
+Since there are geometry of surface, reflectance is more comparable between seasons, or at least with
+
+55
+00:05:02,620 --> 00:05:06,310
+LANSAT, our L1 tippity A1 product.

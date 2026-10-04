@@ -1,0 +1,275 @@
+1
+00:00:00,270 --> 00:00:01,540
+Welcome back, students.
+
+2
+00:00:01,560 --> 00:00:08,910
+And now we are continuing our exercise on a flat in mapping with Google Earth engine using Sentinel
+
+3
+00:00:08,910 --> 00:00:10,330
+data as an input data.
+
+4
+00:00:10,650 --> 00:00:19,020
+So now, as we have produced images where clouds and cloud shadows are masked, we can actually move
+
+5
+00:00:19,020 --> 00:00:28,560
+to another analysis itself and calculate normalized different water index from the previous short video.
+
+6
+00:00:28,590 --> 00:00:30,210
+You already know what it is.
+
+7
+00:00:30,210 --> 00:00:37,860
+Normalized difference for the index and what it stands for and how to calculate it from Sentinel Sentinel
+
+8
+00:00:37,950 --> 00:00:39,240
+to images here.
+
+9
+00:00:39,270 --> 00:00:48,570
+Basically, this is a function where we define how we apply, how we calculate normalized difference
+
+10
+00:00:48,570 --> 00:00:49,370
+in index.
+
+11
+00:00:50,100 --> 00:00:57,540
+If you can see they're basically the function is very similar to what we will be able to envision.
+
+12
+00:00:57,550 --> 00:01:02,710
+Devi basically is just different bands that we take as an input.
+
+13
+00:01:02,730 --> 00:01:08,000
+So here we just defined the function and then we ran on the same map.
+
+14
+00:01:08,550 --> 00:01:10,980
+Let me change this terminology.
+
+15
+00:01:10,980 --> 00:01:22,460
+Bitmap Andere w I index map our function of an I over cloud three Sentinel Collection.
+
+16
+00:01:22,470 --> 00:01:30,230
+After this we select maximum value of normal and normalized different water index.
+
+17
+00:01:30,570 --> 00:01:43,080
+And for this we use basically they're created here images the new the newly created images and we apply
+
+18
+00:01:45,330 --> 00:01:53,120
+newly created images of normalized difference, what the index and we apply a function of maximum.
+
+19
+00:01:53,130 --> 00:01:54,840
+And here we can print it.
+
+20
+00:01:54,840 --> 00:01:58,570
+We can see what the what the result will look like.
+
+21
+00:01:58,590 --> 00:02:07,890
+So the result is basically you can see here it is one image because we just took maximum value with
+
+22
+00:02:07,890 --> 00:02:08,580
+one bent.
+
+23
+00:02:08,580 --> 00:02:15,900
+And you can also see there basically the range of the values from minus one to one, which is what we
+
+24
+00:02:15,900 --> 00:02:18,660
+need, as well as geographic information.
+
+25
+00:02:19,530 --> 00:02:21,050
+What I would like to say.
+
+26
+00:02:21,070 --> 00:02:28,710
+So that was something that you have to note, that here we take as an input our images cloud free images
+
+27
+00:02:28,710 --> 00:02:33,240
+and we map a function that we define here.
+
+28
+00:02:33,330 --> 00:02:41,570
+But here we just and the result of this step by the closest two steps is that collection.
+
+29
+00:02:41,580 --> 00:02:47,490
+But with this step here, we already the result is just one image.
+
+30
+00:02:47,490 --> 00:02:54,420
+So we reduce our collection to on the maximum value of normalized difference what the index for our
+
+31
+00:02:54,420 --> 00:02:55,910
+selected period of time.
+
+32
+00:02:55,920 --> 00:03:03,510
+Yeah, well, then we need to set the threshold, as I have explained in a theoretical video, where
+
+33
+00:03:03,510 --> 00:03:09,270
+we say what is water, what is not water regarding the thresholds, the thresholds are different.
+
+34
+00:03:09,310 --> 00:03:09,620
+Yeah.
+
+35
+00:03:10,500 --> 00:03:15,560
+Basically sometimes you see the threshold of point five, sometimes six point one.
+
+36
+00:03:15,850 --> 00:03:25,200
+So so basically it's also one of the points where you as an analyst can can check the different options
+
+37
+00:03:25,200 --> 00:03:28,560
+and see what would better suit your own study area.
+
+38
+00:03:29,010 --> 00:03:31,890
+So here we declare a variable threshold.
+
+39
+00:03:31,890 --> 00:03:46,200
+And since we have created Maximum and Dubai and indeed I as a one image, we can now produce use arithmetical
+
+40
+00:03:47,490 --> 00:03:52,860
+arithmetical calculations with this with this image.
+
+41
+00:03:52,880 --> 00:03:59,400
+So basically what I say, please deliver to me all the values which are greater the our thresholds and
+
+42
+00:03:59,400 --> 00:04:00,210
+our thresholds.
+
+43
+00:04:00,210 --> 00:04:00,950
+Point five.
+
+44
+00:04:00,960 --> 00:04:01,250
+Yeah.
+
+45
+00:04:01,920 --> 00:04:05,640
+And the final piece of the code is set in.
+
+46
+00:04:06,600 --> 00:04:12,150
+Well, here I have experiment with this visualization and come up with this idea.
+
+47
+00:04:12,270 --> 00:04:19,440
+But you're from the previous video, as you already know, that you can also just map your layer as
+
+48
+00:04:19,440 --> 00:04:28,590
+an output and then you can create here visualization with this beautiful button where you can basically
+
+49
+00:04:28,950 --> 00:04:31,840
+can change the visualisation parameters.
+
+50
+00:04:32,910 --> 00:04:35,690
+So this is our output.
+
+51
+00:04:35,780 --> 00:04:41,400
+Let me zoom in and make my screen a little bit smaller.
+
+52
+00:04:41,430 --> 00:04:50,540
+So first, as in in red is our sentinel images, which I can just take or take off.
+
+53
+00:04:50,550 --> 00:04:53,880
+And here is our water mask.
+
+54
+00:04:53,880 --> 00:04:59,670
+Maybe if I use satellite view is better, then we can zoom in to some.
+
+55
+00:05:00,240 --> 00:05:08,190
+Area of here is dalla-riva, because we are working with Dubuisson and we can see now what actually
+
+56
+00:05:08,190 --> 00:05:11,610
+we mapped with normalized different water index.
+
+57
+00:05:12,450 --> 00:05:14,520
+Let me zoom again.
+
+58
+00:05:16,710 --> 00:05:23,400
+The thing is that I'm not sure which date of this image we are looking at here, so it's also a bit
+
+59
+00:05:23,400 --> 00:05:23,960
+trickier.
+
+60
+00:05:24,300 --> 00:05:32,460
+So I'm not sure the underlying background image from Google or Assange from which day to this and whether
+
+61
+00:05:32,460 --> 00:05:34,000
+it corresponds to our.
+
+62
+00:05:35,850 --> 00:05:40,470
+Yeah, it doesn't correspond because here we can already see that there was more water here.
+
+63
+00:05:40,470 --> 00:05:49,300
+But basically we can also see that this index is really in some cases, it's really nicely.
+
+64
+00:05:49,320 --> 00:05:53,220
+It can identify water, though, here already.
+
+65
+00:05:53,220 --> 00:06:01,860
+We can see that the threshold is really underperforming because this definitely is not is not water,
+
+66
+00:06:01,860 --> 00:06:07,230
+its reputation as Hill and it was marked as water by this index.
+
+67
+00:06:07,230 --> 00:06:14,640
+So this also means that we can play with a threshold and see what will be the outcome.
+
+68
+00:06:14,910 --> 00:06:22,560
+So basically, this is one method to do flood mapping with Google Earth engine.
+
+69
+00:06:22,740 --> 00:06:24,990
+And I see you in the next to be doing.

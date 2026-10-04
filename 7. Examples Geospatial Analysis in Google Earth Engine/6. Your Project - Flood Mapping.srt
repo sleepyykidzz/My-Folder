@@ -1,0 +1,111 @@
+1
+00:00:00,330 --> 00:00:01,540
+Welcome back, students.
+
+2
+00:00:01,560 --> 00:00:11,160
+And now it's time to give actually some tasks for you, practical tasks for you to start applying now
+
+3
+00:00:11,160 --> 00:00:14,520
+the geospatial analysis and Google Earth engine by yourself.
+
+4
+00:00:14,550 --> 00:00:20,230
+So after you have completed flood mapping exercise by yourself, I would like to ask you the following.
+
+5
+00:00:20,850 --> 00:00:25,260
+First of all, please run the same code for a different period.
+
+6
+00:00:25,260 --> 00:00:26,740
+What difference you observe.
+
+7
+00:00:27,090 --> 00:00:34,800
+So if you want to do it simple, you can just change the dates of sentinel images for the period of
+
+8
+00:00:34,800 --> 00:00:35,070
+time.
+
+9
+00:00:35,070 --> 00:00:39,470
+You want to look at the results and just play with this.
+
+10
+00:00:39,480 --> 00:00:46,390
+If you want to do it even more comprehensive, you can shortly shuttle Google what where they are.
+
+11
+00:00:46,620 --> 00:00:58,140
+Basically, they're flooding dates in in that region in Asia and then basically start looking at the
+
+12
+00:00:58,140 --> 00:01:02,030
+real flood events while both options are fine with me.
+
+13
+00:01:02,760 --> 00:01:10,230
+Question to play with a threshold increase of two point five to point decreases to point one and see
+
+14
+00:01:10,230 --> 00:01:13,810
+the differences and look at the differences that you observe.
+
+15
+00:01:13,860 --> 00:01:14,210
+Yeah.
+
+16
+00:01:14,400 --> 00:01:16,510
+So this is a question of the threshold.
+
+17
+00:01:16,530 --> 00:01:18,620
+It's often a very sensitive issue.
+
+18
+00:01:18,840 --> 00:01:20,940
+So have a look on the results.
+
+19
+00:01:21,480 --> 00:01:26,520
+And question three, change the formula of normalized different water index.
+
+20
+00:01:26,530 --> 00:01:32,810
+So I was calculated is it with let me see this band of.
+
+21
+00:01:35,630 --> 00:01:42,730
+With a band aid and band, well, but there is also an option to calculate the same index with Bantry
+
+22
+00:01:42,770 --> 00:01:47,060
+and Band Aid, so try to do that and then reapply.
+
+23
+00:01:47,060 --> 00:01:53,120
+Question one and question to look at the differences, what you observe and make a conclusion.
+
+24
+00:01:53,150 --> 00:01:58,930
+What would be the best threshold to monitor flood mapping for your study area?
+
+25
+00:01:59,210 --> 00:02:02,710
+What and what would be their best band combinations?
+
+26
+00:02:02,720 --> 00:02:06,510
+By the way, you are not linked to specific this specific area.
+
+27
+00:02:06,530 --> 00:02:10,460
+You can move it to any study area you are more interested in.
+
+28
+00:02:11,120 --> 00:02:12,230
+See your next video.

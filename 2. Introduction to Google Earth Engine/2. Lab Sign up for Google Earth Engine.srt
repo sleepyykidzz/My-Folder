@@ -1,0 +1,171 @@
+1
+00:00:00,180 --> 00:00:06,260
+Welcome, students in this region lecture, I'm going to tell you how to sign up for Google Earth Engine,
+
+2
+00:00:06,540 --> 00:00:10,410
+our planetary scale platform for Earth science data and analysis.
+
+3
+00:00:10,440 --> 00:00:13,760
+We are going to use it for some classification purposes.
+
+4
+00:00:13,770 --> 00:00:21,270
+So I would encourage you to follow my advice and to sign up for Google Earth engine as soon as possible,
+
+5
+00:00:21,570 --> 00:00:25,600
+because the activation of your account is taken some days.
+
+6
+00:00:26,010 --> 00:00:27,360
+So here's a link.
+
+7
+00:00:27,390 --> 00:00:32,790
+You can see it here on the top menu of the website where you can come.
+
+8
+00:00:33,210 --> 00:00:38,140
+And if you just Google, for example, here, when I just Google Google Earth engine you, it is the
+
+9
+00:00:38,190 --> 00:00:42,000
+first link that will come up here on the website.
+
+10
+00:00:42,000 --> 00:00:45,270
+You would find a lot of interesting information nowadays.
+
+11
+00:00:45,270 --> 00:00:52,950
+Google Earth Engine is one of their most important and popular cloud platforms which are used for remote
+
+12
+00:00:52,950 --> 00:00:53,400
+sensing.
+
+13
+00:00:53,400 --> 00:00:55,290
+Then Gayus analysis.
+
+14
+00:00:55,290 --> 00:01:03,080
+Its capabilities are amazing because Google collect in all freely available data and store on its servers.
+
+15
+00:01:03,090 --> 00:01:06,840
+And what is more, you can access them quite on.
+
+16
+00:01:08,130 --> 00:01:11,640
+Or just on on on fly through this platform.
+
+17
+00:01:12,030 --> 00:01:17,660
+So here you see there is a link on the right, which is called sign up.
+
+18
+00:01:17,970 --> 00:01:26,550
+You have to basically just click sign up and then you will be directed to their menu, which will allow
+
+19
+00:01:26,550 --> 00:01:27,450
+you to sign up.
+
+20
+00:01:28,710 --> 00:01:37,310
+Something you have to bear in mind is that in order to sign up, you have to have a Gmail account.
+
+21
+00:01:37,650 --> 00:01:44,310
+So two steps that you need is first to create a Gmail account and then Visa's Gmail account.
+
+22
+00:01:44,310 --> 00:01:47,280
+You would be able to sign up for Google or engine.
+
+23
+00:01:47,460 --> 00:01:49,790
+And in a few days, sometimes it takes longer.
+
+24
+00:01:49,800 --> 00:01:53,250
+Sometimes it takes fewer days.
+
+25
+00:01:53,250 --> 00:01:57,910
+You would be able to look into your Google Earth engine account.
+
+26
+00:01:58,440 --> 00:02:02,910
+What is interesting here, you can have a look on the frequently asked questions.
+
+27
+00:02:03,030 --> 00:02:07,380
+This will give you some understanding of what Google or Ascencion is.
+
+28
+00:02:07,740 --> 00:02:17,400
+Also, timelapse is quite interesting information because it allows you to look at some case studies
+
+29
+00:02:17,400 --> 00:02:20,700
+which were done in Google or search engine, for example.
+
+30
+00:02:20,700 --> 00:02:25,530
+Here we can see some animations so you can exploit.
+
+31
+00:02:27,550 --> 00:02:35,590
+Let, for example, drying of the Aral Sea would become one of those cool animations that is done with
+
+32
+00:02:35,740 --> 00:02:40,610
+this Landsat images which were created by Google Earth engine platforms to have a look on it.
+
+33
+00:02:40,960 --> 00:02:45,420
+And finally, what we are going to work with is there is a code editor.
+
+34
+00:02:45,970 --> 00:02:56,500
+So this is basically a code editor of Google Earth Engine is this kind of platform which allows us to
+
+35
+00:02:56,500 --> 00:03:06,240
+assess all the archive of satellite images and other geospatial data from our Google Earth engine.
+
+36
+00:03:06,610 --> 00:03:10,060
+So as you as you can see, it is a console based.
+
+37
+00:03:10,070 --> 00:03:13,460
+So we are going to use JavaScript for this.
+
+38
+00:03:13,480 --> 00:03:19,600
+So if you have time and you are really interested in this topic, you can also have a look on their
+
+39
+00:03:21,040 --> 00:03:22,990
+code documentation.
+
+40
+00:03:23,200 --> 00:03:31,920
+You can have a look on their interface and also do some tutorials to get to know basic JavaScript.
+
+41
+00:03:32,680 --> 00:03:33,340
+That's it.
+
+42
+00:03:34,060 --> 00:03:35,830
+Signed up for Google Earth Engine.
+
+43
+00:03:35,830 --> 00:03:37,210
+And so you in the next video.

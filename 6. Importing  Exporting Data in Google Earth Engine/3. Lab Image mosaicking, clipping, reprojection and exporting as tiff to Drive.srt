@@ -1,0 +1,343 @@
+1
+00:00:00,390 --> 00:00:01,620
+Welcome back, students.
+
+2
+00:00:01,650 --> 00:00:09,240
+And in this video, I'm going to continue with the topic of exporting and imported data from and to
+
+3
+00:00:09,240 --> 00:00:15,240
+Google Earth engine, and I'm going to show you another example when we are going to use Sentinel to
+
+4
+00:00:15,270 --> 00:00:20,460
+image and we are going to apply several manipulations with this same age.
+
+5
+00:00:20,480 --> 00:00:33,120
+We are going first to filter it by date, by geometry and also by, um, uh, by geometry and date.
+
+6
+00:00:33,510 --> 00:00:39,660
+And then we are going to preselect bands that we want to work with, with Ibbitson Satellite Sentinel
+
+7
+00:00:39,680 --> 00:00:40,110
+Image.
+
+8
+00:00:40,410 --> 00:00:45,200
+As you might remember, Centinela has a lot of bands, but I'm going to show you this.
+
+9
+00:00:45,900 --> 00:00:50,900
+And finally, we are going to visualize this image.
+
+10
+00:00:50,910 --> 00:00:56,310
+We are going then to clip to our study area, which is in in Paris, in France.
+
+11
+00:00:56,880 --> 00:01:05,280
+And, uh, then I'm going to show you how we can reproduce this image and export it, as it did to our
+
+12
+00:01:05,280 --> 00:01:14,160
+Google Drive that will be available from there to download and we can further use it inputted to other
+
+13
+00:01:14,160 --> 00:01:15,300
+software packages.
+
+14
+00:01:15,870 --> 00:01:17,310
+So let's get started.
+
+15
+00:01:17,940 --> 00:01:24,060
+Basically, the first in which we have to do is to improve Centinela image.
+
+16
+00:01:24,720 --> 00:01:31,310
+I'm using here Sentinel Multispectral, uh, collection level at once.
+
+17
+00:01:31,710 --> 00:01:41,880
+C But if you basically click on this link, then you would be directed to the documentation about Sentinel
+
+18
+00:01:42,210 --> 00:01:49,200
+to multispectral instrument as well as you can see it, the general description of this product, what
+
+19
+00:01:49,200 --> 00:01:54,440
+kind of the product it is then what kind of bands and how and what.
+
+20
+00:01:54,750 --> 00:01:56,100
+That's what I mean.
+
+21
+00:01:56,100 --> 00:02:04,530
+It has not a few bands like not five or six or eight bands or even five bands like Landside, but has
+
+22
+00:02:05,070 --> 00:02:15,180
+it's a multispectral basically a product you much product with the 12 bands in a different part of the
+
+23
+00:02:15,180 --> 00:02:16,830
+electromagnetic spectrum.
+
+24
+00:02:17,130 --> 00:02:25,980
+And then we have also one, two, three, four different quality bands, which gives us a different
+
+25
+00:02:25,980 --> 00:02:29,160
+quality information about our product.
+
+26
+00:02:29,730 --> 00:02:32,630
+Then you can also have a look at the image properties.
+
+27
+00:02:32,640 --> 00:02:41,080
+Its image properties could also be used to filter for the filter out our image collections, as well
+
+28
+00:02:41,140 --> 00:02:42,510
+as the terms of use.
+
+29
+00:02:42,510 --> 00:02:46,680
+That's basically about this project, about this product.
+
+30
+00:02:47,940 --> 00:02:56,040
+And, um, basically I have recreated this polygon over the Paris in France.
+
+31
+00:02:56,040 --> 00:02:59,910
+And, uh, we are going to work over this area.
+
+32
+00:02:59,910 --> 00:03:07,230
+For example, this line, you already know, we just sent out a map of our area.
+
+33
+00:03:07,230 --> 00:03:15,090
+And here I just changed the name of a label of fentanyl to just my geometry as opposed to imports.
+
+34
+00:03:15,390 --> 00:03:18,630
+And here I am basically filtering by date.
+
+35
+00:03:18,630 --> 00:03:27,340
+So we are looking at the time span from the force of or from the 1st of April till 18th of 2019 till
+
+36
+00:03:27,780 --> 00:03:35,850
+well, we can extend it to current date, which is 25th of July 2020.
+
+37
+00:03:36,690 --> 00:03:39,030
+And we also feel threatened by violence.
+
+38
+00:03:39,030 --> 00:03:45,690
+And we can print this part to see how much, uh, how many images we have.
+
+39
+00:03:45,960 --> 00:03:50,100
+So much computing in which collection is still computing.
+
+40
+00:03:50,760 --> 00:03:51,780
+Take some time.
+
+41
+00:03:52,410 --> 00:03:59,010
+Well, and, uh, we are also not, um, interested in all bands for our expert.
+
+42
+00:03:59,010 --> 00:04:03,450
+We just want to have the bands, uh, which are useful for us.
+
+43
+00:04:03,450 --> 00:04:08,880
+So it should be banned from band one to through to band twelve.
+
+44
+00:04:08,880 --> 00:04:16,320
+So this we are mentioning by selecting just the number of the bands, the names of the bands that we're
+
+45
+00:04:16,320 --> 00:04:17,090
+interested in.
+
+46
+00:04:17,940 --> 00:04:25,490
+Well, this is an important and interesting part of our quote.
+
+47
+00:04:25,500 --> 00:04:29,040
+And this what we didn't talk with you in such a detail.
+
+48
+00:04:29,460 --> 00:04:36,630
+So here I'm basically mazing creating a music room and I'm not using all images.
+
+49
+00:04:36,630 --> 00:04:44,280
+I want to create a mosaic of Centinela to images and only for the bands I'm interested in.
+
+50
+00:04:44,760 --> 00:04:49,200
+So I'm doing a mosaic in to cover my study area.
+
+51
+00:04:50,400 --> 00:04:52,200
+OK, this looks much better.
+
+52
+00:04:52,230 --> 00:05:01,290
+Yeah, it's cloud free image, so this is how to create a mosaic in case your study area does not fall
+
+53
+00:05:01,290 --> 00:05:04,500
+within one of granule of Centinela, too.
+
+54
+00:05:04,920 --> 00:05:14,310
+This is very helpful and important function to use and you can always search for it.
+
+55
+00:05:15,150 --> 00:05:16,860
+Specification in the hub.
+
+56
+00:05:16,860 --> 00:05:22,500
+So Mosaic, functional composites, all the images in collection using the mask.
+
+57
+00:05:22,500 --> 00:05:30,480
+And here is arguments that it takes basically image collection that you have created, visualization
+
+58
+00:05:30,480 --> 00:05:31,100
+parameters.
+
+59
+00:05:31,110 --> 00:05:34,340
+You already know how to create them, how to change them.
+
+60
+00:05:34,350 --> 00:05:38,210
+You can basically adjust your visualization parameters here.
+
+61
+00:05:38,580 --> 00:05:39,960
+So we're here.
+
+62
+00:05:39,960 --> 00:05:50,010
+I use what's called a composite with a band aid as a need for the red band, for band, for as a green
+
+63
+00:05:50,010 --> 00:05:52,280
+bed and bansuri as a blue band.
+
+64
+00:05:52,340 --> 00:05:58,080
+Yeah, but again, here you can adjust it and input again as a part of your script.
+
+65
+00:05:59,310 --> 00:06:08,040
+Well, this code is adding you much to their to the mapu.
+
+66
+00:06:08,070 --> 00:06:14,670
+And here is a nice part of our code which we didn't talk with you in in detail.
+
+67
+00:06:14,670 --> 00:06:25,530
+So sometimes you would like to import your export, your images arrested data vector data doesn't matter
+
+68
+00:06:25,560 --> 00:06:27,960
+in a particular geographic projection.
+
+69
+00:06:27,960 --> 00:06:32,710
+And for this you can use a function which is called project.
+
+70
+00:06:32,730 --> 00:06:41,310
+So basically in this line, what we do, we clip our image to our polygon, to the geometry of our polygon,
+
+71
+00:06:41,310 --> 00:06:47,880
+and we are projecting it to the data that we are interested in.
+
+72
+00:06:48,810 --> 00:06:56,040
+And finally, this is an expert in part of the script here.
+
+73
+00:06:56,040 --> 00:07:06,420
+We use expert image to drive function and we specify in this library we specify the properties of our
+
+74
+00:07:06,420 --> 00:07:07,010
+expert.
+
+75
+00:07:07,380 --> 00:07:11,230
+So we say that it should be our projected team.
+
+76
+00:07:11,430 --> 00:07:19,590
+So basically, what kind of image we would like to, uh, to to to expert description of the scene,
+
+77
+00:07:19,610 --> 00:07:29,020
+which shows its name, how it will appear a scale scale is a resolution at which you want to expert.
+
+78
+00:07:29,070 --> 00:07:33,000
+So basically, remember that the Google Earth engine does not know this by default.
+
+79
+00:07:33,000 --> 00:07:39,540
+So you have to say this rich region and maximum number of pixels.
+
+80
+00:07:39,660 --> 00:07:42,270
+Yeah, there's also something to do with the size.
+
+81
+00:07:42,760 --> 00:07:47,070
+And this is helpful to specify, though.
+
+82
+00:07:47,070 --> 00:07:48,130
+Not necessarily.
+
+83
+00:07:48,840 --> 00:07:56,700
+Well, as I run already this code, what you will see as an output of this code will be the task which
+
+84
+00:07:57,000 --> 00:08:06,660
+will will be available here and the task window of Google or Ascension Code editor and if you run into
+
+85
+00:08:06,660 --> 00:08:14,190
+it, will be automatically added to your Google Drive asset.
+
+86
+00:08:14,490 --> 00:08:21,000
+So you can basically go to your Google Drive and fetch it from their.

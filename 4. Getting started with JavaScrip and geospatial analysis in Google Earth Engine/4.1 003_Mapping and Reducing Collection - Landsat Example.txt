@@ -1,0 +1,15 @@
+// Code Link https://code.earthengine.google.com/08e435afc2b43261caf9b6d104a48932
+
+//Lab: Mapping and Reducing Collection - Landsat Example
+
+var landsat = ee.ImageCollection("LANDSAT/LC8_L1T")
+    .filterDate('2016-01-01', '2017-01-01')
+    .filterBounds(geometry)
+
+var composite = ee.Algorithms.Landsat.simpleComposite({
+  collection: landsat,
+  asFloat: true
+})
+
+Map.addLayer(composite, {bands: ["B4", "B3", "B2"], min:0, max: 0.3}, "RGB")
+Map.centerObject(geometry, 11)

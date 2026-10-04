@@ -1,0 +1,243 @@
+1
+00:00:00,180 --> 00:00:05,820
+Welcome back, students, in this video, I'm going to briefly introduce to the variety of data so that
+
+2
+00:00:05,820 --> 00:00:07,640
+you can access in Google Earth.
+
+3
+00:00:08,580 --> 00:00:15,270
+So in order to access those data sets and to see the overview, you should go to the main page of Google
+
+4
+00:00:15,270 --> 00:00:17,910
+Earth engine and go to the data set.
+
+5
+00:00:18,510 --> 00:00:26,740
+Then a new tab will be opened where you can see those datasets grouped by their function.
+
+6
+00:00:27,300 --> 00:00:36,090
+So while you as you remember, Google Earth engine has petabytes of the data available and they collect
+
+7
+00:00:36,090 --> 00:00:44,310
+all options open upon open and available data sets and in just those openly available data sets to the
+
+8
+00:00:44,310 --> 00:00:52,980
+Google infrastructure to be stored in Google server and B and that could be accessed by us through our
+
+9
+00:00:52,980 --> 00:00:53,940
+Web browsers.
+
+10
+00:00:54,310 --> 00:01:03,570
+So as good as you can see, there is a variety of datasets that are raster datasets that are designed
+
+11
+00:01:03,570 --> 00:01:12,870
+to describe our climate and weather, including surface temperature, climate, atmospheric data sets,
+
+12
+00:01:12,870 --> 00:01:13,700
+weather.
+
+13
+00:01:13,920 --> 00:01:21,090
+And in order if you want to see some details, you have to basically click on exposed temperature data,
+
+14
+00:01:21,090 --> 00:01:28,830
+which will give you some details about the temperature data sets available in Google Earth engine for
+
+15
+00:01:28,830 --> 00:01:29,240
+us.
+
+16
+00:01:29,580 --> 00:01:35,460
+What is going to be important since we are going to work with land use, land cover mapping, with machine
+
+17
+00:01:35,460 --> 00:01:36,770
+learning algorithms?
+
+18
+00:01:36,780 --> 00:01:43,320
+It's basically the input data for classification supervised or unsupervised learning tasks.
+
+19
+00:01:43,590 --> 00:01:46,860
+And this is usually a satellite images.
+
+20
+00:01:47,040 --> 00:01:55,170
+And the images which we are going to work will be, for example, Landsat Sentinel, while you can also
+
+21
+00:01:55,170 --> 00:02:01,800
+work with modules and there are also some high resolution imagery available for you asked, for example,
+
+22
+00:02:01,800 --> 00:02:04,390
+from National Agriculture Imagery Program.
+
+23
+00:02:05,880 --> 00:02:15,480
+Well, you in order to see what kind of Landsat data sets available, you can go to explore data Landsat.
+
+24
+00:02:15,480 --> 00:02:19,530
+And here there will be Landsat collections and their descriptions.
+
+25
+00:02:19,530 --> 00:02:23,610
+So you can see that all the answers are basically present there.
+
+26
+00:02:23,850 --> 00:02:29,880
+And if you go to lunch at 8:00, you can see that there is different products like surface reflectance
+
+27
+00:02:29,880 --> 00:02:32,070
+product is the best product for us.
+
+28
+00:02:33,470 --> 00:02:40,790
+And because it is atmospherical corrected, dramatically corrected and allfirst, the data as a service
+
+29
+00:02:40,790 --> 00:02:45,560
+reflectance is there is also a product of top of atmosphere and images.
+
+30
+00:02:45,860 --> 00:02:54,440
+And here there is, for example, one if you click this is their description of the name of the product
+
+31
+00:02:54,680 --> 00:02:59,980
+you directly have or ASCENCION snippet.
+
+32
+00:02:59,990 --> 00:03:06,680
+So how you have to call your or your basically your image collection if you want to use Landser data
+
+33
+00:03:06,950 --> 00:03:07,830
+for your code.
+
+34
+00:03:07,880 --> 00:03:10,870
+This will be their code, how it should be written.
+
+35
+00:03:11,120 --> 00:03:14,440
+And here is a very nicely let let click it.
+
+36
+00:03:14,450 --> 00:03:14,860
+Yeah.
+
+37
+00:03:15,170 --> 00:03:28,760
+So when you are clicking on this small link, this will bring LANSAT image directly into your, into
+
+38
+00:03:28,760 --> 00:03:29,390
+your code.
+
+39
+00:03:30,590 --> 00:03:31,050
+Yeah.
+
+40
+00:03:31,070 --> 00:03:32,030
+So it's basically.
+
+41
+00:03:33,690 --> 00:03:45,270
+I will open a piece of code which is available already written for you by Google team, which shows
+
+42
+00:03:45,270 --> 00:03:46,500
+you how to
+
+43
+00:03:49,090 --> 00:03:52,410
+to import LANSAT collection.
+
+44
+00:03:52,410 --> 00:03:57,930
+And also there is already written for you some functions.
+
+45
+00:03:57,930 --> 00:04:09,510
+For example, how to mask clouds and cloud, cloud shadows in landside use in quality bands available
+
+46
+00:04:09,510 --> 00:04:10,430
+for Lanzetta.
+
+47
+00:04:10,620 --> 00:04:12,930
+So this is very helpful indeed.
+
+48
+00:04:13,200 --> 00:04:21,240
+Other interesting data sets, of course I'm going just back, Sentinel data said, because it's also
+
+49
+00:04:21,240 --> 00:04:29,550
+loofahs were high spatial resolution images that could be readily used for land use, land for classification.
+
+50
+00:04:29,790 --> 00:04:38,070
+And for those of you who would like to work on a modest scale, which is starting from 2000 250 meter
+
+51
+00:04:38,400 --> 00:04:39,330
+per pixel.
+
+52
+00:04:39,360 --> 00:04:47,190
+This could be also an interesting option, especially if you are intending to do some serious analysis
+
+53
+00:04:47,190 --> 00:04:50,550
+for land degradation studies of a drought assessment team.
+
+54
+00:04:51,450 --> 00:04:58,070
+There is also a geophysical parameters, such as digital elevation models, which could be very important,
+
+55
+00:04:59,100 --> 00:05:02,190
+also data set for a variety of applications.
+
+56
+00:05:02,520 --> 00:05:08,040
+There are also already available and cover products that you can access directly from Google or Sinjin,
+
+57
+00:05:08,040 --> 00:05:08,580
+for example.
+
+58
+00:05:08,580 --> 00:05:11,740
+Modest and cover is already available here.
+
+59
+00:05:12,120 --> 00:05:19,320
+We have some cropland data here on Google Earth engine, especially a very nice one for us.
+
+60
+00:05:19,800 --> 00:05:25,530
+And there are another geophysical data that you could explore, such as, for example, here, which
+
+61
+00:05:25,530 --> 00:05:30,030
+is shown is the nightlights dataset.

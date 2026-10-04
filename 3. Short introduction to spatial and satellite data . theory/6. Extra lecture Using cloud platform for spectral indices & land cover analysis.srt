@@ -1,0 +1,767 @@
+1
+00:00:00,580 --> 00:00:06,230
+Welcome back, students, today in this video, I'm going to show you an amazing possibilities that
+
+2
+00:00:07,030 --> 00:00:09,190
+it offers by cloud computing.
+
+3
+00:00:09,640 --> 00:00:16,140
+And in this video, I'm not going to talk about Google Earth engine, as you have had expected.
+
+4
+00:00:16,470 --> 00:00:20,740
+We're going to talk about Google Earth engine and the full lectures.
+
+5
+00:00:21,070 --> 00:00:29,050
+But here, I'm going to show you one very useful platform that is maintained by European Space Agency,
+
+6
+00:00:29,050 --> 00:00:33,350
+which is called EPOP, rather than your stays for Earth observation.
+
+7
+00:00:33,700 --> 00:00:37,250
+So what is very interesting and useful about this platform?
+
+8
+00:00:37,270 --> 00:00:45,640
+Well, basically, this platform allows the organization of different types of special datasets and
+
+9
+00:00:45,640 --> 00:00:54,190
+imagery, such as from the European Space Agency, Satellite Sentinel one Sentinel two, three and four
+
+10
+00:00:54,400 --> 00:01:04,410
+Landsat modules, probably as well as digital elevation model for the areas all around the world especially.
+
+11
+00:01:04,420 --> 00:01:15,130
+It is very handy for people who wants to work with the Sentinel images because sentinels European Space
+
+12
+00:01:15,130 --> 00:01:23,140
+Agency satellites and therefore it is a platform to look for sentinel images.
+
+13
+00:01:23,830 --> 00:01:31,330
+But here it's also a cloud computing platform which allows to compute different spectral indices from
+
+14
+00:01:32,050 --> 00:01:37,060
+those sensors on the fly and quickly visualize it for your study area.
+
+15
+00:01:37,870 --> 00:01:44,800
+So for this example, I'm going to work in Europe, but you can do it for anyplace in the world.
+
+16
+00:01:45,040 --> 00:01:52,010
+And the link for this Sentinel, hop your observation browser, you can see here.
+
+17
+00:01:52,420 --> 00:02:03,970
+So but basically, if you just go to the Google and here type in your browser, you will be directly
+
+18
+00:02:04,810 --> 00:02:09,310
+directed to the Sentinel type or separation browser.
+
+19
+00:02:09,320 --> 00:02:12,850
+It's very, very easy to to to use and work.
+
+20
+00:02:12,860 --> 00:02:21,830
+So this is the first window which you see if you just open up or separation browser, you will see that
+
+21
+00:02:21,850 --> 00:02:23,320
+it is a complete agoraphobe.
+
+22
+00:02:23,320 --> 00:02:34,890
+Sentinel images and Lassard images from the from the European Space Agency archive.
+
+23
+00:02:35,170 --> 00:02:41,500
+So that's not a full archive of those LANZETTA images, but from the part that is maintained by ESA.
+
+24
+00:02:42,440 --> 00:02:48,220
+But also, as I said, it's very nice to to look OK here.
+
+25
+00:02:48,220 --> 00:02:58,100
+You have to work to two options to continue with tutorial or just close this in which I'm going to do.
+
+26
+00:02:58,150 --> 00:03:04,630
+And as you can see, on the right hand side, there are different tools.
+
+27
+00:03:04,670 --> 00:03:07,450
+I'm going to show you how to work with them later on.
+
+28
+00:03:07,780 --> 00:03:15,950
+While on the left hand side, we have an option to choose satellites with which we would like to work.
+
+29
+00:03:16,390 --> 00:03:24,600
+So the first thing to do is to choose a place where you would like to compute or visualize our images
+
+30
+00:03:25,030 --> 00:03:27,630
+and let's go to run.
+
+31
+00:03:27,640 --> 00:03:28,780
+It's already here.
+
+32
+00:03:28,780 --> 00:03:37,840
+But basically what you have to do is to type in the name of the place in this search window and select
+
+33
+00:03:38,140 --> 00:03:41,770
+the one that is that is your study area.
+
+34
+00:03:42,580 --> 00:03:50,190
+After this, we have to go to the search and select images which we would like to search for.
+
+35
+00:03:50,260 --> 00:03:52,760
+I am going to use Sentinel, too.
+
+36
+00:03:53,110 --> 00:03:54,670
+There is also a question mark.
+
+37
+00:03:54,680 --> 00:04:00,330
+If you click on it, then you will see all information about Centinela Tool.
+
+38
+00:04:00,670 --> 00:04:02,710
+So what you what you can read here.
+
+39
+00:04:02,710 --> 00:04:08,890
+The Sentinel Tool provides High-Resolution images in the visible and infrared wavelengths to monitor
+
+40
+00:04:08,890 --> 00:04:13,160
+vegetation, soil and water, cover inland waterways and coastal areas.
+
+41
+00:04:13,510 --> 00:04:18,520
+So this is a perfect satellite to monitor environmental and land applications.
+
+42
+00:04:19,360 --> 00:04:22,970
+Special resolution, again, very important characteristics.
+
+43
+00:04:23,260 --> 00:04:27,530
+It is 10, 20 meter and 16 meters depending on the violence.
+
+44
+00:04:28,220 --> 00:04:28,570
+Yeah.
+
+45
+00:04:29,600 --> 00:04:36,140
+And you can also click on my information and read more about different characteristics of Centinela
+
+46
+00:04:36,140 --> 00:04:38,960
+to revisit time maximum five days.
+
+47
+00:04:40,480 --> 00:04:47,500
+To revisit the same area using both satellites, why both Satellite Sentinel, too, is a constellation
+
+48
+00:04:47,500 --> 00:04:53,020
+of two satellites and not to walk to a center to be data availability.
+
+49
+00:04:53,050 --> 00:05:02,020
+That's important because sentinel images are available since June 2015, while global average since
+
+50
+00:05:02,020 --> 00:05:03,560
+March 2017.
+
+51
+00:05:03,850 --> 00:05:11,560
+So if you would like to monitor your area before this date, it means that maybe central to is not a
+
+52
+00:05:12,130 --> 00:05:16,330
+good place because it's actually is not available.
+
+53
+00:05:17,050 --> 00:05:22,330
+OK, and here you can see that it's commonly used for land column that will then change the direction
+
+54
+00:05:22,330 --> 00:05:25,710
+of vegetation monitoring and monitoring of land areas.
+
+55
+00:05:25,710 --> 00:05:31,410
+So different environmental applications about which we are talking in this in this course.
+
+56
+00:05:32,230 --> 00:05:32,890
+All right.
+
+57
+00:05:34,000 --> 00:05:36,710
+Here is there is also advanced search.
+
+58
+00:05:36,730 --> 00:05:37,960
+Let me activate it.
+
+59
+00:05:38,260 --> 00:05:47,320
+And here you have two options so you can either use that 11 see product, which is not atmospherical
+
+60
+00:05:47,320 --> 00:05:52,960
+correct project or out to a product which is atmospherical corrected product.
+
+61
+00:05:53,230 --> 00:05:58,540
+And of course, I recommend you to use this, though it depends on your applications.
+
+62
+00:05:58,960 --> 00:06:06,400
+So sometimes this product actually sufficient, for example, for vegetation industries when you during
+
+63
+00:06:06,400 --> 00:06:08,340
+this could be sufficient.
+
+64
+00:06:08,830 --> 00:06:12,370
+But what is important is maximum cloud coverage.
+
+65
+00:06:12,670 --> 00:06:20,790
+So of course, we want since Sentinel to optical data set, we always want to have as less images of
+
+66
+00:06:20,850 --> 00:06:22,260
+with clouds as possible.
+
+67
+00:06:22,690 --> 00:06:29,460
+So for the purpose of the demonstration, I am going to put maximum cloud coverage to zero.
+
+68
+00:06:29,680 --> 00:06:33,910
+But that again, depends on your application and your expectations.
+
+69
+00:06:34,940 --> 00:06:45,530
+After this time range and time range, we have to specify the date for which we are searching for images
+
+70
+00:06:45,980 --> 00:06:52,180
+that go to the summer months that go, for example, to August this year.
+
+71
+00:06:52,190 --> 00:07:03,080
+And I'm going to select a window of the whole month to be sure that I can see and find cloud free images
+
+72
+00:07:03,560 --> 00:07:08,440
+from it is not that hard since it is quite in the south, in Europe.
+
+73
+00:07:08,930 --> 00:07:14,960
+And then I will hit the button search after this.
+
+74
+00:07:14,990 --> 00:07:26,540
+In the left hand side, you can see the result of your search so we can go down and look at the different
+
+75
+00:07:26,540 --> 00:07:28,310
+possibilities and select.
+
+76
+00:07:28,670 --> 00:07:35,410
+Well, for example, here is a nice image with a zero cloud cover.
+
+77
+00:07:35,420 --> 00:07:41,900
+It was acquired on 13th of August at 10 o'clock ute's.
+
+78
+00:07:42,290 --> 00:07:46,520
+And we can visualize this image for this.
+
+79
+00:07:46,530 --> 00:07:52,850
+You just have to click visualize and your request is processed on the cloud.
+
+80
+00:07:52,850 --> 00:08:00,860
+Depending on your Internet connection and Internet speed, it could be very fast or it could take a
+
+81
+00:08:00,860 --> 00:08:01,400
+while.
+
+82
+00:08:01,970 --> 00:08:03,290
+But here you go.
+
+83
+00:08:03,330 --> 00:08:14,540
+We can see now our study area covered by Sentinel to image and as default that your browser shows the
+
+84
+00:08:14,540 --> 00:08:15,890
+true color composite.
+
+85
+00:08:16,820 --> 00:08:24,560
+And then we have I have been talking about Truecaller composite false color composite in our introduction
+
+86
+00:08:25,220 --> 00:08:26,730
+to remote sensing course.
+
+87
+00:08:26,780 --> 00:08:31,040
+So the part of this course, which refers to remote sensing crash course.
+
+88
+00:08:31,040 --> 00:08:39,020
+But here you can if you click on this arrow next to the Truecaller composites, you can read again,
+
+89
+00:08:39,410 --> 00:08:46,270
+what does a true color composite, what events are used for Truecaller Composite and for Santtana.
+
+90
+00:08:46,280 --> 00:08:53,140
+And if you need more information, there are even more links provided, while also you have learned
+
+91
+00:08:53,140 --> 00:08:59,720
+that for some applications of color composite, I need it and I have just clicked on it.
+
+92
+00:08:59,720 --> 00:09:08,120
+And the false color composite composite is calculated on the cloud and you can nicely and will not.
+
+93
+00:09:08,120 --> 00:09:12,420
+It will now naturally visualize our study area.
+
+94
+00:09:12,890 --> 00:09:21,170
+So you remember that first color composite, which is based in our case on the bench eight four three
+
+95
+00:09:21,500 --> 00:09:28,410
+are usually used for highlighting a specific Latvala type in their study area.
+
+96
+00:09:28,700 --> 00:09:37,400
+So in this case, you say all vegetation is what is is visualized with the red color.
+
+97
+00:09:37,700 --> 00:09:45,350
+And this kind of color composite is very is very useful for.
+
+98
+00:09:46,460 --> 00:09:50,670
+Vegetation monitoring because of vegetation shows in red.
+
+99
+00:09:50,690 --> 00:10:00,530
+So we can very nicely see the vegetated areas, by the way, you can also them and go around your study
+
+100
+00:10:00,530 --> 00:10:10,160
+area and to see the city even in more detail, setting out to have a special resolution of an average
+
+101
+00:10:10,160 --> 00:10:11,020
+20 meters.
+
+102
+00:10:11,060 --> 00:10:14,820
+So it's actually quite a deal.
+
+103
+00:10:14,840 --> 00:10:17,640
+So here's, for example, Vatican City.
+
+104
+00:10:17,900 --> 00:10:26,630
+This is City Center from and the this amazing that you can all and you can see this on the cloud without
+
+105
+00:10:27,680 --> 00:10:29,220
+having to download that, you might.
+
+106
+00:10:30,380 --> 00:10:39,680
+OK, so this is one of the strands of this cloud computing platforms that you can actually already check
+
+107
+00:10:39,680 --> 00:10:43,640
+out your images without having to download them.
+
+108
+00:10:43,670 --> 00:10:49,940
+So the speed up the process and up to then you can, of course, download the image and work on the
+
+109
+00:10:49,940 --> 00:10:57,830
+local intelligence and your computer, but does a fast visualization tool and to check the quality of
+
+110
+00:10:57,830 --> 00:10:59,750
+the data is is perfect.
+
+111
+00:11:00,650 --> 00:11:09,320
+OK, but in this video, I wanted to talk more about spectral indexes and spectral indices are specific
+
+112
+00:11:09,590 --> 00:11:19,810
+band combinations computed from one set of satellite image that are used for specific applications for
+
+113
+00:11:19,820 --> 00:11:30,290
+and for monitoring of specific features of light colors and one of the most used vegetation indices
+
+114
+00:11:30,890 --> 00:11:33,290
+and analyze different vegetation index.
+
+115
+00:11:33,740 --> 00:11:41,280
+The normalized different vegetation index is a simple but effective index for quantifying green vegetation.
+
+116
+00:11:41,660 --> 00:11:46,010
+So it's used to monitor how much attention it is.
+
+117
+00:11:46,010 --> 00:11:51,740
+A measure of the state of vegetation has based on how plants reflect light at certain wavelengths.
+
+118
+00:11:52,220 --> 00:11:59,840
+The value range of the individual is from one minus one to one, and negative values often divide correspond
+
+119
+00:11:59,840 --> 00:12:00,540
+to water.
+
+120
+00:12:00,710 --> 00:12:07,090
+So sometimes that divide is also used to detect what the what is also negative.
+
+121
+00:12:07,770 --> 00:12:14,240
+I just could be used to detect the location of what an image.
+
+122
+00:12:15,520 --> 00:12:23,640
+OK, there is an auction of more information, and I clicked this link and you can see that here is
+
+123
+00:12:23,650 --> 00:12:26,390
+a general description of in Dubai.
+
+124
+00:12:26,680 --> 00:12:35,710
+It also shows how and Dubai's computed a different using different satellites because a bunch of different
+
+125
+00:12:35,710 --> 00:12:38,480
+satellites are a bit different.
+
+126
+00:12:38,500 --> 00:12:42,510
+So we have LANSAT here, modest marriage data.
+
+127
+00:12:42,520 --> 00:12:50,440
+And of course, for Sentinel combination, you can see the patterns that they used for Dubai calculation
+
+128
+00:12:50,440 --> 00:12:54,250
+directly here on the top of our generation browser.
+
+129
+00:12:54,910 --> 00:13:01,360
+Then there is the color, a legend as well as the reference used to create this page.
+
+130
+00:13:01,370 --> 00:13:10,000
+Of course, this is not a very precise reference to this index was not created by Wikipedia, but by
+
+131
+00:13:10,850 --> 00:13:17,170
+arrows back in the 80s, late in the 70s, beginning in the 80s.
+
+132
+00:13:17,560 --> 00:13:22,050
+So that was a father up, but not Wikipedia.
+
+133
+00:13:22,390 --> 00:13:24,790
+But this was already quite a nice thing.
+
+134
+00:13:24,790 --> 00:13:33,370
+But and also here there is a custom script that could be used with Sentinel Web services that you can
+
+135
+00:13:33,580 --> 00:13:35,470
+also explore later on.
+
+136
+00:13:36,390 --> 00:13:45,390
+OK, there is another false color composite that is used to monitor and visualize urbanized areas more
+
+137
+00:13:45,390 --> 00:13:52,380
+clearly, so it's based on the combination of setting autobahns 12, 11 and 14.
+
+138
+00:13:52,830 --> 00:13:58,110
+So you can you could also visualize the street about description and see.
+
+139
+00:13:58,120 --> 00:14:06,750
+But the interesting part for you and there are more in this is somewhat more -- index, Monomyth Difference
+
+140
+00:14:06,750 --> 00:14:14,040
+Moisture Index, and we are going to work with it a little bit later in our Google Earth engine, part
+
+141
+00:14:14,050 --> 00:14:14,810
+of the course.
+
+142
+00:14:15,480 --> 00:14:20,270
+But first of all, there is two different numbers, different vegetation index.
+
+143
+00:14:20,340 --> 00:14:29,550
+One is the one that is visualized here is based on this combination of bands and is used to determine
+
+144
+00:14:29,550 --> 00:14:36,120
+vegetation, water content, and therefore it's usually used for drought applications to monitor monitoring,
+
+145
+00:14:36,120 --> 00:14:37,260
+especially stress.
+
+146
+00:14:38,100 --> 00:14:39,930
+What is stress in vegetation?
+
+147
+00:14:40,840 --> 00:14:42,900
+But there is also not much difference.
+
+148
+00:14:44,700 --> 00:14:51,660
+What the index that is more that is the most appropriate for what embodied body, Maiken, and we are
+
+149
+00:14:51,660 --> 00:14:58,860
+going to use this part, this enormous difference, what the index that is used based on slightly different,
+
+150
+00:14:58,860 --> 00:15:05,090
+that combination for later for flat monitoring map.
+
+151
+00:15:06,270 --> 00:15:12,300
+There is also an index, which is sort which is called normalized difference, no index, which is used
+
+152
+00:15:12,750 --> 00:15:20,940
+to monitor snow services surfaces, which is for all, is not actually helpful at all because there
+
+153
+00:15:20,940 --> 00:15:25,980
+is no snow or very seldom and not in August.
+
+154
+00:15:26,010 --> 00:15:34,260
+And of course, there is the same classification map which is used based on that specific Centinela
+
+155
+00:15:34,260 --> 00:15:40,480
+to classification algorithm for which you can actually assess information here.
+
+156
+00:15:41,220 --> 00:15:47,490
+Oh, and in general, this classification was developed to distinguish between cloudy pixels, clear
+
+157
+00:15:47,490 --> 00:15:54,420
+pixels and what a pixels of sentinel do to date as a result of the assassin's classification algorithm
+
+158
+00:15:54,870 --> 00:16:00,450
+of different classification are provided, including class of clouds, vegetation, soil wouldn't snow
+
+159
+00:16:00,450 --> 00:16:04,800
+does not constitute a plant color classification map in a strict sense.
+
+160
+00:16:05,220 --> 00:16:07,050
+But that's amazing.
+
+161
+00:16:07,050 --> 00:16:16,380
+You can do actually at a supervised classification of your study area, just with Centinela images just
+
+162
+00:16:16,380 --> 00:16:17,880
+by one click.
+
+163
+00:16:18,180 --> 00:16:20,130
+So that's actually amazing.
+
+164
+00:16:20,670 --> 00:16:26,910
+The question comes probably you are now wondering whether you can use this data, download this data
+
+165
+00:16:26,910 --> 00:16:28,280
+and not just visualize it.
+
+166
+00:16:28,560 --> 00:16:30,810
+And of course, you can do it.
+
+167
+00:16:30,810 --> 00:16:37,500
+But for this, you have to first begin to create your login information so you can log in it.
+
+168
+00:16:37,500 --> 00:16:47,910
+And then it will be that the downloading of the images will will be a very straightforward and possible.
+
+169
+00:16:48,830 --> 00:16:56,450
+And very easy to do, and you can also not only download the Sentinel to image as a right image, but
+
+170
+00:16:56,450 --> 00:17:03,240
+of course you could be able to download all of these different products available here.
+
+171
+00:17:03,590 --> 00:17:11,870
+What is more, there is also a very nice customized tool which has this very interesting
+
+172
+00:17:14,660 --> 00:17:19,340
+animation that you could just track different bands.
+
+173
+00:17:20,750 --> 00:17:30,890
+And create your own visualization of center, not so much, for example, or there is also a possibility
+
+174
+00:17:31,250 --> 00:17:39,500
+to create or calculate index that is not by default provided by first observation browser.
+
+175
+00:17:39,530 --> 00:17:44,150
+You see, this also works pretty amazingly.
+
+176
+00:17:44,150 --> 00:17:49,910
+And the computer computation I'm just dragging now and drop in random bands.
+
+177
+00:17:49,910 --> 00:17:54,500
+And you see the calculations are done on the fly, on the cloud.
+
+178
+00:17:54,690 --> 00:17:58,640
+And then you could also download your computed indices.
+
+179
+00:17:58,880 --> 00:18:06,650
+And you can if you want, you can even create customized thresholds of that you could apply to your
+
+180
+00:18:06,650 --> 00:18:07,100
+image.
+
+181
+00:18:07,670 --> 00:18:17,150
+And finally here, you can also even load your customized script to run it and to implement some calculations
+
+182
+00:18:17,150 --> 00:18:20,510
+on the cloud using our application, the browser.
+
+183
+00:18:20,780 --> 00:18:30,610
+So all in all, I think that this tool is very helpful, very useful when you would like to work with
+
+184
+00:18:30,620 --> 00:18:35,780
+us with data, especially with data from the European Space Agency.
+
+185
+00:18:35,900 --> 00:18:39,920
+And you need to compute some spectral indices.
+
+186
+00:18:40,190 --> 00:18:41,170
+And that is done.
+
+187
+00:18:41,630 --> 00:18:44,150
+Very simple, very straightforward.
+
+188
+00:18:44,450 --> 00:18:54,080
+And you can not only just visualize your data and indices with this tool, you can also even do customization
+
+189
+00:18:54,080 --> 00:18:58,580
+of spectral indices and you can download the data expurgated.
+
+190
+00:18:58,580 --> 00:19:07,190
+And later on, for example, work with and Devi in pujas for any other applications, too, that you
+
+191
+00:19:07,190 --> 00:19:07,580
+have.
+
+192
+00:19:07,940 --> 00:19:14,900
+So that's definitely a very nice tool worth exploring and worth of checking out.

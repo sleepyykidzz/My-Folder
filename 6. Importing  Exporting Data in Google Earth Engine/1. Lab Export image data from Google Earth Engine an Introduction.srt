@@ -1,0 +1,187 @@
+1
+00:00:00,510 --> 00:00:01,820
+Welcome back, students.
+
+2
+00:00:01,890 --> 00:00:07,270
+In this video, I'm going to show you how to perform experts in Google Earth engine.
+
+3
+00:00:07,320 --> 00:00:14,550
+So basically we're starting from the point of view when we have created an unhealthy image.
+
+4
+00:00:16,680 --> 00:00:24,520
+We have a map and DBI and we have created a buffer zone, which is a Rasta layer.
+
+5
+00:00:24,540 --> 00:00:26,660
+So this is from previous examples.
+
+6
+00:00:27,210 --> 00:00:27,720
+What now?
+
+7
+00:00:27,720 --> 00:00:35,390
+We would like we would like to expert and DIBBY maximum and DBI to our Google Drive.
+
+8
+00:00:35,760 --> 00:00:41,070
+Basically, the experts in Google Earth engine are two step processes.
+
+9
+00:00:42,060 --> 00:00:52,880
+First, we have to either export our image to the Google Earth drive or you have an option to export
+
+10
+00:00:52,920 --> 00:00:55,440
+it to the Google Earth cloud storage.
+
+11
+00:00:55,690 --> 00:01:01,020
+But of course, for this you have to buy Google or cloud storage and pay for this.
+
+12
+00:01:01,680 --> 00:01:11,490
+Essentially, the a function of a browser expert in Google search engine is a function and here it is
+
+13
+00:01:11,490 --> 00:01:15,210
+written we use expert image dot to drive.
+
+14
+00:01:15,240 --> 00:01:23,580
+So if you have cloud storage to cloud storage and as you can see, this is a dictionary where we specify
+
+15
+00:01:25,080 --> 00:01:31,000
+our arguments, image, what kind of image we want to take the description region.
+
+16
+00:01:31,020 --> 00:01:38,100
+So basically, we don't want to exploit the hole in Dubai for the whole world, which is essentially
+
+17
+00:01:38,100 --> 00:01:39,140
+computed here.
+
+18
+00:01:39,150 --> 00:01:42,720
+Yeah, but only for our region of interest.
+
+19
+00:01:43,140 --> 00:01:47,790
+And if you remember, our region of interest was basically an.
+
+20
+00:01:53,040 --> 00:01:54,250
+Around Baffour.
+
+21
+00:01:54,390 --> 00:02:06,750
+Yeah, but what you have to bear in mind that this this is not going to be our region when when we are
+
+22
+00:02:06,750 --> 00:02:09,510
+going to apply it and map it over our own.
+
+23
+00:02:09,970 --> 00:02:16,620
+So when we are going to export our endevour, only four region isn't going to be to have a circular
+
+24
+00:02:18,120 --> 00:02:23,460
+shape because essentially this is basically not a circle.
+
+25
+00:02:23,460 --> 00:02:27,030
+It's Sarastro, because we create in here a buffer zone here.
+
+26
+00:02:27,360 --> 00:02:36,680
+So how to say how to know what is going to be a boundaries of our of our expert?
+
+27
+00:02:36,690 --> 00:02:41,630
+You can use it by looking at the bounding boxes of this thrust.
+
+28
+00:02:41,670 --> 00:02:51,090
+And for this you can use here this function bounce and you can just keep the default and let's run it
+
+29
+00:02:52,050 --> 00:02:52,920
+in such a way.
+
+30
+00:02:52,950 --> 00:02:58,190
+Now you can see that now the circle is changed to the rectangular shape.
+
+31
+00:02:58,200 --> 00:03:05,370
+And this is of course, this is understandable because our region is basically a Rasta file.
+
+32
+00:03:05,610 --> 00:03:06,370
+What does it mean?
+
+33
+00:03:06,390 --> 00:03:12,080
+It means that individual values will be our NDB idea.
+
+34
+00:03:12,090 --> 00:03:12,810
+Here it is.
+
+35
+00:03:12,840 --> 00:03:17,910
+It's going to be clipped over this region.
+
+36
+00:03:18,210 --> 00:03:19,110
+Valencia.
+
+37
+00:03:20,850 --> 00:03:24,560
+Well, you have to specify scale on which you are working.
+
+38
+00:03:24,570 --> 00:03:28,320
+And of course, you can specify projection.
+
+39
+00:03:28,320 --> 00:03:30,490
+You want to work that set.
+
+40
+00:03:30,510 --> 00:03:41,880
+And when we run this task, you can see on the right hand side in the task panel that there is already
+
+41
+00:03:41,880 --> 00:03:47,100
+a task which could be now run.
+
+42
+00:03:47,340 --> 00:03:51,420
+If I click run, it will take this image and divide you much.
+
+43
+00:03:51,420 --> 00:03:57,330
+It will create it in my Google Drive and from my Google Drive.
+
+44
+00:03:57,540 --> 00:04:01,770
+I could export it to my computer and work in it for.
+
+45
+00:04:02,430 --> 00:04:02,700
+Yes.
+
+46
+00:04:02,710 --> 00:04:11,790
+So basically, essentially, it was about how to export images from Google Earth engine to your Google
+
+47
+00:04:11,790 --> 00:04:13,140
+Drive and computer.

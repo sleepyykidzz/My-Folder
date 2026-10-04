@@ -1,0 +1,647 @@
+1
+00:00:00,120 --> 00:00:02,560
+Welcome back, students, in this video.
+
+2
+00:00:02,580 --> 00:00:09,480
+I'm going to introduce you to the iteration functions in Google Earth Engine we are going to use for
+
+3
+00:00:09,480 --> 00:00:11,760
+this and example of drought monitoring.
+
+4
+00:00:12,270 --> 00:00:20,600
+So basically, in the previous videos, you have learned how we can map a function over the entire collection.
+
+5
+00:00:20,610 --> 00:00:28,440
+Let's say we have Landsat images and we could map our function of a whole collection of Landsat images
+
+6
+00:00:28,440 --> 00:00:33,330
+for the sit and study area we have preselected in order to calculate and divide.
+
+7
+00:00:34,050 --> 00:00:38,720
+And but sometimes we do need to apply iteration functions.
+
+8
+00:00:38,750 --> 00:00:47,490
+So, for example, why we have to calculate something iteratively, which means that the result of previous
+
+9
+00:00:47,490 --> 00:00:51,690
+steps are used as an input for the upcoming steps.
+
+10
+00:00:51,690 --> 00:01:00,930
+And very good example for this is actually is to use this to use drought, because droughts, when we
+
+11
+00:01:00,930 --> 00:01:07,470
+are monitoring drought, is often iteration, which is needed to address and function is used.
+
+12
+00:01:08,250 --> 00:01:15,770
+So in our example here, I'm going to use in this example for iteration.
+
+13
+00:01:15,780 --> 00:01:23,880
+I'm going to use a precipitation precipitation data dataset, precipitation data for the time, going
+
+14
+00:01:23,880 --> 00:01:31,350
+to use this called first, then we can have a look on it together with you.
+
+15
+00:01:32,280 --> 00:01:38,850
+So basically, it is a daily kwassa global precipitation product that spans for the period from 1983
+
+16
+00:01:39,090 --> 00:01:40,050
+to present.
+
+17
+00:01:40,080 --> 00:01:44,160
+The data is produced quarterly with a typical lack of three months.
+
+18
+00:01:44,940 --> 00:01:46,770
+Yes, here's some information.
+
+19
+00:01:46,800 --> 00:01:50,400
+How it is collected from where it is produced.
+
+20
+00:01:50,850 --> 00:01:53,390
+Then you can also have a look on the band.
+
+21
+00:01:53,400 --> 00:01:54,270
+So the band.
+
+22
+00:01:54,280 --> 00:02:02,510
+So precipitation in millimeters with minimum weather of zero maximum 718 dumps a few citations.
+
+23
+00:02:02,520 --> 00:02:06,050
+And if you want to use the data directly, you can improve it.
+
+24
+00:02:06,060 --> 00:02:12,000
+So, I mean, I have just inputted previously, but you can just interpret it and it's going to be the
+
+25
+00:02:12,000 --> 00:02:14,590
+same, basically the same result.
+
+26
+00:02:14,610 --> 00:02:16,170
+I can just rename this.
+
+27
+00:02:19,690 --> 00:02:21,520
+And do it here.
+
+28
+00:02:23,170 --> 00:02:27,670
+Yeah, so in such a way, we have interpreted the data.
+
+29
+00:02:27,940 --> 00:02:38,110
+So now what we have to do is to basically filter our data for a certain period of time that we are interested
+
+30
+00:02:38,110 --> 00:02:38,560
+in.
+
+31
+00:02:39,010 --> 00:02:44,440
+In my case, am I in this example, I'm going to use a span of one year.
+
+32
+00:02:44,680 --> 00:02:52,390
+So the data from the 2019, this is for you, you could basically filtered according to your like.
+
+33
+00:02:52,390 --> 00:02:56,570
+And also here I'm going to work on the global level if you want.
+
+34
+00:02:56,590 --> 00:03:06,870
+You can always just focus on this on under certain area by filtering by borders function.
+
+35
+00:03:07,210 --> 00:03:17,500
+You have to, uh, actually create a function that will allow us to iterate our result, our images
+
+36
+00:03:17,500 --> 00:03:19,760
+and basically what we want to do.
+
+37
+00:03:20,260 --> 00:03:29,680
+Just to explain you, we want to analyze each of this image in our dataset from precipitation data set
+
+38
+00:03:29,680 --> 00:03:37,930
+for 2019 and to have a look and for each of the pixel in in this image to use.
+
+39
+00:03:38,230 --> 00:03:43,060
+If there is a precipitation, we would like to assign a new value of one.
+
+40
+00:03:43,420 --> 00:03:50,770
+And if there is no precipitation, we would like to assign a value of.
+
+41
+00:03:53,310 --> 00:04:01,260
+So another way around, if we have a precipitation event, we would like to assign a zero value to the
+
+42
+00:04:01,260 --> 00:04:06,090
+pixel and if there is a precipitation, there is no precipitation.
+
+43
+00:04:06,120 --> 00:04:12,920
+We will assign value one that this we will do for each of these images.
+
+44
+00:04:12,930 --> 00:04:23,130
+And we also look in the time consecutively how this precipitation behaves so and in such a way, we
+
+45
+00:04:23,130 --> 00:04:35,370
+would we would like to create an image which will show the maximum number of images without precipitation.
+
+46
+00:04:35,670 --> 00:04:35,970
+Why?
+
+47
+00:04:35,970 --> 00:04:40,970
+It is important because a drought is always characterized by research, but by its duration.
+
+48
+00:04:40,980 --> 00:04:41,210
+Yes.
+
+49
+00:04:41,230 --> 00:04:49,230
+So the longer is a consecutive number of the days without rain than the drought, the more severe drought
+
+50
+00:04:49,230 --> 00:04:53,340
+and the more negative impact it has on people and livelihoods.
+
+51
+00:04:53,370 --> 00:04:59,430
+Of course, it is not simple as it is because drought highly dependent a period of time.
+
+52
+00:05:00,120 --> 00:05:02,680
+It happens if it talks about agriculture.
+
+53
+00:05:02,700 --> 00:05:09,450
+So if it is outside or if it is at the beginning of the growing season in the middle of woods and it
+
+54
+00:05:09,450 --> 00:05:10,740
+will have different impact.
+
+55
+00:05:10,980 --> 00:05:12,360
+Well, this all details.
+
+56
+00:05:12,360 --> 00:05:17,610
+And you have we understand the principle behind iteration.
+
+57
+00:05:17,790 --> 00:05:21,730
+We can also fine-tune those details according to our needs.
+
+58
+00:05:22,410 --> 00:05:29,790
+So the main basically the main function that we are going to use is iterate through.
+
+59
+00:05:30,060 --> 00:05:37,380
+And here let's go to the document and read together what are and arguments for this.
+
+60
+00:05:37,980 --> 00:05:40,750
+As you can see, it takes algorithm first.
+
+61
+00:05:40,770 --> 00:05:48,640
+So first, when we would like to apply a function, we have to supply an algorithm or another function.
+
+62
+00:05:48,840 --> 00:05:58,080
+So basically the rules according to which we are going to iterate and apply it read function as well
+
+63
+00:05:58,080 --> 00:06:00,500
+as it takes a first few months.
+
+64
+00:06:00,540 --> 00:06:07,410
+So you have to take as much as a first step indicate, which you might say is going to be the first
+
+65
+00:06:08,460 --> 00:06:19,180
+state of the or of the drought and drought in order that algorithm start iteration with this first image.
+
+66
+00:06:19,680 --> 00:06:21,900
+Also, something that you have to bear in mind.
+
+67
+00:06:21,910 --> 00:06:29,680
+The iterate function does not return you much as a result, but an object.
+
+68
+00:06:29,680 --> 00:06:36,150
+So if you want to to have an image, you have to declare that it is an image which we are going to do
+
+69
+00:06:36,150 --> 00:06:36,460
+here.
+
+70
+00:06:36,480 --> 00:06:40,210
+So basically, this is what I wrote.
+
+71
+00:06:40,230 --> 00:06:45,990
+This is a final going to be a final result for our iteration.
+
+72
+00:06:46,320 --> 00:06:57,270
+We take our data and we apply to it to read function and iteration.
+
+73
+00:06:57,270 --> 00:07:03,090
+Our function is is called calculate dry days, which I'm going to expand further.
+
+74
+00:07:03,100 --> 00:07:05,170
+We are going to have to define it.
+
+75
+00:07:05,190 --> 00:07:12,740
+So there's a function that has to be written by us and provided by to the iteration algorithm.
+
+76
+00:07:13,020 --> 00:07:25,740
+And here is this image which identify the initial stage of our basically the initial stage based on
+
+77
+00:07:25,740 --> 00:07:27,990
+which direction will start.
+
+78
+00:07:28,230 --> 00:07:28,550
+Yeah.
+
+79
+00:07:28,980 --> 00:07:30,950
+So what does this initial stage.
+
+80
+00:07:31,590 --> 00:07:31,890
+Yeah.
+
+81
+00:07:31,890 --> 00:07:32,550
+What is this.
+
+82
+00:07:33,330 --> 00:07:35,310
+It's basically here variable.
+
+83
+00:07:37,230 --> 00:07:41,240
+You need initial stage and this is an empty image.
+
+84
+00:07:41,250 --> 00:07:50,880
+So what do we have to create now is to create an empty data image data set which will have a cost,
+
+85
+00:07:50,880 --> 00:07:54,120
+a constant value of zero.
+
+86
+00:07:54,120 --> 00:07:57,330
+So zero it means there is a range.
+
+87
+00:07:57,420 --> 00:08:03,860
+And then based on our we are going to use the same much in our function here.
+
+88
+00:08:04,200 --> 00:08:09,480
+And based on this, the the the values in this image are going to be updated.
+
+89
+00:08:10,980 --> 00:08:17,730
+OK, so let's first create this image so it is how much value will be zero here?
+
+90
+00:08:17,740 --> 00:08:21,760
+I'm renaming this image, so I will call it precipitation.
+
+91
+00:08:21,810 --> 00:08:26,210
+Yeah, that for us to understand better what we are doing.
+
+92
+00:08:26,220 --> 00:08:31,770
+And then I also have to change the data format.
+
+93
+00:08:32,080 --> 00:08:40,140
+I have to change it to Lorne because to match it with the other person data set.
+
+94
+00:08:40,260 --> 00:08:49,470
+What is more also what you have to my take take in mind or consider that if you say that that image
+
+95
+00:08:49,470 --> 00:08:55,330
+has a constant value of zero, this will be this assumes that our image is binary.
+
+96
+00:08:55,370 --> 00:08:55,650
+Yeah.
+
+97
+00:08:56,640 --> 00:09:04,920
+And the final, um, basically step is that we have created basically this calculate Fris function that
+
+98
+00:09:04,920 --> 00:09:09,750
+is supplied within our iterate function here.
+
+99
+00:09:10,530 --> 00:09:16,190
+So what we are going to do, we are going to do it in this function.
+
+100
+00:09:16,200 --> 00:09:17,580
+I'm going to explain here.
+
+101
+00:09:17,580 --> 00:09:23,910
+I have written all this for you to save some time, but basically we create a function.
+
+102
+00:09:24,030 --> 00:09:27,710
+Then you give us a name of the function I gave it.
+
+103
+00:09:27,720 --> 00:09:31,830
+Calculate the days you can give whatever name you want.
+
+104
+00:09:32,160 --> 00:09:34,190
+That is just should make sense for you.
+
+105
+00:09:35,370 --> 00:09:44,100
+And, uh, we have to specify to you the names of the two arguments.
+
+106
+00:09:44,110 --> 00:09:48,460
+So we are going to specify to Perabo current and previous year.
+
+107
+00:09:48,480 --> 00:09:53,490
+So current is a current state image and previous previous data image.
+
+108
+00:09:54,390 --> 00:10:03,690
+Within this function, we have to provide the variables, names and what basically we mean under this
+
+109
+00:10:03,690 --> 00:10:06,270
+variables and what should be done within the function.
+
+110
+00:10:06,570 --> 00:10:07,260
+Exactly.
+
+111
+00:10:07,710 --> 00:10:19,020
+So first of all, what we have to do, we have to take a current image within our data set and evaluate
+
+112
+00:10:19,200 --> 00:10:22,530
+each pixel value in this image.
+
+113
+00:10:22,530 --> 00:10:35,130
+And if this a pixel value is so precipitation value basically is zero, then we assign a new value of
+
+114
+00:10:35,130 --> 00:10:35,560
+one.
+
+115
+00:10:36,010 --> 00:10:36,360
+Yeah.
+
+116
+00:10:36,540 --> 00:10:43,590
+So if we have no precipitation in our current image, in our precipitation dataset, then we will assign
+
+117
+00:10:43,590 --> 00:10:44,820
+the new value of one.
+
+118
+00:10:45,280 --> 00:10:56,200
+Otherwise, if it is zero, if it is not zero, then we will assign a value of zero.
+
+119
+00:10:56,220 --> 00:10:56,480
+Yeah.
+
+120
+00:10:56,820 --> 00:11:05,220
+So in such a way, our Maskey much will evaluate each of the images in our dataset and for the images
+
+121
+00:11:05,220 --> 00:11:14,670
+where there is precipitation, we will assign a value of zero and of for the image for the pixels where
+
+122
+00:11:14,670 --> 00:11:23,070
+there is no precipitation, we will assign a new value of one and we will create as a binary mask for
+
+123
+00:11:23,070 --> 00:11:24,300
+each of our image.
+
+124
+00:11:24,960 --> 00:11:26,490
+Then what we need to do.
+
+125
+00:11:26,520 --> 00:11:33,740
+We take we can declare a variable which called last image again, you can call it whatever.
+
+126
+00:11:34,110 --> 00:11:40,470
+But what we take, we take basically we say that this is an image.
+
+127
+00:11:40,470 --> 00:11:43,340
+So previous is a mirror image here.
+
+128
+00:11:44,010 --> 00:11:51,690
+And we also declare very variable updated where we take our last image.
+
+129
+00:11:52,590 --> 00:11:59,160
+Yeah, we add our mask and multiply by our muscaria in such a way.
+
+130
+00:11:59,190 --> 00:12:07,800
+All the pixels which are percipient, which has precipitation in it, will be assigned value zero.
+
+131
+00:12:08,640 --> 00:12:18,180
+All the pixels in our images that do not have precipitation will be a sign of value one.
+
+132
+00:12:18,180 --> 00:12:20,790
+And this would be done in consecutive way.
+
+133
+00:12:20,820 --> 00:12:21,150
+Yeah.
+
+134
+00:12:21,420 --> 00:12:28,390
+So it will be done not by together but one by one.
+
+135
+00:12:28,410 --> 00:12:34,650
+So what basically we want and what we want to return is this updated image.
+
+136
+00:12:35,970 --> 00:12:37,560
+So this is our function.
+
+137
+00:12:38,220 --> 00:12:45,540
+And um, basically what we need then is to see you evaluate the result.
+
+138
+00:12:46,050 --> 00:12:47,070
+Let me run it.
+
+139
+00:12:51,600 --> 00:13:00,900
+OK, so this is while it's loading, let let us change a little bit, visualisations parameters, so
+
+140
+00:13:00,900 --> 00:13:08,250
+let's use it and let's create several values so green for.
+
+141
+00:13:10,310 --> 00:13:10,900
+Four zero.
+
+142
+00:13:11,320 --> 00:13:15,830
+So four areas where there is precipitation than then yellow.
+
+143
+00:13:17,740 --> 00:13:26,710
+And red values are those areas will be shown with no precipitation, then if you make it a little bit
+
+144
+00:13:26,710 --> 00:13:31,660
+transparent and we can see which countries are there behind it, we can apply.
+
+145
+00:13:32,950 --> 00:13:34,270
+That's as a result.
+
+146
+00:13:44,960 --> 00:13:46,400
+My ability to stretch.
+
+147
+00:14:01,570 --> 00:14:07,570
+Now, for example, he already we can see that in eastern Africa, there was up to one hundred seventy
+
+148
+00:14:07,570 --> 00:14:20,560
+six days or pixels with consecutive, I think, better to say, pixels with the consecutive days, with
+
+149
+00:14:20,560 --> 00:14:22,750
+no precipitation because it's in red.
+
+150
+00:14:23,140 --> 00:14:24,910
+Basically, you understand the idea.
+
+151
+00:14:24,910 --> 00:14:35,170
+So now we can in visually appealing way, see underlaid areas across the globe where we had consecutive
+
+152
+00:14:35,500 --> 00:14:37,600
+days of no with no rain.
+
+153
+00:14:37,600 --> 00:14:42,100
+And if we did so, how approximately severe it was.
+
+154
+00:14:42,370 --> 00:14:47,650
+If you want to use this visualization parameters later on, we just import them.
+
+155
+00:14:48,070 --> 00:14:57,970
+You can change the name for this variable and here we just add the rotation parameters for the next
+
+156
+00:14:57,970 --> 00:14:58,330
+time.
+
+157
+00:14:59,320 --> 00:15:02,800
+Servet, I ran it and basically that's it.
+
+158
+00:15:02,810 --> 00:15:14,320
+Now you know how to apply iteration functions in Google or engine and how to do it for the example of
+
+159
+00:15:14,320 --> 00:15:14,890
+drought.
+
+160
+00:15:15,220 --> 00:15:22,930
+And by the way, don't forget to know if you don't know what is or a map function does, which is was
+
+161
+00:15:22,960 --> 00:15:26,670
+also a new function that we were working with.
+
+162
+00:15:26,680 --> 00:15:36,640
+You can always go to the documents and see that roadmap water map basically and function does as about.

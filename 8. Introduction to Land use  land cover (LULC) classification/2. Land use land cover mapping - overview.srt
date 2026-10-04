@@ -1,0 +1,523 @@
+1
+00:00:00,060 --> 00:00:02,110
+Welcome, students, in this video.
+
+2
+00:00:02,160 --> 00:00:07,130
+I'm going to explain to you the main stages of supervised land use and classification.
+
+3
+00:00:07,710 --> 00:00:08,770
+Let's get started.
+
+4
+00:00:10,890 --> 00:00:16,090
+The figure on the slide summarizes the basic steps involved in a typical supervised land.
+
+5
+00:00:16,090 --> 00:00:18,330
+Josslyn Carver classification procedure.
+
+6
+00:00:19,470 --> 00:00:26,250
+The first and foremost, that analyst should decide upon the classes he would like to map, as well
+
+7
+00:00:26,250 --> 00:00:28,650
+as a preferably writes a description.
+
+8
+00:00:29,080 --> 00:00:36,240
+All classes of interest must be selected and defined carefully to classify remotely sends data successfully
+
+9
+00:00:36,510 --> 00:00:41,510
+into land use and land cover information in professional applications.
+
+10
+00:00:41,520 --> 00:00:47,820
+For example, mapping of land cover for European Union or across the United States of America.
+
+11
+00:00:48,000 --> 00:00:55,110
+S Standardized Classification Scheme containing taxonomic correct definitions of classes of information
+
+12
+00:00:55,350 --> 00:01:03,340
+that are organized according to certain logical criteria are usually used, however, for other applications.
+
+13
+00:01:03,360 --> 00:01:10,200
+It is enough just to remember that your classes should be mutually exclusive and exhaustive and possibly
+
+14
+00:01:10,200 --> 00:01:12,070
+are also hierarchical.
+
+15
+00:01:12,480 --> 00:01:13,680
+Let's say, what does it mean?
+
+16
+00:01:14,250 --> 00:01:20,750
+Mutually exclusive classes means that there is no taxonomic overlap or fuzziness of any class.
+
+17
+00:01:21,150 --> 00:01:26,430
+For example, deciduous forest and evergreen forest are distinct classes.
+
+18
+00:01:26,910 --> 00:01:33,450
+Exhaustive means that all land cover classes present present in the landscape are accounted for and
+
+19
+00:01:33,450 --> 00:01:34,890
+none has been omitted.
+
+20
+00:01:35,280 --> 00:01:43,350
+Here I means that sublevel classes, for example, single family, residential, multiple family, residential
+
+21
+00:01:43,350 --> 00:01:51,360
+housing may be here regularly combined into a higher level category, for example, residential class.
+
+22
+00:01:51,390 --> 00:01:52,230
+That makes sense.
+
+23
+00:01:52,710 --> 00:01:59,700
+This concept of hierarchy, unless you will also see is present in semi automatic classification, begins
+
+24
+00:01:59,700 --> 00:02:03,690
+when we are going to work with land use mapping in.
+
+25
+00:02:04,140 --> 00:02:09,780
+Yes, this allows simplified domestic maps to be produced when required.
+
+26
+00:02:10,170 --> 00:02:17,310
+After this, the next step after you have defined your classes is a training step in the training stage.
+
+27
+00:02:17,520 --> 00:02:24,630
+The analyst identifies representative training areas for the land covered classes he intends to map
+
+28
+00:02:24,630 --> 00:02:31,470
+and develops a numerical description or statistics of the spectral attributes of land cover type of
+
+29
+00:02:31,470 --> 00:02:32,640
+interest in the scene.
+
+30
+00:02:33,090 --> 00:02:40,260
+Next, in the classification stage, each pixel in the image dataset is categorized in total land cover
+
+31
+00:02:40,260 --> 00:02:44,160
+class, which is closely resembles to it.
+
+32
+00:02:44,820 --> 00:02:49,140
+The pixel is insufficiently similar to any training data set.
+
+33
+00:02:49,470 --> 00:02:51,450
+It is usually labeled as unknown.
+
+34
+00:02:51,990 --> 00:02:55,590
+After all, pixels in the input image have been categorized.
+
+35
+00:02:55,740 --> 00:03:00,300
+The results are present in in the output stage, which is a map.
+
+36
+00:03:00,780 --> 00:03:07,500
+After this, the analysts usually should perform accurate assessment to determine how good is his map.
+
+37
+00:03:07,830 --> 00:03:13,410
+If their accuracy assessment shows that the land use land call map is valid, then the resulting map
+
+38
+00:03:13,410 --> 00:03:15,810
+might be used in a number of different ways.
+
+39
+00:03:16,200 --> 00:03:20,640
+Through typical forms of output product to mantic maps.
+
+40
+00:03:21,030 --> 00:03:29,460
+We are going to look at this kind of output tables or statistics for the various land classes and digital
+
+41
+00:03:29,460 --> 00:03:32,850
+data files amendable to inclusion in JS.
+
+42
+00:03:33,150 --> 00:03:38,790
+In this latter case, the classification output becomes an input for various analysis.
+
+43
+00:03:39,420 --> 00:03:44,430
+So let's talk now in more detail about some of the stages that I have mentioned.
+
+44
+00:03:44,550 --> 00:03:45,020
+Now,
+
+45
+00:03:48,420 --> 00:03:54,870
+the overall objective of the training process we are now on the training stage is to assemble.
+
+46
+00:03:54,870 --> 00:04:00,900
+A set of statistics are described as spectral response pattern for each front cover type to be classified
+
+47
+00:04:00,900 --> 00:04:04,950
+in an image relative to our earlier graphical example.
+
+48
+00:04:04,950 --> 00:04:11,790
+It is during the training stage that the location, size, shape and orientation of the cloud of points
+
+49
+00:04:11,790 --> 00:04:17,340
+for each language class are determined to yield acceptable classification results.
+
+50
+00:04:17,670 --> 00:04:21,290
+Training data must be both representative and complete.
+
+51
+00:04:21,660 --> 00:04:28,890
+This means that the image analyst must develop training statistics for all spectral classes constitute
+
+52
+00:04:28,920 --> 00:04:32,450
+in each information class to be discriminated by the classifier.
+
+53
+00:04:32,970 --> 00:04:39,750
+Don't worry, this is usually a standardised step for any classification algorithm, but sometimes you
+
+54
+00:04:39,750 --> 00:04:41,550
+would also need to do it by yourself.
+
+55
+00:04:42,210 --> 00:04:49,170
+Thus, the analyst should adequately sample the spectral variation of for the information class, for
+
+56
+00:04:49,170 --> 00:04:56,100
+example, shallow water might look different from deep water and thus you have to have samples located
+
+57
+00:04:56,100 --> 00:04:59,160
+both in shallow and deep water sample.
+
+58
+00:04:59,420 --> 00:05:05,990
+Numerous small areas scattered throughout the image and finally sufficient sample size is required to
+
+59
+00:05:05,990 --> 00:05:09,830
+ensure accurate statistical descriptors of your training data.
+
+60
+00:05:10,640 --> 00:05:16,640
+Let's talk about some for the rule about some further rules when choosing training data for land cover
+
+61
+00:05:16,650 --> 00:05:25,940
+mapping, as already mentioned, and image analysis should collect training data that are representative
+
+62
+00:05:25,940 --> 00:05:31,400
+of the land cover or land use clauses of interest up to the classification scheme is adopted.
+
+63
+00:05:31,760 --> 00:05:36,500
+The sample should be enough and well distributed representative samples per class.
+
+64
+00:05:37,010 --> 00:05:43,140
+This means that you have to try to cover as much spectral variations within your class as possible.
+
+65
+00:05:43,400 --> 00:05:50,900
+For example, if all the soils in grassland region are composed of well drained sandy loam soil, then
+
+66
+00:05:50,900 --> 00:05:58,250
+it is likely that grasslands training data collected throughout the region would be representative.
+
+67
+00:05:58,280 --> 00:06:05,090
+However, if the soil conditions change across the study area, for example, one half of the region
+
+68
+00:06:05,090 --> 00:06:09,970
+has purged water watertable with moist near surface soil.
+
+69
+00:06:10,250 --> 00:06:17,090
+It is likely that grassland training data acquired in the dry soil part of the study area will not be
+
+70
+00:06:17,090 --> 00:06:23,150
+representative of the spectral conditions for grassland found in the moist soil portion of the study
+
+71
+00:06:23,150 --> 00:06:23,570
+area.
+
+72
+00:06:24,290 --> 00:06:31,250
+The easiest way to remedy this situation is to apply geographical certification for collection samples
+
+73
+00:06:31,580 --> 00:06:34,010
+during the preliminary stage of a project.
+
+74
+00:06:34,340 --> 00:06:41,060
+However, if environmental conditions are homogeneous over the area of interest or can be held constant,
+
+75
+00:06:41,390 --> 00:06:48,110
+it may be possible to extend signature's vast distances in space, significantly reducing the training,
+
+76
+00:06:48,110 --> 00:06:53,660
+cost and effort, irrespective of how trendy training areas are delineated.
+
+77
+00:06:53,960 --> 00:07:01,130
+When using any statistical base classifier that theoretically lower the limit of the number of pixels
+
+78
+00:07:01,130 --> 00:07:05,780
+that might be contained in a training set is and plus one.
+
+79
+00:07:11,180 --> 00:07:17,980
+Well, and is a no spectral band in Nevada band example, theoretically, the subject.
+
+80
+00:07:19,940 --> 00:07:25,240
+Well, in our two band example, theoretically, only three observations would be required.
+
+81
+00:07:25,250 --> 00:07:29,210
+So if the number of bands is two, two plus one, it's three.
+
+82
+00:07:29,570 --> 00:07:36,260
+If you have an image which is consist of six bands and the minimum number of samples that you have to
+
+83
+00:07:36,260 --> 00:07:37,310
+collect is seven.
+
+84
+00:07:37,940 --> 00:07:43,280
+Obviously they use a few words and three observations in the case of two band, which would make it
+
+85
+00:07:43,280 --> 00:07:49,250
+impossible to appropriately evaluate the variance in covariance of the spectral response values.
+
+86
+00:07:49,550 --> 00:07:56,480
+And this variance in covariance is always computed for statistical based classifiers, for parametric
+
+87
+00:07:56,480 --> 00:07:56,990
+methods.
+
+88
+00:07:57,710 --> 00:08:04,580
+In practice, a minimum of 10 multiply and to 100 multiply and pixels is used.
+
+89
+00:08:05,030 --> 00:08:11,030
+Since the estimates of the mean vectors and covariance mattresses improve as a number of pixels in the
+
+90
+00:08:11,030 --> 00:08:12,700
+training sense increases.
+
+91
+00:08:13,040 --> 00:08:20,550
+So, for example, the minimum number is ten multiplied by NP, which is and is a number of the bands.
+
+92
+00:08:20,570 --> 00:08:28,820
+So if you have a five band image, then the minimum pixel number of the pixel that you have to collect
+
+93
+00:08:28,820 --> 00:08:35,660
+will be 50 and but better five multiplied by one hundred five hundred.
+
+94
+00:08:36,710 --> 00:08:43,070
+Within the reasons, the more pixels that can be used in training, the better the statistical representation
+
+95
+00:08:43,070 --> 00:08:44,390
+of each spectral class.
+
+96
+00:08:45,020 --> 00:08:51,140
+When delineate an Iranian set because it is important to analyze several training sites throughout the
+
+97
+00:08:51,140 --> 00:08:51,580
+scene.
+
+98
+00:08:51,920 --> 00:08:58,550
+For example, it will be better to define the training patterns for a given class by analyzing 20 locations
+
+99
+00:08:58,550 --> 00:09:06,440
+containing 40 pixels of a given type than one location containing eight hundred pixels.
+
+100
+00:09:07,250 --> 00:09:13,730
+Dispersion of the sides throughout the thin increases the chance that the training data will be representative
+
+101
+00:09:13,730 --> 00:09:17,860
+of all variations in the cover types present in the same.
+
+102
+00:09:18,170 --> 00:09:25,190
+So you have to bear this in mind when you are going to collect your training data during our practical
+
+103
+00:09:25,190 --> 00:09:25,720
+session.
+
+104
+00:09:32,080 --> 00:09:40,810
+There are a number of ways to collect the training site data, including collection of InSitu information
+
+105
+00:09:41,470 --> 00:09:49,550
+such as through type hired person canopy closure and diameter height measurements or crop type, while
+
+106
+00:09:49,600 --> 00:09:54,970
+on screen selection of Triton data and on screen Sedin of training data.
+
+107
+00:09:55,300 --> 00:10:03,100
+You can also use spectral libraries, field measurements with field spectrometers or existant either
+
+108
+00:10:03,100 --> 00:10:04,000
+maps for this.
+
+109
+00:10:04,540 --> 00:10:12,250
+Ideally, each training site is visited in the field and its perimeter and or centroid coordinates are
+
+110
+00:10:12,250 --> 00:10:15,580
+measured directly using a GPS device.
+
+111
+00:10:16,360 --> 00:10:24,970
+But in this case, this is of course requires you to go to the area of your interest, which is not
+
+112
+00:10:24,970 --> 00:10:26,050
+often possible.
+
+113
+00:10:27,250 --> 00:10:30,950
+Well, in another example.
+
+114
+00:10:30,970 --> 00:10:34,510
+Another option would be then to use image data by itself.
+
+115
+00:10:34,510 --> 00:10:39,490
+And this is this type of analysis and type of collection of training data.
+
+116
+00:10:39,520 --> 00:10:49,930
+We are going to use in our in our course, the analyst can view the image on the computer screen and
+
+117
+00:10:49,930 --> 00:10:59,320
+select the polygon polygons or area of interest to map as a training data.
+
+118
+00:10:59,770 --> 00:11:07,810
+Must image processing systems use a kind of a rubber band tool that allows an analyst to identify detailed
+
+119
+00:11:07,810 --> 00:11:09,760
+area areas of interest?
+
+120
+00:11:10,090 --> 00:11:16,780
+Conversely, the analyst may also seed a specific location in the image using the cursor.
+
+121
+00:11:16,810 --> 00:11:22,690
+We are going to to to explore both of these options in Kuji.
+
+122
+00:11:22,740 --> 00:11:23,080
+Yes.
+
+123
+00:11:24,760 --> 00:11:31,780
+This program begins at a single secret location and dates, neighborhood and pixel values in all bands
+
+124
+00:11:31,780 --> 00:11:38,740
+of interest using criteria specified by the analyst or the fourth criteria, the CET algorithm, in
+
+125
+00:11:38,750 --> 00:11:46,540
+case it is called interest growing region that we will look at later in the lab expands outward like
+
+126
+00:11:46,540 --> 00:11:54,700
+and as long as it finds pixel spectral characteristics similar to the original set pixel, this is a
+
+127
+00:11:54,700 --> 00:12:00,390
+very effective way of collecting homogeneous training information in our practical solution.
+
+128
+00:12:00,390 --> 00:12:07,090
+And I'm going to show you both methods image classification based on the data collected on screen.
+
+129
+00:12:07,330 --> 00:12:14,350
+And also I'm going to provide you with some data collected in the field to use it for image classification.
+
+130
+00:12:14,830 --> 00:12:16,180
+That's it for today.
+
+131
+00:12:16,480 --> 00:12:18,570
+And see you in the next video.

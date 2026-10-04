@@ -1,0 +1,587 @@
+1
+00:00:00,870 --> 00:00:03,460
+Welcome back, students, in this short video.
+
+2
+00:00:03,480 --> 00:00:10,630
+I'm going to try to introduce you to JavaScript and its syntax.
+
+3
+00:00:10,650 --> 00:00:12,000
+So let's get started.
+
+4
+00:00:12,720 --> 00:00:18,630
+Basically in this is a forced video in the series, the introduction of the JavaScript.
+
+5
+00:00:18,640 --> 00:00:24,990
+First, we will start with a theoretical overview of the how to declare variables.
+
+6
+00:00:25,170 --> 00:00:28,740
+What are objects, dictionaries and function in JavaScript?
+
+7
+00:00:28,980 --> 00:00:36,510
+And then in the subsequent videos, we are going to apply it on a simple examples for remote sensing
+
+8
+00:00:36,510 --> 00:00:40,770
+and JS applications for geospatial analysis applications in Google Earth.
+
+9
+00:00:41,070 --> 00:00:48,390
+And so hopefully you would at the end of those C of this section, you would have a clearer understanding
+
+10
+00:00:48,390 --> 00:00:51,840
+on how to use JavaScript in Google Earth engine.
+
+11
+00:00:51,900 --> 00:00:53,160
+So let's get started.
+
+12
+00:00:54,060 --> 00:01:00,650
+The first one, and maybe a very important for you is how we comment as a script.
+
+13
+00:01:00,660 --> 00:01:08,070
+So line common start with two forward slashes like this line in the as it's used very often, for example,
+
+14
+00:01:08,220 --> 00:01:14,520
+to comment pieces of the script that you want to be implemented, you want to be run.
+
+15
+00:01:15,100 --> 00:01:21,450
+You can also use multiline comments that with a forward slash and a start and end with a star and a
+
+16
+00:01:21,450 --> 00:01:25,500
+forward slash as shown here and this example.
+
+17
+00:01:25,530 --> 00:01:27,410
+Yeah, basically.
+
+18
+00:01:28,800 --> 00:01:34,510
+So as I said, this could be used, for example, for explaining your code.
+
+19
+00:01:34,530 --> 00:01:34,920
+Yeah.
+
+20
+00:01:34,920 --> 00:01:40,570
+And this is a very good practice for the Ron when you will have more complex code.
+
+21
+00:01:40,590 --> 00:01:48,870
+It's very good practice to add description explanations, comment to your code to document them and
+
+22
+00:01:48,870 --> 00:01:54,840
+make them reusable also for you, because with the time we tend to forget what we have been doing.
+
+23
+00:01:55,890 --> 00:02:03,930
+Well, variables are very central part in JavaScript and they are used to store objects and a defined
+
+24
+00:02:03,930 --> 00:02:06,660
+user using the keyword waaa.
+
+25
+00:02:06,840 --> 00:02:18,750
+So basically to, uh, to declare a variable, we use a keyboard toolbar and for example, variable,
+
+26
+00:02:19,350 --> 00:02:24,300
+uh, hours equals.
+
+27
+00:02:27,860 --> 00:02:42,150
+So, yeah, so this basically in this way, we have declared verifiable and verifiable that so, I mean,
+
+28
+00:02:42,200 --> 00:02:45,710
+we're able to restore a value for what to do.
+
+29
+00:02:45,710 --> 00:02:54,260
+And in verifiable earths, we store value to let's see what will this variable return.
+
+30
+00:02:54,290 --> 00:02:59,480
+So, for example, when you want to print it, you have to write print.
+
+31
+00:02:59,510 --> 00:03:00,770
+This is a function.
+
+32
+00:03:01,160 --> 00:03:06,590
+And in the brackets you have to write what you want to print.
+
+33
+00:03:12,910 --> 00:03:25,600
+Yeah, um, so you have also to take care and not to use, uh, caps or caps letters in JavaScript,
+
+34
+00:03:25,930 --> 00:03:33,790
+so when I write print the answer you see in console, basically the code told me what to do because
+
+35
+00:03:34,630 --> 00:03:41,140
+invariably done to restore the value of what to do if I write print.
+
+36
+00:03:42,540 --> 00:03:52,860
+Their answer and ours, and then they run, right, it is their code will return the results of both
+
+37
+00:03:52,860 --> 00:03:54,140
+of my variables here.
+
+38
+00:03:54,930 --> 00:03:57,950
+So this is how to define variables.
+
+39
+00:03:58,530 --> 00:04:04,250
+We have also string or objects that start a start and end with a single quote.
+
+40
+00:04:04,260 --> 00:04:07,580
+So you can also store in the variables text.
+
+41
+00:04:07,590 --> 00:04:17,220
+So we just drink and you can for for use in this, you can basically use either single quote or double
+
+42
+00:04:17,220 --> 00:04:19,560
+quotes, but you should be consistent.
+
+43
+00:04:19,560 --> 00:04:24,540
+If you start with a single quote, you should end your statement with a single quote.
+
+44
+00:04:24,540 --> 00:04:26,010
+And if you print is.
+
+45
+00:04:35,550 --> 00:04:47,610
+And Ron, you see there this small gold return us strain, which is I am a string throwing objects,
+
+46
+00:04:47,610 --> 00:04:52,250
+can also start and end with a double quotes, but don't mix and match them.
+
+47
+00:04:52,350 --> 00:04:52,640
+Yeah.
+
+48
+00:04:52,660 --> 00:04:55,130
+So basically that's what I have just explained to you.
+
+49
+00:04:55,550 --> 00:04:56,640
+She has the same.
+
+50
+00:04:57,010 --> 00:04:58,290
+We're the same.
+
+51
+00:04:58,290 --> 00:05:04,050
+But we put a double quote and.
+
+52
+00:05:05,200 --> 00:05:06,280
+If I printed.
+
+53
+00:05:18,390 --> 00:05:26,850
+Yeah, so it will also return me a text, I'm also a strength also basically have a note that each of
+
+54
+00:05:26,850 --> 00:05:32,960
+those of your statements, it's a good practice to finish with a semicolon.
+
+55
+00:05:33,810 --> 00:05:35,410
+We can use this.
+
+56
+00:05:35,430 --> 00:05:37,980
+I used to pass parameters to a function.
+
+57
+00:05:37,980 --> 00:05:47,400
+For example, here we have a function print and we use Barondess to parse, uh, parameters into this
+
+58
+00:05:47,730 --> 00:05:48,420
+function.
+
+59
+00:05:49,620 --> 00:05:59,540
+We if we write, print and put parameters into the function, we would the return would be, uh, the
+
+60
+00:05:59,640 --> 00:06:06,370
+text that we have specified in the function print square brackets, square brackets are used for selecting
+
+61
+00:06:06,930 --> 00:06:08,430
+items within the list.
+
+62
+00:06:08,850 --> 00:06:18,120
+So basically, um, in variables, we cannot not on this, um, store the single values or a string,
+
+63
+00:06:18,390 --> 00:06:19,560
+but we can also.
+
+64
+00:06:21,410 --> 00:06:29,960
+We can also store lists like in this example, we have arrived on my list and we have three lists that
+
+65
+00:06:29,960 --> 00:06:36,530
+are three words, arguments which we pass the eggplant, apple and wheat.
+
+66
+00:06:37,190 --> 00:06:49,380
+And in the list, we that there are a location of each of the variables are a numbered.
+
+67
+00:06:49,400 --> 00:06:56,030
+So, for example, in the first location is always started with a location zero.
+
+68
+00:06:56,030 --> 00:06:56,940
+So this is zero.
+
+69
+00:06:56,960 --> 00:06:57,710
+This is one.
+
+70
+00:06:57,710 --> 00:06:58,380
+This is two.
+
+71
+00:06:58,910 --> 00:07:08,960
+So when we would like to print not the whole list, but we would like to print only the first item in
+
+72
+00:07:08,960 --> 00:07:10,900
+the list, we will write it it.
+
+73
+00:07:10,940 --> 00:07:19,980
+So print my list and we specify a location of the intended variable.
+
+74
+00:07:20,630 --> 00:07:21,040
+Yeah.
+
+75
+00:07:21,290 --> 00:07:29,710
+So if we would put here not zero but one and run it, the answer would be here Apple.
+
+76
+00:07:30,200 --> 00:07:36,650
+And if we put the location to and again run it, you see the answer would be right.
+
+77
+00:07:36,890 --> 00:07:42,050
+So there's something you have to remember that the list, the number of locations in the list start
+
+78
+00:07:42,050 --> 00:07:42,740
+with zero.
+
+79
+00:07:42,830 --> 00:07:43,240
+Yeah.
+
+80
+00:07:43,850 --> 00:07:49,370
+And what will be if we print just all variable.
+
+81
+00:07:51,740 --> 00:07:52,520
+My list.
+
+82
+00:07:56,300 --> 00:07:59,030
+Yeah, you will receive then all of this
+
+83
+00:08:01,850 --> 00:08:08,990
+all all of their items, vizontele list, so something that you have to bear in mind if you don't forget,
+
+84
+00:08:09,000 --> 00:08:17,450
+if you don't remember, which basically on which location your item is within the list, you can always
+
+85
+00:08:17,450 --> 00:08:19,090
+print the whole list.
+
+86
+00:08:19,340 --> 00:08:25,070
+And here you would see what is the location of the item you are interested in.
+
+87
+00:08:25,100 --> 00:08:25,430
+Yeah.
+
+88
+00:08:26,420 --> 00:08:27,200
+All right.
+
+89
+00:08:27,770 --> 00:08:35,150
+Curly brackets are currently brackets or braces can be used to define dictionaries and dictionaries
+
+90
+00:08:35,150 --> 00:08:37,880
+is also a very important part of JavaScript.
+
+91
+00:08:37,880 --> 00:08:43,220
+And they used it to like extend it at least.
+
+92
+00:08:43,220 --> 00:08:47,100
+And they have a value appears.
+
+93
+00:08:47,150 --> 00:08:47,550
+Yeah.
+
+94
+00:08:47,810 --> 00:08:56,310
+So, for example, in this dictionary we have three value pairs which actually mix and match.
+
+95
+00:08:56,320 --> 00:09:01,010
+You don't have to have value pairs only in with numbers or strings.
+
+96
+00:09:01,190 --> 00:09:07,610
+The first value pair is food, bread, the second color and red and the third one number.
+
+97
+00:09:07,610 --> 00:09:10,790
+And this number is 42.
+
+98
+00:09:11,480 --> 00:09:17,150
+And square brackets can be used to access dictionary items by its key and some.
+
+99
+00:09:19,430 --> 00:09:21,580
+Let's run it here.
+
+100
+00:09:21,660 --> 00:09:33,770
+What we say that we want to access within the dictionary, my dictionary, a verifiable an item which
+
+101
+00:09:35,570 --> 00:09:40,320
+key is colour and this color is red.
+
+102
+00:09:40,380 --> 00:09:40,640
+Yeah.
+
+103
+00:09:40,640 --> 00:09:48,770
+So in order to do this, we use in order to access to assess that item by its key in the dictionary,
+
+104
+00:09:48,770 --> 00:09:50,750
+we use square brackets.
+
+105
+00:09:51,620 --> 00:09:52,010
+Yeah.
+
+106
+00:09:52,790 --> 00:09:59,540
+Or you can use also the documentation to get the same result which is might be easier to, to, to,
+
+107
+00:10:00,410 --> 00:10:01,080
+to write.
+
+108
+00:10:01,130 --> 00:10:09,800
+So instead of writing a square brackets you will use my dictionary color and the results will be the
+
+109
+00:10:09,800 --> 00:10:10,120
+same.
+
+110
+00:10:10,400 --> 00:10:12,290
+So I can also write it.
+
+111
+00:10:12,650 --> 00:10:13,400
+Print.
+
+112
+00:10:17,790 --> 00:10:24,690
+My dictionary, Dot Collura Dot.
+
+113
+00:10:38,760 --> 00:10:46,740
+And the result would be a color red, and he is not defined maybe like this.
+
+114
+00:10:49,120 --> 00:10:58,750
+Yeah, so my dictionary dot color would, uh, return to US color, which is red, or if you want to
+
+115
+00:10:59,020 --> 00:11:02,910
+assess number you would write, print my dictionary number.
+
+116
+00:11:03,370 --> 00:11:03,780
+Yeah.
+
+117
+00:11:07,360 --> 00:11:08,740
+Or you can also write.
+
+118
+00:11:21,590 --> 00:11:29,430
+You if you want to assess both number and color in your dictionary, you can write to dot my dictionary,
+
+119
+00:11:29,430 --> 00:11:30,690
+but I will my dictionary.
+
+120
+00:11:30,690 --> 00:11:38,880
+And you are interested in that in in that item we just thought.
+
+121
+00:11:38,880 --> 00:11:45,350
+And the key number and you're also interested in the item which is stored under the collar.
+
+122
+00:11:45,390 --> 00:11:50,030
+And in order to write this, you can use dot notation.
+
+123
+00:11:50,250 --> 00:11:55,250
+You could also have written it with this syntax.
+
+124
+00:11:55,260 --> 00:11:59,640
+It's also correct is just a file and with the dots, maybe a much handy area.
+
+125
+00:12:01,110 --> 00:12:09,450
+And the final important, very important piece of the code, which we have to understand is the functions
+
+126
+00:12:09,450 --> 00:12:15,630
+and functions can be defined as a way to reuse code and make it easier to read well.
+
+127
+00:12:16,200 --> 00:12:27,050
+And a function usually have an argument that should you should define and you can pass into the in arguments
+
+128
+00:12:27,060 --> 00:12:28,310
+or different things.
+
+129
+00:12:28,320 --> 00:12:28,650
+Yeah.
+
+130
+00:12:28,980 --> 00:12:36,150
+Which we will see in the following examples in, um, in our upcoming lectures.
+
+131
+00:12:38,180 --> 00:12:45,590
+So here in this function, we basically we define the function, which is a string, which is string
+
+132
+00:12:45,980 --> 00:12:47,790
+and should return.
+
+133
+00:12:47,910 --> 00:12:50,000
+Uh, hello.
+
+134
+00:12:50,420 --> 00:12:51,440
+What hello.
+
+135
+00:12:51,470 --> 00:13:00,830
+And a string, uh, which we will define later, as well as, uh, exclamation sine and when we print
+
+136
+00:13:00,830 --> 00:13:01,730
+this function.
+
+137
+00:13:04,760 --> 00:13:11,120
+Yeah, the result is, hello, Walt, so again, so our function, the argument to the function was,
+
+138
+00:13:11,270 --> 00:13:19,700
+um, drin then when you pass into the function, the beginning of the function, its argument, you
+
+139
+00:13:19,700 --> 00:13:27,200
+also use you can use this controller Brackett's and you use the word argument return.
+
+140
+00:13:27,380 --> 00:13:29,180
+Hello, Blackstreet.
+
+141
+00:13:29,780 --> 00:13:33,350
+So we will have all except of string here.
+
+142
+00:13:33,360 --> 00:13:33,730
+Hello.
+
+143
+00:13:33,740 --> 00:13:38,990
+We will have another string which will define later and exclamation a sign.
+
+144
+00:13:39,830 --> 00:13:49,520
+Well it might uh at the beginning um look a little bit and not very clear, but I'm sure with our upcoming
+
+145
+00:13:49,520 --> 00:13:53,840
+examples, this JavaScript will become much more clearer for you.
+
+146
+00:13:53,840 --> 00:14:00,740
+And you would also understand that it's not that difficult to use it for your special analysis for machine
+
+147
+00:14:00,740 --> 00:14:03,920
+learning on the cloud, such as Google Earth Engine.

@@ -1,0 +1,115 @@
+1
+00:00:00,840 --> 00:00:06,600
+The topics we are going to cover in this lectures are following how to work with satellite images.
+
+2
+00:00:06,750 --> 00:00:12,250
+What are the main steps of the remote sensing image analysis for land use, land cover mapping?
+
+3
+00:00:12,630 --> 00:00:17,970
+We are going to talk about the main pre-process and steps, which is cosmetic operations, atmospheric
+
+4
+00:00:17,970 --> 00:00:20,080
+correction and geometric correction.
+
+5
+00:00:21,450 --> 00:00:28,680
+Basically, every remote sensing analyst start with the identification of the main task or AIM main
+
+6
+00:00:28,680 --> 00:00:30,000
+aim of the analysis.
+
+7
+00:00:30,540 --> 00:00:34,650
+In our case, it is to create land use land cover map.
+
+8
+00:00:36,420 --> 00:00:38,040
+Having our aim in mind.
+
+9
+00:00:38,190 --> 00:00:45,470
+We should then decide on the specific type of the images that we are going to use for our task.
+
+10
+00:00:46,140 --> 00:00:50,460
+Then we should also consider image characteristics that we need for our M.
+
+11
+00:00:50,820 --> 00:00:58,410
+For example, if you would like to to have a different crop types at the field level, your image pixel
+
+12
+00:00:58,410 --> 00:01:05,430
+sizes should be desirably below field sizes, so you have to acquire a special resolution.
+
+13
+00:01:05,430 --> 00:01:12,020
+Images for this task after you have decided on the images and the type, you should acquire them.
+
+14
+00:01:12,750 --> 00:01:18,480
+Either you should download them from the web portal or the image provider, or if you work on the cloud,
+
+15
+00:01:18,480 --> 00:01:21,420
+you do not need to download them physically to your computer.
+
+16
+00:01:21,930 --> 00:01:28,830
+After that, the next step would be to apply basic preprocessing operations that are performed on the
+
+17
+00:01:28,830 --> 00:01:36,850
+raw data of satellite images prior to its use in any further enhancement, interpretation or analysis.
+
+18
+00:01:37,380 --> 00:01:44,520
+Some of these operations are designed to correct flaws in the data, while others make the data more
+
+19
+00:01:44,760 --> 00:01:46,680
+usable for further processing.
+
+20
+00:01:47,370 --> 00:01:54,150
+Usually it consists of the following steps cosmetic operations, radiometric calibration, atmospheric
+
+21
+00:01:54,150 --> 00:01:56,380
+correction and geometric correction.
+
+22
+00:01:56,910 --> 00:02:02,310
+Currently, most of the image providers implement geometric and atmospheric correction for you.
+
+23
+00:02:02,550 --> 00:02:06,790
+But of course it depends on the level of satellite in which product that you use.
+
+24
+00:02:07,260 --> 00:02:12,390
+So I will encourage you to always check it before you start the image analysis.
+
+25
+00:02:12,810 --> 00:02:20,490
+After image processing, the following step is actually classification itself up to the classification
+
+26
+00:02:20,490 --> 00:02:21,610
+has been done.
+
+27
+00:02:21,870 --> 00:02:29,550
+We are moving to the medical analysis, which can be changed direction, Aryal calculation and other
+
+28
+00:02:30,120 --> 00:02:36,180
+manipulation with a classified map to derive the information that you are interested in.
+
+29
+00:02:36,780 --> 00:02:42,560
+Now let's talk briefly about some of this pre-process and steib that I have mentioned here.

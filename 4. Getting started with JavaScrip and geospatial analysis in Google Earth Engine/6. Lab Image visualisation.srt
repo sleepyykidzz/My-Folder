@@ -1,0 +1,259 @@
+1
+00:00:00,720 --> 00:00:07,950
+Welcome back, students, in this video, I'm going to talk about basics of image visualization and
+
+2
+00:00:08,280 --> 00:00:08,750
+ascension.
+
+3
+00:00:09,540 --> 00:00:18,240
+So we are continuing working with LANSAT collection and the first part of the quote, actually the same
+
+4
+00:00:19,270 --> 00:00:22,800
+and input in numerical collection, which is Landsat eight.
+
+5
+00:00:22,800 --> 00:00:27,240
+We are filtering by date, then we are filtering by geometry.
+
+6
+00:00:27,260 --> 00:00:36,630
+So now we are working on another part of the world in basically in Japan, just to make it more interesting
+
+7
+00:00:36,630 --> 00:00:37,230
+for us.
+
+8
+00:00:38,280 --> 00:00:49,170
+And basically, um, we also created a composite, uh, and now there are different ways how we can
+
+9
+00:00:49,960 --> 00:00:53,100
+visualize, visualize our images.
+
+10
+00:00:53,110 --> 00:01:02,420
+So basically we would like to create a true color composite from LANSAT image, from our LANSAT composite.
+
+11
+00:01:02,430 --> 00:01:04,850
+We would like to create a false color composite.
+
+12
+00:01:05,130 --> 00:01:09,870
+And we also would like to visualize Dermo Band of Landsat eight.
+
+13
+00:01:10,350 --> 00:01:15,870
+So the first arrival, the time declaring here is the true color composite.
+
+14
+00:01:15,870 --> 00:01:21,800
+And for Landsat eight, it is basically band four, three and two.
+
+15
+00:01:21,840 --> 00:01:22,220
+Yes.
+
+16
+00:01:22,290 --> 00:01:30,190
+We have to specify what kind of bands are going into this composite as well as you have to specify this
+
+17
+00:01:30,210 --> 00:01:31,530
+minimum and maximum value.
+
+18
+00:01:31,680 --> 00:01:37,880
+As you remember, we can always go to here Lalomanu and change it here.
+
+19
+00:01:37,890 --> 00:01:42,750
+For example, you can also put it here, point six, appli.
+
+20
+00:01:44,480 --> 00:01:48,290
+And see how their visualization changes here.
+
+21
+00:01:48,300 --> 00:01:56,570
+So it's it's become too dark and if I put point to and click apply, it's it is actually maybe point
+
+22
+00:01:56,570 --> 00:01:57,580
+to even better.
+
+23
+00:01:57,590 --> 00:02:01,280
+And then we can also apply different stretches here.
+
+24
+00:02:01,610 --> 00:02:10,760
+So in case you forgot how to do visualization or how to set up those parameters, you can always use
+
+25
+00:02:11,030 --> 00:02:12,800
+the help this layer here.
+
+26
+00:02:13,790 --> 00:02:14,490
+All right.
+
+27
+00:02:14,510 --> 00:02:18,830
+So I would even say that point to here maybe is a better option.
+
+28
+00:02:19,250 --> 00:02:25,490
+Then we have, um, um, infrared, uh, so forth, color composite.
+
+29
+00:02:25,490 --> 00:02:30,120
+And here basically the best combination of five, four and three.
+
+30
+00:02:30,260 --> 00:02:36,620
+So if you are in doubt what bands you should use for different Truecaller composites and fourth color
+
+31
+00:02:36,620 --> 00:02:42,500
+composites of LANSAT Centinela and or any other sensor, you can always Google it.
+
+32
+00:02:42,500 --> 00:02:48,640
+It's there are a certain combinations of the bands which are used for different purposes.
+
+33
+00:02:48,650 --> 00:02:48,940
+Yeah.
+
+34
+00:02:49,280 --> 00:02:53,330
+And we're basically the same as in the previous example.
+
+35
+00:02:53,330 --> 00:03:02,630
+Here's our false color composite and revitalization parameters as was selected end up in showing up
+
+36
+00:03:02,630 --> 00:03:03,800
+pretty much like this.
+
+37
+00:03:03,800 --> 00:03:10,580
+But again, you can always adjusted, for example, point five, let's say four two point three.
+
+38
+00:03:11,000 --> 00:03:12,700
+And how much will change.
+
+39
+00:03:12,710 --> 00:03:13,120
+Yeah.
+
+40
+00:03:14,540 --> 00:03:17,630
+So maybe actually someone would prefer one three.
+
+41
+00:03:17,960 --> 00:03:24,020
+So don't forget about this opportunities and basically this quite straightforward.
+
+42
+00:03:24,710 --> 00:03:35,240
+Uh, here we have another image that we are actually displaying and this is Taurima band of LANSAT eight
+
+43
+00:03:35,240 --> 00:03:35,950
+110.
+
+44
+00:03:36,650 --> 00:03:43,820
+And by default, if we just use the default values and to to visualize.
+
+45
+00:03:45,080 --> 00:03:51,790
+Went down in LANSAT, it will be a grayscale image, so by default, Google or Sanjayan would assign
+
+46
+00:03:52,150 --> 00:04:03,160
+the darkest values to zero, the the highest values to to to white and all the values in between will
+
+47
+00:04:03,160 --> 00:04:03,910
+be stretched.
+
+48
+00:04:04,180 --> 00:04:11,520
+Yeah, but in our case, we don't want to be from greyscale in which we want to assign a ballot.
+
+49
+00:04:11,530 --> 00:04:17,710
+And in this case, in this case, we said we wanted to have four colors.
+
+50
+00:04:17,710 --> 00:04:19,350
+Blue, red, orango.
+
+51
+00:04:19,630 --> 00:04:20,140
+Yeah.
+
+52
+00:04:20,560 --> 00:04:28,450
+And when blue will be assigned basically the darkest values that the minimum values and yellow will
+
+53
+00:04:28,630 --> 00:04:30,640
+have the brightest value.
+
+54
+00:04:30,730 --> 00:04:30,980
+Yeah.
+
+55
+00:04:31,000 --> 00:04:37,420
+So for example here you could also change it perhaps to green.
+
+56
+00:04:39,460 --> 00:04:42,700
+Let's change that check whether it will work.
+
+57
+00:04:43,630 --> 00:04:44,530
+Yes, you.
+
+58
+00:04:45,130 --> 00:04:55,000
+So basically, I just changed the orange to green and our very high values are now displayed in green.
+
+59
+00:04:55,000 --> 00:05:00,610
+So and here also you can basically change the minimum and maximum values.
+
+60
+00:05:00,610 --> 00:05:07,010
+And basically, it always depends on the values within your image and how you want to display it.
+
+61
+00:05:07,030 --> 00:05:15,790
+So this display parameters could be all looked here and customized to how you want to create how you
+
+62
+00:05:15,790 --> 00:05:16,560
+can change it.
+
+63
+00:05:16,650 --> 00:05:24,250
+Yeah, so and then we basically map in all these variables that we have just created.
+
+64
+00:05:24,250 --> 00:05:34,060
+We assign to them a new new name that we know how they are called and we center our map in in the center
+
+65
+00:05:34,060 --> 00:05:39,010
+of our point of location value that we are interested in.

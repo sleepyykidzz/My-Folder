@@ -1,0 +1,63 @@
+1
+00:00:00,180 --> 00:00:02,680
+Welcome back, students, in this short video.
+
+2
+00:00:02,730 --> 00:00:09,830
+I would like to give your first tasks for our Section four on getting started with JavaScript.
+
+3
+00:00:10,380 --> 00:00:18,630
+So since we have just introduced to the JavaScript and doing different basic things in JavaScript,
+
+4
+00:00:18,630 --> 00:00:27,750
+such as declaring variables, mapping and reducing collections or using Landsat examples and doing also
+
+5
+00:00:27,750 --> 00:00:32,460
+image visualization, I would like you to take each and every video.
+
+6
+00:00:32,520 --> 00:00:40,060
+So what we have learned during this section and to run it by yourself, a different area.
+
+7
+00:00:40,130 --> 00:00:40,460
+Yeah.
+
+8
+00:00:40,710 --> 00:00:42,510
+So first of all, change the area.
+
+9
+00:00:42,780 --> 00:00:47,760
+Second of all, where appropriate, change the period of time.
+
+10
+00:00:48,430 --> 00:00:51,180
+Then we use the images and try to do this.
+
+11
+00:00:51,510 --> 00:00:56,940
+And the finally you can also play with reverse image visualization.
+
+12
+00:00:57,180 --> 00:00:59,020
+Try to understand it by yourself.
+
+13
+00:00:59,040 --> 00:01:02,630
+Try to to create your own image visualization.
+
+14
+00:01:02,850 --> 00:01:12,360
+So take each of these videos and do it for the different time for the different area, as well as if
+
+15
+00:01:12,360 --> 00:01:18,090
+there is image visualization, which we read that we were doing together, please create your own image
+
+16
+00:01:18,090 --> 00:01:23,430
+visualization Inputted and Jandakot then can see you in the next session section.

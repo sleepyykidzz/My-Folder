@@ -1,0 +1,263 @@
+1
+00:00:00,150 --> 00:00:05,490
+Welcome back, students, in this video, I'm going to speak about Centinela, two sensors as we are
+
+2
+00:00:05,490 --> 00:00:12,120
+going to use the data from those sensors in our blind, remote sensing based analysis that should understand
+
+3
+00:00:12,150 --> 00:00:17,790
+basic characteristics of the Sentinel to sensors as well as the main characteristics of the Sentinel
+
+4
+00:00:17,790 --> 00:00:19,260
+data that they deliver.
+
+5
+00:00:19,620 --> 00:00:21,280
+So let's get started.
+
+6
+00:00:21,900 --> 00:00:28,080
+Sentinel two is a multispectral mission consisting of a pair of optical earth observation satellite
+
+7
+00:00:28,080 --> 00:00:36,150
+sentinel to a sentinel to be operated by the European Space Agency ESA with the framework of the Copernicus
+
+8
+00:00:36,150 --> 00:00:36,630
+program.
+
+9
+00:00:36,630 --> 00:00:47,100
+So Landsat is operated by NASA in U.S. and Central are European sensors from ESA Sentinel two is a European
+
+10
+00:00:47,100 --> 00:00:52,530
+counterpart in Landsat and provides freely available data to study climate change processes and land
+
+11
+00:00:52,530 --> 00:00:53,310
+surfaces.
+
+12
+00:00:54,060 --> 00:01:00,840
+But Sentinel two satellites were built by our bus company and launched on Wagger launch vehicle in French
+
+13
+00:01:00,840 --> 00:01:08,650
+Guiana in June to on June 23, 2015, and on March 7th, 2017 respectively.
+
+14
+00:01:08,940 --> 00:01:18,840
+So the product, the data from LANSAT from Sentinel to a available since June 2000 15 or better July
+
+15
+00:01:18,840 --> 00:01:27,630
+2015, while both Sentinel 2A and Sentinel to be products are available only from the March 2017.
+
+16
+00:01:27,630 --> 00:01:31,600
+Something you have to bear in mind if you want to use Sentinel data to.
+
+17
+00:01:31,620 --> 00:01:38,310
+My identical satellites are scheduled to launch in 2020 to 21 to improve the temporal resolution of
+
+18
+00:01:38,310 --> 00:01:38,910
+Sentinel.
+
+19
+00:01:39,390 --> 00:01:45,090
+The Sentinel to Mission is designed to mainly provide information for agricultural and forestry practices
+
+20
+00:01:45,090 --> 00:01:45,990
+and applications.
+
+21
+00:01:46,320 --> 00:01:53,400
+In this context, the three red H bands of five seven which we will have, we will see next slide help
+
+22
+00:01:53,400 --> 00:01:58,500
+to differentiate varied various plant species by leaf area chlorophyll characteristics.
+
+23
+00:02:00,870 --> 00:02:07,440
+For much more detailed information about Sentinel to product, I invite you to read Sentinel to use
+
+24
+00:02:07,440 --> 00:02:07,950
+a guide.
+
+25
+00:02:09,000 --> 00:02:17,280
+Each sentinel to satellite carries a single multispectral instrument MCI, which uses a push broom concept
+
+26
+00:02:17,280 --> 00:02:24,420
+and provides for to inspect all channels ranging from the visible to short wavelengths infrared light.
+
+27
+00:02:24,420 --> 00:02:27,480
+In a different special resolution.
+
+28
+00:02:27,810 --> 00:02:36,780
+The special resolution of the product of the bands are respectively 10, 20 and 60 meters to satellites
+
+29
+00:02:39,090 --> 00:02:47,310
+are flying in cancellation, which means and help to deliver a special atemporal resolution of about
+
+30
+00:02:47,310 --> 00:02:48,180
+five days.
+
+31
+00:02:48,630 --> 00:02:52,380
+And it is about 10 days for a single satellite.
+
+32
+00:02:52,380 --> 00:02:59,370
+So most important characteristic, Lanson has a temporal resolution of 16 days.
+
+33
+00:02:59,580 --> 00:03:07,470
+And Centinela, if you use both, if you would like to use both satellites, have a special temporal
+
+34
+00:03:07,470 --> 00:03:10,310
+resolution of about five days.
+
+35
+00:03:10,900 --> 00:03:13,230
+A single sentinel tossin is huge.
+
+36
+00:03:13,530 --> 00:03:17,610
+The square feet of Sentinel two is 290 kilometres.
+
+37
+00:03:17,610 --> 00:03:25,770
+It's really huge so that the data can be handled at all imageries, geometrically subdivided into rectangular
+
+38
+00:03:25,770 --> 00:03:28,020
+tiles or so-called granules.
+
+39
+00:03:28,140 --> 00:03:33,420
+Yeah, all products are in initially projected to the universe.
+
+40
+00:03:33,720 --> 00:03:44,190
+Universal Transfers Mercader UTM coordinate system with a world geodetic system 84 data and again Centinela
+
+41
+00:03:44,190 --> 00:03:47,100
+to data goes through multiple process and levels.
+
+42
+00:03:47,100 --> 00:03:54,990
+Level zero is unprocessed instrument data level one A is it a Demetra Corrections and geometric ruban
+
+43
+00:03:54,990 --> 00:04:01,770
+model refinement product level and one B is a resample converted to reflectance is and cloud waterland
+
+44
+00:04:01,770 --> 00:04:09,390
+Marzook generated product for more information about processing of the Sentinel to products who can
+
+45
+00:04:09,390 --> 00:04:12,870
+lead the Sentinel to use a guide anyway.
+
+46
+00:04:12,900 --> 00:04:15,600
+Level zero, level one and level one.
+
+47
+00:04:15,600 --> 00:04:20,220
+B So this trip first level products are not provided to the users.
+
+48
+00:04:20,460 --> 00:04:25,140
+When browsing through there is a Sentinel copses.
+
+49
+00:04:25,140 --> 00:04:32,190
+The Sentinel Hub is the basically the main website where you can get Sentinel data.
+
+50
+00:04:32,550 --> 00:04:39,180
+You will be able to choose only from level one C and a level to a product.
+
+51
+00:04:39,900 --> 00:04:46,530
+So level one C products are radiometric and geometric corrected type of atmosphere data T or A, so
+
+52
+00:04:46,530 --> 00:04:53,790
+it's a kind of analog to a LANSAT Tier one product 171 product.
+
+53
+00:04:54,150 --> 00:04:59,910
+This corrections include auto rectification and special registration to the.
+
+54
+00:05:00,070 --> 00:05:08,930
+Wattenberg's for 84 system with the pixel accuracy level of undersea imagery is delivered in granules
+
+55
+00:05:08,930 --> 00:05:16,760
+of 100 by 100 kilometres of approximately 600 to 800 megabyte each.
+
+56
+00:05:16,770 --> 00:05:22,850
+So the data sentinel data is really huge and heavier than individual spectral bands are present in their
+
+57
+00:05:22,850 --> 00:05:28,880
+respective resolution 10, 20 and 60 meters, which is why resampling to a uniform geometric resolution
+
+58
+00:05:29,180 --> 00:05:31,370
+is often necessary for the process.
+
+59
+00:05:31,370 --> 00:05:40,340
+And when you are working with Sentinel to level one product where one C product level to a product level
+
+60
+00:05:40,340 --> 00:05:47,540
+to A is a surface reflectance or bottom of atmosphere product derived from associated level one C product,
+
+61
+00:05:47,810 --> 00:05:54,200
+this product is corrected by any distortions of atmosphere, terrain and cercas clouds level to a data
+
+62
+00:05:54,530 --> 00:05:58,430
+come with some additional data layers which could be used.
+
+63
+00:05:58,430 --> 00:06:06,200
+For example, for example, for Cloud Maskin, you can choose a resolution of 10, 20 or 60 meters in
+
+64
+00:06:06,200 --> 00:06:08,800
+which all channels are assembled uniformly.
+
+65
+00:06:08,810 --> 00:06:14,420
+So, for example, if you choose to work with LANSAT level to a product, you can say you can choose
+
+66
+00:06:14,420 --> 00:06:18,430
+between different types of resolution depending on your application.

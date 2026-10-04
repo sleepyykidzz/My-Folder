@@ -1,0 +1,915 @@
+1
+00:00:00,420 --> 00:00:01,650
+Welcome back, students.
+
+2
+00:00:01,670 --> 00:00:09,600
+In this video, I'm going to show you how to import a satellite data into Google Earth engine and how
+
+3
+00:00:09,600 --> 00:00:17,180
+to do it from scratch, as well as we are going to talk about using dogs as a help in your Google Earth
+
+4
+00:00:17,190 --> 00:00:20,790
+engine for basically to help you with this.
+
+5
+00:00:21,570 --> 00:00:22,200
+With this.
+
+6
+00:00:23,330 --> 00:00:26,690
+DASK Impotent image data for your analysis.
+
+7
+00:00:26,750 --> 00:00:28,100
+So let's get started.
+
+8
+00:00:28,850 --> 00:00:35,840
+So the first thing is to create a new script that you can do by going to script and hire new and file.
+
+9
+00:00:35,840 --> 00:00:40,450
+By doing so, you would be prompted to give a name to your file.
+
+10
+00:00:40,460 --> 00:00:43,850
+And once it's done, you basically all set up and can go.
+
+11
+00:00:44,960 --> 00:00:54,890
+The easiest way to input data into your into your Google Earth engine mapping is to type the name of
+
+12
+00:00:54,890 --> 00:00:57,590
+their image collections that you would like to impart.
+
+13
+00:00:57,950 --> 00:01:04,600
+So in our example, I'm going to use Landsat eight collection of top atmosphere, atmosphere reflectance.
+
+14
+00:01:05,060 --> 00:01:13,930
+And when you just basically click on it, then the next window that you would be prompted to is a window
+
+15
+00:01:14,150 --> 00:01:18,380
+showing in the name of the collection the description of this data set.
+
+16
+00:01:18,650 --> 00:01:25,360
+You can also check the balance, which is a very important because we don't have to remember all those
+
+17
+00:01:25,370 --> 00:01:26,830
+bands by heart.
+
+18
+00:01:26,840 --> 00:01:34,430
+So you would see that we have 11 bands and would bands stand forward and there is also a bit mask's,
+
+19
+00:01:34,430 --> 00:01:43,280
+which is going to be quite important for Cloud, Maskin and atmospheric correction later on that we
+
+20
+00:01:43,280 --> 00:01:49,670
+are going to apply for LANSAT and Sentinel, modest images and wherever images you want to use so that
+
+21
+00:01:49,670 --> 00:01:54,980
+here all the information is taught in bands and there is also image properties here.
+
+22
+00:01:55,010 --> 00:02:02,480
+This is also important to note because this image properties also could be used to filter to reduce
+
+23
+00:02:02,720 --> 00:02:06,600
+our image collections to work in Google Earth.
+
+24
+00:02:07,760 --> 00:02:14,570
+OK, so basically when we want to import the data into a Google search engine, what we need to do is
+
+25
+00:02:15,290 --> 00:02:17,900
+find the necessary image.
+
+26
+00:02:17,900 --> 00:02:27,170
+And then here you can already see the piece of the code that was recorded for you that you can use for
+
+27
+00:02:27,170 --> 00:02:28,320
+your in your script.
+
+28
+00:02:28,340 --> 00:02:31,310
+All you need to do is to use this input button.
+
+29
+00:02:32,120 --> 00:02:32,780
+All right.
+
+30
+00:02:33,110 --> 00:02:43,430
+So I have just incorporated I just have imported image collection in my Google Earth engine script.
+
+31
+00:02:43,640 --> 00:02:46,550
+I can immediately change the variable name.
+
+32
+00:02:46,550 --> 00:02:48,950
+I would call it Landsat eight.
+
+33
+00:02:49,520 --> 00:02:52,100
+And, um, basically,
+
+34
+00:02:54,950 --> 00:03:03,760
+let's see how many images are there in order to to to to understand with what we are dealing with here.
+
+35
+00:03:04,070 --> 00:03:12,230
+For this, you can use print function so print than you put in a variable name, which is Landsat eight
+
+36
+00:03:12,230 --> 00:03:13,370
+and function size.
+
+37
+00:03:13,670 --> 00:03:23,060
+And then if we are right around a small code, basically their function is going through the whole image
+
+38
+00:03:23,570 --> 00:03:29,320
+collection for Landsat eight and computing a number of all images the same.
+
+39
+00:03:29,370 --> 00:03:36,040
+Well, you say that it is taking some time and this is because Landsat eight collection is quite big.
+
+40
+00:03:36,050 --> 00:03:42,680
+And you see this is a number of all image which is out there, which is basically more than one million
+
+41
+00:03:42,680 --> 00:03:44,980
+image images for sure.
+
+42
+00:03:45,320 --> 00:03:51,800
+We don't want to use to work with all of these images because this image is available for whole globe,
+
+43
+00:03:52,190 --> 00:04:01,040
+for the whole period of Landsat eight functioning of Landsat eight, which were to the, uh, the graphical
+
+44
+00:04:01,040 --> 00:04:04,400
+atmospherical connected to the reflectance values.
+
+45
+00:04:04,550 --> 00:04:10,930
+So basically, what we have to do is write we have to choose images that we need for our study area.
+
+46
+00:04:11,180 --> 00:04:19,730
+Basically, this is normal is a step that we also do when we, for example, apply normal preprocessing
+
+47
+00:04:19,730 --> 00:04:30,380
+steps or for Incudes or Geass or when you have to select the image which which we take from image collection
+
+48
+00:04:30,380 --> 00:04:31,460
+and be filtered.
+
+49
+00:04:31,730 --> 00:04:39,530
+We chose it for the specific area and for specific region.
+
+50
+00:04:39,590 --> 00:04:47,180
+So basically, in order to do so, we can we have to apply a specific function to image collection of
+
+51
+00:04:47,180 --> 00:04:55,250
+LANSAT to reduce it to their other area of interest and to reduce it based on the parameters that we
+
+52
+00:04:55,250 --> 00:04:58,010
+would like to specify now how to do it.
+
+53
+00:04:58,020 --> 00:05:02,780
+Well, basically what we have to do is we have to go to the dogs.
+
+54
+00:05:02,900 --> 00:05:12,600
+It's here on the right left hand side, and here we have to go to image collection objects.
+
+55
+00:05:12,690 --> 00:05:20,240
+This is image collection object in Google Earth Engine, which specify different functions that we can
+
+56
+00:05:20,240 --> 00:05:22,730
+apply to our image collections.
+
+57
+00:05:23,040 --> 00:05:28,890
+As you can see, there are many of them, but of course, you would not use all of them, but probably
+
+58
+00:05:28,890 --> 00:05:39,210
+only some of them currently what we are interested in is those basically four main reduce our so-called
+
+59
+00:05:39,210 --> 00:05:49,620
+reduced functions, which would allow us to reduce our huge more than one million images collection,
+
+60
+00:05:49,620 --> 00:05:53,410
+image collection to just the few images that we want to work with.
+
+61
+00:05:53,970 --> 00:05:56,100
+So the first one is filter one.
+
+62
+00:05:56,130 --> 00:06:05,940
+So basically, if you just click on this and you just you receive help for this function which say what
+
+63
+00:06:05,940 --> 00:06:13,750
+kind of function it is and that it is applied to the collection and it returns a filtered collection.
+
+64
+00:06:13,770 --> 00:06:22,830
+So this basically this function allows us to write another object to based on which you can filter your
+
+65
+00:06:22,830 --> 00:06:23,780
+image collection.
+
+66
+00:06:25,410 --> 00:06:33,090
+One of the most popular, basically a filtering or reducing image collections functions as a filter
+
+67
+00:06:33,090 --> 00:06:33,720
+bounce.
+
+68
+00:06:35,070 --> 00:06:42,150
+So this allow us to filter our collection by specific geometry.
+
+69
+00:06:42,180 --> 00:06:42,560
+Yeah.
+
+70
+00:06:42,780 --> 00:06:52,170
+So the geometry could be shapefile of your study area that you can import or add in to your Google or
+
+71
+00:06:52,170 --> 00:06:52,740
+Sanjayan.
+
+72
+00:06:52,740 --> 00:06:58,710
+It could be a shapefile that you would a polygon that you would create directly in Google Earth engine
+
+73
+00:06:58,890 --> 00:07:01,660
+or a point file or point future.
+
+74
+00:07:01,800 --> 00:07:07,650
+Let me show you based on the example when we would like to filter it by a polygon.
+
+75
+00:07:07,680 --> 00:07:16,350
+So here I took an example of Cairo Eisenmann to Cairo and here is a delta of Nile River.
+
+76
+00:07:16,350 --> 00:07:22,590
+And I would just use this tool, which is called Draw a Rectangle Tool.
+
+77
+00:07:22,680 --> 00:07:31,680
+Yeah, when I click on it, it will allow me to draw a rectangle, which I will do, and just click
+
+78
+00:07:31,680 --> 00:07:33,840
+on it after I click on it.
+
+79
+00:07:33,870 --> 00:07:37,340
+Don't forget to use this function.
+
+80
+00:07:37,350 --> 00:07:38,140
+Stop driving.
+
+81
+00:07:38,700 --> 00:07:39,440
+All right.
+
+82
+00:07:39,960 --> 00:07:48,510
+What you can see immediately in our code that the new variable was appeared in the top of our imports,
+
+83
+00:07:48,510 --> 00:07:50,250
+which is called variable geometry.
+
+84
+00:07:50,580 --> 00:07:52,080
+Let's rename it to region.
+
+85
+00:07:52,650 --> 00:07:53,070
+Yeah.
+
+86
+00:07:53,460 --> 00:08:01,200
+And basically this a piece of code that it is available for us and we can readily use to filter our
+
+87
+00:08:02,790 --> 00:08:03,790
+collection now.
+
+88
+00:08:04,920 --> 00:08:15,510
+So in order to do this filtering, we have to apply this filter, bounce a function to our Landsat eight
+
+89
+00:08:16,860 --> 00:08:18,510
+landside eight image collection.
+
+90
+00:08:18,840 --> 00:08:24,360
+For this, we have to assign a new variable, which is called filter to region.
+
+91
+00:08:24,690 --> 00:08:26,490
+I mean, you can call it whatever.
+
+92
+00:08:26,490 --> 00:08:30,390
+Yeah, I call it filtered region for simplicity.
+
+93
+00:08:30,390 --> 00:08:40,320
+And then you basically input to your image collection here and apply it to our variable at today to
+
+94
+00:08:40,320 --> 00:08:42,480
+apply this function, filter bonds.
+
+95
+00:08:42,750 --> 00:08:48,610
+And inside you have to specify the argument of this function.
+
+96
+00:08:48,860 --> 00:08:57,120
+So if you go to this geometries and you can see that, what were the arguments here?
+
+97
+00:08:57,130 --> 00:09:00,390
+So the argument is the geometry, the filter to.
+
+98
+00:09:00,480 --> 00:09:05,760
+Yeah, and this geometry was specified here by the region here.
+
+99
+00:09:06,240 --> 00:09:08,960
+Once we do it, we can run the code.
+
+100
+00:09:09,790 --> 00:09:10,950
+Everything is OK.
+
+101
+00:09:11,320 --> 00:09:15,000
+There is no mistake in a code.
+
+102
+00:09:15,420 --> 00:09:23,250
+And now we can also what we can do, we can just again print our new variable, filtered that region
+
+103
+00:09:23,250 --> 00:09:30,240
+and filtered by size apply in order to apply function size in order to know how much images.
+
+104
+00:09:30,270 --> 00:09:31,140
+Now we have.
+
+105
+00:09:31,560 --> 00:09:39,600
+OK, now you can see that our for this study area, Landsat eight images available for the whole time
+
+106
+00:09:39,600 --> 00:09:50,730
+of spending of Sunset eight is much smaller compared to the whole collection, and it is eleven thousand
+
+107
+00:09:51,540 --> 00:09:55,020
+two hundred images, which is of course a lot.
+
+108
+00:09:55,800 --> 00:10:03,120
+And but again, I don't want to have images for the whole period of time.
+
+109
+00:10:03,120 --> 00:10:10,800
+I want to have images on the for this year from 2020, because for my analysis, I want to work on the
+
+110
+00:10:10,800 --> 00:10:13,770
+four images for 2020.
+
+111
+00:10:14,190 --> 00:10:22,740
+But before we go here, I can also show you how we can map those images to.
+
+112
+00:10:23,140 --> 00:10:31,480
+Our Mapendo, so for this, you already know this map at a function which we used also in the introductory
+
+113
+00:10:33,220 --> 00:10:44,610
+section, introduction to JavaScript, and basically in order to see or display images in Google Earth
+
+114
+00:10:44,620 --> 00:10:51,520
+Engine Mapendo, you have to just specify MANPAD layer filter by region.
+
+115
+00:10:51,880 --> 00:10:52,780
+You would run it.
+
+116
+00:10:52,780 --> 00:10:58,660
+And then the top of the list, the first, the very first image in the collection that you retrieve
+
+117
+00:10:59,590 --> 00:11:01,230
+would be displayed.
+
+118
+00:11:01,510 --> 00:11:01,930
+Yeah.
+
+119
+00:11:01,930 --> 00:11:03,060
+Over the study area.
+
+120
+00:11:03,100 --> 00:11:09,850
+So because our study area is within several images, three images, we will have three images displayed
+
+121
+00:11:09,850 --> 00:11:10,570
+over it.
+
+122
+00:11:10,580 --> 00:11:10,950
+Yeah.
+
+123
+00:11:11,740 --> 00:11:20,260
+So it takes some time, but once it's computed we will see the images that carveth that covers our study
+
+124
+00:11:20,260 --> 00:11:20,680
+area.
+
+125
+00:11:21,220 --> 00:11:21,960
+All right.
+
+126
+00:11:22,480 --> 00:11:28,100
+So basically, having done this, the next step is to filter our, um,
+
+127
+00:11:30,970 --> 00:11:33,520
+our region by date.
+
+128
+00:11:33,550 --> 00:11:33,880
+Yeah.
+
+129
+00:11:33,910 --> 00:11:39,880
+So for this, I create a new variable, which I called Kilted
+
+130
+00:11:42,880 --> 00:11:44,850
+Region Date.
+
+131
+00:11:44,980 --> 00:11:48,900
+So I sign your variable and basically.
+
+132
+00:11:49,870 --> 00:11:52,540
+I want to use this another.
+
+133
+00:11:53,900 --> 00:11:56,320
+Function, which is called field data.
+
+134
+00:11:56,990 --> 00:12:06,710
+So when you click on it, you would see that there are arguments for this function is the start of the
+
+135
+00:12:06,710 --> 00:12:08,690
+period of time you are interested in.
+
+136
+00:12:08,960 --> 00:12:18,530
+And it's and so basically what I'm writing here, I need to specify to which, based on what I actually
+
+137
+00:12:18,530 --> 00:12:21,800
+apply this to, to which you match collection.
+
+138
+00:12:21,800 --> 00:12:29,300
+I applied and I apply it to my variable filtered through generate and then, well, the same procedure
+
+139
+00:12:30,290 --> 00:12:32,240
+as previously.
+
+140
+00:12:32,330 --> 00:12:36,580
+I type the function when the function is typed correctly.
+
+141
+00:12:36,590 --> 00:12:40,580
+It's in this Lillah violet color.
+
+142
+00:12:40,880 --> 00:12:49,850
+I call it field to date and then in the um, basically in the brackets you should put the date that
+
+143
+00:12:49,850 --> 00:12:51,890
+you are interested in.
+
+144
+00:12:51,900 --> 00:12:59,330
+And as I said, I'm interested in only in the date of 2020 from the 1st of January to the 1st of July.
+
+145
+00:12:59,360 --> 00:13:01,130
+Be careful how you write it.
+
+146
+00:13:01,140 --> 00:13:05,990
+So the quote should be either single or double should be consistent.
+
+147
+00:13:06,140 --> 00:13:06,420
+Yeah.
+
+148
+00:13:08,090 --> 00:13:08,860
+All right.
+
+149
+00:13:08,870 --> 00:13:20,170
+And after this, let's also add a print function to see how the size of our collection has changed.
+
+150
+00:13:20,450 --> 00:13:26,390
+Now it's on the seven to seven images, which is basically, um.
+
+151
+00:13:27,110 --> 00:13:29,070
+Yeah, much more doable.
+
+152
+00:13:29,540 --> 00:13:35,060
+So the question is, is it the right or elegant way to write it?
+
+153
+00:13:35,070 --> 00:13:42,500
+Or maybe there is a way how we can basically write it a bit nicer?
+
+154
+00:13:42,860 --> 00:13:50,960
+Yes, of course you can assign a variable for every time you want to filter it, but you can also just
+
+155
+00:13:50,960 --> 00:13:52,210
+do it in one go.
+
+156
+00:13:52,220 --> 00:13:58,000
+You can call filtered assen, write the variable filter to region.
+
+157
+00:13:58,880 --> 00:14:04,460
+Um, let's call it not filtered region but call it.
+
+158
+00:14:07,240 --> 00:14:10,900
+Filtered region by region final.
+
+159
+00:14:14,590 --> 00:14:23,110
+Region final and basically what we do here, we.
+
+160
+00:14:28,860 --> 00:14:29,850
+Uses.
+
+161
+00:14:38,230 --> 00:14:39,100
+And then.
+
+162
+00:14:43,010 --> 00:14:45,110
+Also, add this, Patea.
+
+163
+00:14:57,570 --> 00:14:59,250
+And that said.
+
+164
+00:15:03,980 --> 00:15:05,480
+I also would printed.
+
+165
+00:15:11,760 --> 00:15:18,840
+And specify size, just to show you that it's basically the same functions here.
+
+166
+00:15:18,870 --> 00:15:19,970
+That's right.
+
+167
+00:15:19,980 --> 00:15:27,990
+And and so real that the same result that by writing it in two separate steps.
+
+168
+00:15:28,390 --> 00:15:29,080
+So I'm writing.
+
+169
+00:15:29,130 --> 00:15:30,370
+I'm running it.
+
+170
+00:15:30,390 --> 00:15:31,500
+It's all correct.
+
+171
+00:15:31,500 --> 00:15:38,400
+And you see that the output, the variable size or the size of our image collection, the region final
+
+172
+00:15:38,400 --> 00:15:49,310
+is 77, which also agrees to that, to the size of this image collection that we have created in steps.
+
+173
+00:15:49,320 --> 00:15:51,450
+And this is not the end.
+
+174
+00:15:51,460 --> 00:15:57,380
+You could have added here filter, for example, by other properties like metadata properties.
+
+175
+00:15:57,390 --> 00:16:03,210
+And in order to, for example, to know what kind of metadata you want to use to filter out, you can
+
+176
+00:16:03,210 --> 00:16:10,410
+always just click here on the inputted collection and it will promptitude to this you much property
+
+177
+00:16:10,440 --> 00:16:13,020
+to the description of your image collection.
+
+178
+00:16:13,290 --> 00:16:21,300
+And you can go to the image properties and search here for the image properties you want to filter for
+
+179
+00:16:21,300 --> 00:16:29,060
+and use and filter metadata here as an input for your filtering.
+
+180
+00:16:29,130 --> 00:16:29,400
+Yeah.
+
+181
+00:16:29,430 --> 00:16:38,920
+And here what we need to use as our input arguments for this function is a name.
+
+182
+00:16:39,430 --> 00:16:46,470
+So name of the property would like to filter, for example, here, where, for example, you would
+
+183
+00:16:46,470 --> 00:16:50,620
+want to filter by by by my cloud cover.
+
+184
+00:16:50,640 --> 00:16:50,820
+Yeah.
+
+185
+00:16:50,850 --> 00:16:52,350
+So it would be cloud cover.
+
+186
+00:16:55,000 --> 00:17:01,730
+Operator, so you should specify, is it equal or less than or more than etc. and values?
+
+187
+00:17:02,070 --> 00:17:04,680
+So, for example, cloud cover, less than one.
+
+188
+00:17:04,690 --> 00:17:08,050
+Yeah, that would be to metadata function.
+
+189
+00:17:08,620 --> 00:17:09,390
+All right.
+
+190
+00:17:09,700 --> 00:17:17,540
+Let's now also display our image beautifully on our map.
+
+191
+00:17:17,740 --> 00:17:23,890
+And also by now we I showed you how to display just the top of the image collection, but it doesn't
+
+192
+00:17:23,890 --> 00:17:25,300
+look so good.
+
+193
+00:17:25,300 --> 00:17:33,880
+And what would be more beautiful might be a visualization would be best if you create a Madian image,
+
+194
+00:17:33,880 --> 00:17:39,580
+which would basically average all the images for this period of time.
+
+195
+00:17:40,000 --> 00:17:48,490
+For this, we are going to use we are going to declare a new arrival, which is called which I would
+
+196
+00:17:48,490 --> 00:17:55,770
+call, for example, imagine image and I would use either.
+
+197
+00:17:55,960 --> 00:17:59,560
+Well, that's let's let's use our final.
+
+198
+00:18:04,070 --> 00:18:13,680
+The tribal region V and we our final image collection, which is a region feen and apply magin function
+
+199
+00:18:13,680 --> 00:18:26,430
+to calculate the median function of our image, and then I basically will just map this image over my.
+
+200
+00:18:28,100 --> 00:18:29,980
+Well, I do.
+
+201
+00:18:30,020 --> 00:18:33,500
+I will add it to my my window.
+
+202
+00:18:34,470 --> 00:18:41,760
+Well, it looks like this is probably not the best visualization parameter, so you can always go here
+
+203
+00:18:41,760 --> 00:18:48,920
+to the properties and here change your visualization parameters.
+
+204
+00:18:48,930 --> 00:18:59,040
+I would assign I would do a full color composite composite over my study area as well as I will try
+
+205
+00:18:59,340 --> 00:19:07,260
+stretch to stretch a little bit the, um, the image data I applied to stretch.
+
+206
+00:19:07,560 --> 00:19:12,840
+And while this looks better, maybe we can also change it to another stretch.
+
+207
+00:19:17,870 --> 00:19:24,610
+OK, this visualization I like the most, and once you do it, you can also input it.
+
+208
+00:19:24,620 --> 00:19:34,820
+So if you input it, you see here universalization parameters will automatically be displayed at the
+
+209
+00:19:34,820 --> 00:19:35,290
+top.
+
+210
+00:19:35,600 --> 00:19:47,330
+So you basically could just use this variable and specify it here in your map, play a function just
+
+211
+00:19:47,330 --> 00:19:53,180
+to not to do it every time, not to run it manually, but use them every time.
+
+212
+00:19:53,180 --> 00:19:57,170
+For example, next time you would want to use it for this.
+
+213
+00:19:57,170 --> 00:20:05,630
+You will just add here the name of this variable, which is your visualization parameters, and you
+
+214
+00:20:05,630 --> 00:20:10,010
+can also add the name for your layer.
+
+215
+00:20:10,430 --> 00:20:22,130
+And for example, um, we will call it study area and we are going to run the whole thing again.
+
+216
+00:20:22,560 --> 00:20:25,370
+It's all work and there is no mistakes.
+
+217
+00:20:26,090 --> 00:20:34,730
+And as we will see now, the output of our study area layer now that you can see in the list, would
+
+218
+00:20:34,730 --> 00:20:36,440
+be first of all, the name is change.
+
+219
+00:20:36,440 --> 00:20:43,190
+The second of all, the visualization is by default is the same as you have.
+
+220
+00:20:43,190 --> 00:20:53,510
+We have specified I save this code and with this I could further basically reduce it and use it to input
+
+221
+00:20:54,350 --> 00:20:58,130
+data set for any effort for my study area.
+
+222
+00:20:58,640 --> 00:21:01,410
+Before we close, let me show you one trick.
+
+223
+00:21:01,430 --> 00:21:10,700
+So basically, if you want to use the same basically operations you need the same data for and you want
+
+224
+00:21:10,700 --> 00:21:14,300
+to filter it for the same data period of time.
+
+225
+00:21:14,300 --> 00:21:22,460
+But for another another study area, what you have to do, you can just click on the polygon here and
+
+226
+00:21:22,460 --> 00:21:31,850
+move it over area you're interested in, for example, over Jardín, then you click run and voila,
+
+227
+00:21:33,320 --> 00:21:40,220
+the whole code is going to run for the for your new study area that you're interested in.
+
+228
+00:21:41,180 --> 00:21:51,980
+So basically that was main basics of using, inputting and reducing filtering functions for a much collection
+
+229
+00:21:51,980 --> 00:21:53,060
+in Google or Sanja.

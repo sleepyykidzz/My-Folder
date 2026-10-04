@@ -1,0 +1,491 @@
+1
+00:00:00,060 --> 00:00:01,200
+Welcome back, students.
+
+2
+00:00:01,230 --> 00:00:07,740
+And in this video, I'm going to talk about how to compute on our statistics on Google Earth Engine
+
+3
+00:00:08,070 --> 00:00:16,380
+basically are no statistics is one of the most often used J.S. operations at applied for special data
+
+4
+00:00:16,770 --> 00:00:27,360
+and is usually is used to derive statistical parameters of statistical value for different special areas.
+
+5
+00:00:27,810 --> 00:00:31,020
+This is a very common procedure you can easily implement.
+
+6
+00:00:31,130 --> 00:00:38,430
+It encourages in Algiers and now we are going to learn how to do it in Google Earth engine.
+
+7
+00:00:38,700 --> 00:00:48,420
+So we are still working with the same LANSAT and in Dubai Kaleck LANSAT collection and in Dubai composite
+
+8
+00:00:48,420 --> 00:00:52,790
+that we have produced with you in the previous video as well.
+
+9
+00:00:53,100 --> 00:01:03,240
+But this time I have moved our area to British Columbia in Canada just to demonstrate to the power of
+
+10
+00:01:03,630 --> 00:01:06,580
+Google Earth engine and that we can apply it for any region.
+
+11
+00:01:06,600 --> 00:01:12,240
+So you remember, if you want to change your study area, you just have to click on the point and you
+
+12
+00:01:12,240 --> 00:01:18,660
+can move it around and drag and drop to any other area in the world you're interested in and to rerun
+
+13
+00:01:18,660 --> 00:01:20,340
+this code to that area.
+
+14
+00:01:21,150 --> 00:01:21,630
+All right.
+
+15
+00:01:21,640 --> 00:01:29,100
+So basically, if you don't remember how to the clear and important Landsat collection and filter it
+
+16
+00:01:29,400 --> 00:01:36,060
+as well as how to calculate NDB, I refer you to the previous media as well.
+
+17
+00:01:36,060 --> 00:01:41,960
+And also, here's the final step is computed maximum in Dubai.
+
+18
+00:01:41,970 --> 00:01:44,970
+So here we are producing a variable, Max, in Dubai.
+
+19
+00:01:45,900 --> 00:01:54,060
+Now, what we have to do is to create basically a region for which we would like to collect on our statistics.
+
+20
+00:01:54,090 --> 00:01:58,310
+Let me run this code that you can see it better.
+
+21
+00:01:58,320 --> 00:01:59,130
+What I mean.
+
+22
+00:02:00,510 --> 00:02:09,210
+So basically, we define a buffer around our point, which is a circle.
+
+23
+00:02:12,340 --> 00:02:15,320
+Which is basically a circle and it's a polygon.
+
+24
+00:02:15,880 --> 00:02:18,550
+It's a it's a back to back to feature.
+
+25
+00:02:18,580 --> 00:02:18,930
+Yeah.
+
+26
+00:02:19,300 --> 00:02:22,500
+And how we do it, we declare a variable region.
+
+27
+00:02:22,510 --> 00:02:24,670
+We use geometry, buffer function.
+
+28
+00:02:24,940 --> 00:02:31,240
+And the buffer is in my case, I use it for 200 kilometres.
+
+29
+00:02:31,780 --> 00:02:34,840
+So you have to divide it by 100.
+
+30
+00:02:35,770 --> 00:02:48,820
+OK, so the output of this is variable region, which is a buffer zone around our point of interest
+
+31
+00:02:49,120 --> 00:02:49,600
+in this.
+
+32
+00:02:49,610 --> 00:03:01,480
+To step here, we are creating a Rasta data Rasta file, which we will use as a input for our our statistic
+
+33
+00:03:01,500 --> 00:03:02,230
+calculation.
+
+34
+00:03:02,230 --> 00:03:12,190
+We create an ID based on our region, variable region and what we want and based on the elevation data
+
+35
+00:03:12,190 --> 00:03:19,960
+that we have created and basically what we say here, that first of all, we create an empty image and
+
+36
+00:03:19,960 --> 00:03:22,510
+we update the value of this image.
+
+37
+00:03:22,510 --> 00:03:33,760
+So we assign the various for this for we assign the values in this image based on the elevation or within
+
+38
+00:03:33,760 --> 00:03:35,500
+this pixel.
+
+39
+00:03:35,540 --> 00:03:43,000
+So basically what we say you've elevation greater than 200, assign the value of 200 if revelations
+
+40
+00:03:43,000 --> 00:03:49,690
+greater of one 400 assen 400 and if a greater than 600 600 took.
+
+41
+00:03:49,720 --> 00:03:57,520
+We will have different zones here based on the evaluation and based on our region.
+
+42
+00:03:58,610 --> 00:04:05,000
+But the gunfire that we have created, what else we all saw here, where you see you can you probably
+
+43
+00:04:05,000 --> 00:04:09,360
+noticed we have a mosque, we create a mosque, we will wear.
+
+44
+00:04:09,400 --> 00:04:16,490
+We also say basically we are only interested in the areas which are not equal to zero.
+
+45
+00:04:16,700 --> 00:04:21,400
+Why we are doing it because elevation of zero means water.
+
+46
+00:04:21,410 --> 00:04:23,470
+It's a level of the sea.
+
+47
+00:04:23,480 --> 00:04:29,000
+So in here and economic means not equal to zero.
+
+48
+00:04:29,000 --> 00:04:29,280
+Yeah.
+
+49
+00:04:29,300 --> 00:04:40,200
+So we update our zone variabilities with this function to mask out all the areas which have water.
+
+50
+00:04:40,220 --> 00:04:46,970
+And finally we clip this new newly created image to our region because we don't need it to the whole
+
+51
+00:04:46,970 --> 00:04:47,350
+world.
+
+52
+00:04:47,810 --> 00:04:52,190
+And if you want to see basically how it looks like, you can also print it.
+
+53
+00:04:52,220 --> 00:04:52,610
+Yeah.
+
+54
+00:04:53,090 --> 00:05:03,500
+And in console's and you can see what basically the output of our analysis is going to be, a one image
+
+55
+00:05:03,660 --> 00:05:07,410
+with values from zero to six hundred.
+
+56
+00:05:07,550 --> 00:05:07,720
+Yeah.
+
+57
+00:05:08,300 --> 00:05:16,180
+So always if you're not sure whether you did something correctly or not, what it helps is to print
+
+58
+00:05:16,190 --> 00:05:19,070
+it in the console and map it in your map.
+
+59
+00:05:21,260 --> 00:05:21,890
+All right.
+
+60
+00:05:22,040 --> 00:05:29,320
+Now we're basically adding all our layers to to the map.
+
+61
+00:05:29,330 --> 00:05:34,000
+So now we have elevation zones, region and maximum in Dubai.
+
+62
+00:05:34,730 --> 00:05:37,470
+And we sent out a map on our geometry.
+
+63
+00:05:37,500 --> 00:05:37,700
+Yeah.
+
+64
+00:05:37,730 --> 00:05:45,320
+So basically this here, the last one says that we should concentrate on this area of British Columbia
+
+65
+00:05:45,320 --> 00:05:46,400
+that we're interested in.
+
+66
+00:05:47,180 --> 00:06:00,380
+And here basically this piece of code is the piece of code that basically deals with this creating zone
+
+67
+00:06:00,590 --> 00:06:03,410
+of statistics, calculating of the statistics.
+
+68
+00:06:03,420 --> 00:06:07,060
+So we are declaring a new variable, which is statistics.
+
+69
+00:06:07,430 --> 00:06:16,790
+And what we are essentially saying here, please stack newly created zone image to our maximum and devia
+
+70
+00:06:16,790 --> 00:06:24,100
+image and then reduce it by region reuse, reduce region function to calculate on our statistics.
+
+71
+00:06:24,470 --> 00:06:26,090
+And here this is a dictionary.
+
+72
+00:06:26,090 --> 00:06:34,190
+But because the output of our what we are aiming at is basically for values for each of our own.
+
+73
+00:06:34,760 --> 00:06:44,930
+And we use a reduced mean function and we group it based on other zones defined here.
+
+74
+00:06:46,300 --> 00:06:53,770
+We say geometry is our region and we have to specify scale scale as we are working with so special resolution
+
+75
+00:06:53,770 --> 00:06:56,740
+since we are working with LANSAT Composite, it's 30 meters.
+
+76
+00:06:57,100 --> 00:07:04,390
+So you remember that basically in Google Earth engine, whatever we run, we're basically we run all
+
+77
+00:07:04,390 --> 00:07:07,730
+the analysis on the scale that we are looking at.
+
+78
+00:07:07,750 --> 00:07:08,020
+Yes.
+
+79
+00:07:08,030 --> 00:07:14,440
+So basically, if I am continuing, zoom in and you can see that the whole functions are running on
+
+80
+00:07:14,440 --> 00:07:16,230
+the scale I'm looking at.
+
+81
+00:07:16,570 --> 00:07:21,910
+So the composites in composite occur in Google Earth engine do not have scale.
+
+82
+00:07:22,270 --> 00:07:27,850
+So it is important to specify what scale you are working with that.
+
+83
+00:07:28,210 --> 00:07:37,360
+Basically the output file when you're the output is its image or statistics or would would be computed
+
+84
+00:07:37,360 --> 00:07:38,860
+on the scale that makes sense.
+
+85
+00:07:38,870 --> 00:07:40,280
+Yeah, that's important.
+
+86
+00:07:42,640 --> 00:07:45,110
+Well and oh yeah.
+
+87
+00:07:45,310 --> 00:07:52,810
+So the tricky part in this function here, what is important and maybe not very easy is this one group
+
+88
+00:07:52,810 --> 00:07:53,620
+in group in
+
+89
+00:07:57,250 --> 00:07:57,700
+step.
+
+90
+00:07:58,150 --> 00:08:08,800
+So what essentially it says group our Leja based on the layer one so and layer one in our two banti,
+
+91
+00:08:08,810 --> 00:08:17,290
+which we have to as a part of this step, we produce a two band image, we add two maximum and dibby
+
+92
+00:08:17,320 --> 00:08:24,430
+image, which is one band image, a band which is another band which is which is so the output will
+
+93
+00:08:24,430 --> 00:08:25,390
+be two band image.
+
+94
+00:08:25,750 --> 00:08:35,500
+And we what we say please compute mean based on the zones provided in the zone.
+
+95
+00:08:35,590 --> 00:08:38,140
+And this is file the second band in our file.
+
+96
+00:08:38,650 --> 00:08:43,060
+That's important and trickier to understand and important to understand.
+
+97
+00:08:43,360 --> 00:08:50,260
+And because sometimes we can while we could have a LANSAT image on satellite image which has eleven
+
+98
+00:08:50,260 --> 00:08:59,170
+bands, and then if you Stockhausen's and you have to right here basically 11, not one because you're
+
+99
+00:08:59,210 --> 00:09:08,650
+on grusin file which which based on which you want to group your your bands and lansat on the Lancet
+
+100
+00:09:08,650 --> 00:09:10,930
+bands would be the last one.
+
+101
+00:09:10,940 --> 00:09:11,200
+Yeah.
+
+102
+00:09:11,860 --> 00:09:21,460
+The question is if you don't remember um how which band you need to use, then my advice to you can
+
+103
+00:09:21,460 --> 00:09:24,160
+always basically create a variable.
+
+104
+00:09:24,190 --> 00:09:27,130
+So I hereby declare the variables that one.
+
+105
+00:09:27,550 --> 00:09:34,030
+And I basically I just use this part of the of the function and I run it.
+
+106
+00:09:36,570 --> 00:09:40,070
+And you can also print it immediately.
+
+107
+00:09:43,940 --> 00:09:53,270
+And you see that we have our output is there to image, to bend image, and it has to balance Bend Zero
+
+108
+00:09:53,270 --> 00:09:55,850
+is in Dubai and bend one is a constant.
+
+109
+00:09:55,880 --> 00:09:57,170
+So I was on a layer.
+
+110
+00:09:57,470 --> 00:10:01,130
+So basically, um, this could be a way for you.
+
+111
+00:10:01,130 --> 00:10:07,220
+If you don't remember this correctly, you could always do this function in two steps.
+
+112
+00:10:07,220 --> 00:10:18,320
+You can first stuck in Dubai to basically visa zones to create it, to bend the image and then run the
+
+113
+00:10:18,680 --> 00:10:20,660
+zonal statistics separately.
+
+114
+00:10:20,690 --> 00:10:28,580
+This is also possible for you or if you just forgot about it, you can always create a rival and print
+
+115
+00:10:28,580 --> 00:10:28,760
+it.
+
+116
+00:10:29,000 --> 00:10:33,930
+And then by looking at the results, you would know which bench you should use.
+
+117
+00:10:34,940 --> 00:10:39,320
+And finally, we print our variable stat, which is this object.
+
+118
+00:10:39,380 --> 00:10:43,010
+It's since it's here, we define the dictionary.
+
+119
+00:10:43,340 --> 00:10:46,370
+It has return to us also dictionary.
+
+120
+00:10:46,370 --> 00:10:50,270
+And basically it has it shows us for each of the group.
+
+121
+00:10:50,450 --> 00:10:53,870
+And you see the group, whether it's very convenient.
+
+122
+00:10:53,880 --> 00:10:59,800
+We have three groups from zero to 200, from 200 to 400, 400 to 600 and more.
+
+123
+00:11:00,170 --> 00:11:04,520
+So we can see the mean values of in Dubai.

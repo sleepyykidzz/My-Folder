@@ -1,0 +1,887 @@
+1
+00:00:00,060 --> 00:00:01,350
+Welcome back, students.
+
+2
+00:00:01,380 --> 00:00:09,320
+And in this video, I'm going to show you how to perform different calculations on one single image.
+
+3
+00:00:09,520 --> 00:00:18,230
+So we will start with a simple example, how to use one single image, satellite image from image collection
+
+4
+00:00:18,230 --> 00:00:26,550
+and to perform some very common calculations with this image, such as division or multiplication or
+
+5
+00:00:26,550 --> 00:00:30,650
+calculation maybe of spectral indices that is based on some formulas.
+
+6
+00:00:31,320 --> 00:00:32,040
+Basically.
+
+7
+00:00:32,040 --> 00:00:38,310
+One thing before we start, I would like to show you and what you have to know is that your your best
+
+8
+00:00:38,310 --> 00:00:46,710
+friends are basically this type here dogs, because the dogs, you can see all the different and all
+
+9
+00:00:46,710 --> 00:00:53,790
+the different algorithms that were already preprogrammed to you for you by Google Earth engine team,
+
+10
+00:00:54,060 --> 00:01:00,900
+as well as you can access the documentation and basically see what is possible.
+
+11
+00:01:00,930 --> 00:01:07,520
+So basically, when we are working with image, we are interested in Earth's engine image type.
+
+12
+00:01:07,530 --> 00:01:16,210
+And here you can see what what different algorithms are available here, which are already prayer,
+
+13
+00:01:17,760 --> 00:01:20,790
+prayer computed prayer pre-programmed to us.
+
+14
+00:01:21,270 --> 00:01:29,550
+And when we, for example, on any of them, I'm just searching for a suitable example apple pixel area.
+
+15
+00:01:29,940 --> 00:01:39,920
+We can see their short description of the algorithm where you need argument or you don't need arguments
+
+16
+00:01:39,930 --> 00:01:42,780
+for basically each dot image.
+
+17
+00:01:42,780 --> 00:01:49,080
+That pixel area generate an image in which the value of each pixel is an area of the pixel in a square
+
+18
+00:01:49,080 --> 00:01:52,610
+meters, not arguments is required and returns and images.
+
+19
+00:01:53,190 --> 00:01:59,360
+So basically here you could you could have a look on different options that are available.
+
+20
+00:01:59,670 --> 00:02:08,850
+And now let's come back to our main window and golden window and I'm going to show you some examples.
+
+21
+00:02:08,850 --> 00:02:12,320
+And we are going to learn some basics of image calculation.
+
+22
+00:02:12,720 --> 00:02:16,300
+So as you can see, we have three impacts here.
+
+23
+00:02:16,540 --> 00:02:19,480
+The first part is image collection.
+
+24
+00:02:19,480 --> 00:02:20,600
+That's Landsat eight.
+
+25
+00:02:20,610 --> 00:02:26,310
+We are working with that type of atmosphere reflectance, which is a 12 bent you much.
+
+26
+00:02:26,310 --> 00:02:34,390
+If you click on it, you can just access the documentation, see bands and image properties.
+
+27
+00:02:34,830 --> 00:02:37,580
+We are going to work with the region.
+
+28
+00:02:37,640 --> 00:02:41,280
+I have actually randomly selected a region.
+
+29
+00:02:41,280 --> 00:02:43,770
+I selected the region over in Egypt.
+
+30
+00:02:43,770 --> 00:02:50,430
+It's not far from Cairo, in the delta of Nile of the of the River Nile, which I just thought that
+
+31
+00:02:50,430 --> 00:02:59,250
+is quite a nice example to show you much miscalculation, especially considering that we don't have
+
+32
+00:02:59,250 --> 00:03:02,580
+so much cloud coverage in this part of the world.
+
+33
+00:03:03,330 --> 00:03:10,470
+Well, region, you can also, as you remember, if you just click on this polygon and you change their
+
+34
+00:03:12,450 --> 00:03:20,430
+basically the size of the polygon, you can either reduce it or make it bigger.
+
+35
+00:03:20,430 --> 00:03:26,390
+Or if you click it, you can also just drag it and drop over the area you would be interested in.
+
+36
+00:03:26,450 --> 00:03:26,660
+Yeah.
+
+37
+00:03:26,910 --> 00:03:33,570
+So basically if you would like to do the same algorithm, implement the same algorithm, but at a different
+
+38
+00:03:33,570 --> 00:03:37,290
+part of the world, what you need is just to click on it and react to the part of the world you are
+
+39
+00:03:37,290 --> 00:03:38,130
+interested in.
+
+40
+00:03:38,340 --> 00:03:43,390
+And then you could run and say, OK, here.
+
+41
+00:03:43,390 --> 00:03:49,580
+And you can see there is another variable which is important for you.
+
+42
+00:03:49,590 --> 00:03:52,020
+This is visualization parameters.
+
+43
+00:03:52,470 --> 00:03:55,830
+And I explained to your last video how to do it.
+
+44
+00:03:55,830 --> 00:03:58,920
+Basically you what I did.
+
+45
+00:03:58,920 --> 00:04:01,410
+I just created a false color composite.
+
+46
+00:04:02,900 --> 00:04:13,130
+Of image in our study area, using here Berten of visualization parameters, and then I imported it.
+
+47
+00:04:13,310 --> 00:04:19,710
+And then in order to basically always have it and not to do it, every time I said I saved the day,
+
+48
+00:04:19,820 --> 00:04:22,610
+protected in there in the code.
+
+49
+00:04:22,610 --> 00:04:30,650
+And then I also when I print my output here, I, you see I'm here specifying visualization parameters.
+
+50
+00:04:31,270 --> 00:04:33,100
+OK, but this will follow.
+
+51
+00:04:34,160 --> 00:04:36,890
+Let's start with the code itself.
+
+52
+00:04:36,920 --> 00:04:44,740
+So first of all, what we need is to basically filter our image collection, because here we have impacted
+
+53
+00:04:44,840 --> 00:04:48,630
+the whole image collection and we need to reduce it to only one image.
+
+54
+00:04:48,920 --> 00:04:57,200
+So this way we are using a filter bounce function that you already know from the previous videos and
+
+55
+00:04:57,200 --> 00:05:03,740
+we filtered by region, which is our square polygon, our polygon here.
+
+56
+00:05:05,530 --> 00:05:14,920
+Then I also filter by metadata, so I select only the images that are with the cloud that have cloud
+
+57
+00:05:14,920 --> 00:05:16,090
+cover less than one.
+
+58
+00:05:16,390 --> 00:05:21,610
+And do you see I also say that I would like to retrieve the first image.
+
+59
+00:05:21,940 --> 00:05:22,360
+Yeah.
+
+60
+00:05:22,940 --> 00:05:31,660
+And this is important because if you don't specify this first, this function here, then the whole
+
+61
+00:05:32,620 --> 00:05:43,410
+image collection over your polygon would be imparted to your would be the result of your of your analysis.
+
+62
+00:05:43,720 --> 00:05:51,730
+And this is not what we are doing, because here we are not looking at how to create how to work with
+
+63
+00:05:51,730 --> 00:05:57,610
+image collections, but we are working, how we are talking, how to manipulate single images and how
+
+64
+00:05:57,610 --> 00:06:03,700
+to perform mathematical arithmetical calculations with single images.
+
+65
+00:06:03,730 --> 00:06:08,740
+Therefore, I did this first and then we Mappin layer.
+
+66
+00:06:08,800 --> 00:06:16,020
+So this is image and this visualization parameter and that here I just specify the name.
+
+67
+00:06:16,030 --> 00:06:24,770
+So if I would have not put this false color composite name, I would just have here layer one in the
+
+68
+00:06:24,810 --> 00:06:26,920
+in the in the top, which I don't want.
+
+69
+00:06:26,930 --> 00:06:29,530
+So I just specify it.
+
+70
+00:06:29,530 --> 00:06:34,200
+And visualization parameters have explained you how to do it at the beginning.
+
+71
+00:06:34,720 --> 00:06:45,250
+And here this line here of the code basically center our map window over the area of your interest.
+
+72
+00:06:45,250 --> 00:06:52,630
+If you don't want, if you would not edit otherwise, we would have surged over our study area all over
+
+73
+00:06:52,630 --> 00:06:53,050
+the globe.
+
+74
+00:06:53,050 --> 00:06:55,100
+That basically is not very comfortable.
+
+75
+00:06:55,750 --> 00:06:57,620
+So that's important.
+
+76
+00:06:57,620 --> 00:07:01,570
+The data into our Google Earth engine.
+
+77
+00:07:01,570 --> 00:07:08,650
+And now we are going to use the first method to calculate aspect of industry.
+
+78
+00:07:08,660 --> 00:07:13,360
+So I will I will use an example of normalized different vegetation index.
+
+79
+00:07:13,390 --> 00:07:25,270
+This is probably one of the most useful and most or the most often used vegetation indices in remote
+
+80
+00:07:25,270 --> 00:07:25,840
+sensing.
+
+81
+00:07:26,110 --> 00:07:33,010
+But basically it shows the photosynthetic active vegetation.
+
+82
+00:07:33,020 --> 00:07:35,110
+So here's the code was run.
+
+83
+00:07:35,410 --> 00:07:36,700
+I can run it again.
+
+84
+00:07:37,570 --> 00:07:39,100
+That arrow disappeared.
+
+85
+00:07:39,610 --> 00:07:42,080
+And this one we don't need for a moment.
+
+86
+00:07:42,120 --> 00:07:50,380
+OK, since I have changed my study area, you see the image has changed the location.
+
+87
+00:07:50,390 --> 00:07:51,870
+So this image was nice.
+
+88
+00:07:51,950 --> 00:07:52,200
+Yeah.
+
+89
+00:07:52,900 --> 00:07:55,660
+So basically here you can see.
+
+90
+00:07:58,910 --> 00:08:09,490
+Our study area that all this red color on there on the image shows basically there for the synthetically
+
+91
+00:08:09,500 --> 00:08:12,640
+active vegetation here.
+
+92
+00:08:12,650 --> 00:08:17,440
+You can also see, for example, irrigation very nicely.
+
+93
+00:08:17,450 --> 00:08:24,590
+You can map it from this to image and of course, rejuvenile.
+
+94
+00:08:24,710 --> 00:08:31,340
+So this is the reason why this area is so green, basically.
+
+95
+00:08:31,340 --> 00:08:39,380
+And what we want we want to calculate normalized different vegetation index that would show us for the
+
+96
+00:08:39,380 --> 00:08:43,190
+center for the synthetically active vegetation.
+
+97
+00:08:43,400 --> 00:08:53,270
+It has values from minus one to one while one it's very dense biomass close to the tropical, to the
+
+98
+00:08:53,270 --> 00:08:59,300
+forest, to stands in tropical areas such as I could do, such as in Brazil.
+
+99
+00:09:00,440 --> 00:09:04,970
+And it's never actually reaches one very rarely.
+
+100
+00:09:05,000 --> 00:09:14,090
+And for this dense tropical forest, it could reach by the valleys by point eight negative values on
+
+101
+00:09:14,090 --> 00:09:18,740
+the on the edge of not different vegetation index.
+
+102
+00:09:18,920 --> 00:09:22,810
+And Devi often shows what a water area.
+
+103
+00:09:22,820 --> 00:09:32,660
+So it also could be and also could be used to make out water areas with with water using this simple
+
+104
+00:09:32,660 --> 00:09:33,440
+threshold.
+
+105
+00:09:34,810 --> 00:09:39,140
+OK, so that was a bit background on the on and DBI.
+
+106
+00:09:39,140 --> 00:09:42,920
+And how does it how do we calculate it.
+
+107
+00:09:43,580 --> 00:09:51,850
+We calculated based on an infrared bent and red band of an image.
+
+108
+00:09:51,920 --> 00:09:52,140
+Yes.
+
+109
+00:09:52,140 --> 00:09:59,480
+So basically you can calculate mean and DBI from any satellite image or urban image when infrared and
+
+110
+00:09:59,480 --> 00:10:01,710
+rent bands are present.
+
+111
+00:10:02,120 --> 00:10:04,340
+So the first method is a kind of.
+
+112
+00:10:08,660 --> 00:10:09,440
+Basically,
+
+113
+00:10:12,310 --> 00:10:14,010
+more or less a manual.
+
+114
+00:10:14,330 --> 00:10:24,440
+So basically what we do here, we are forced to rivals, able to read and write Bosnian it, and we
+
+115
+00:10:24,440 --> 00:10:33,500
+just say you must select band four, which is band, red band and select band five, which is basically
+
+116
+00:10:34,160 --> 00:10:35,240
+the infrared band.
+
+117
+00:10:35,240 --> 00:10:45,070
+If you don't remember what band stands for what, you can always print your image, go to console,
+
+118
+00:10:45,620 --> 00:10:49,700
+look at the bands, and here you can see the different bands here.
+
+119
+00:10:50,210 --> 00:11:01,520
+What is important and that you can note here that in a gershenz in the numbering of the bands do not
+
+120
+00:11:01,520 --> 00:11:03,570
+start with one, but with zero.
+
+121
+00:11:03,800 --> 00:11:09,640
+So basically, if it would want to call it as a band driven by its name.
+
+122
+00:11:10,040 --> 00:11:19,430
+So the place of the Band five, which is near infrared, is has a place of four while the red band has
+
+123
+00:11:19,430 --> 00:11:23,130
+a place of three because the count starts with zero.
+
+124
+00:11:24,500 --> 00:11:33,920
+OK, coming back to a calculation of individual, we create a new variable which is called variable
+
+125
+00:11:34,280 --> 00:11:46,400
+and divide, and we subtract an infrared from red and divide by nine by the sum of near infrared plus
+
+126
+00:11:46,400 --> 00:11:47,270
+red band.
+
+127
+00:11:47,720 --> 00:11:56,000
+After we have created the formula and divide, we can just run it and add our newly created variable
+
+128
+00:11:56,000 --> 00:12:00,220
+to our image mapping.
+
+129
+00:12:00,570 --> 00:12:02,330
+So I'm running it.
+
+130
+00:12:02,330 --> 00:12:06,980
+And here we have layer two, which is NDB.
+
+131
+00:12:06,980 --> 00:12:14,690
+Yeah, we can have a look together on this individual layer and maybe to make it more visually appealing,
+
+132
+00:12:14,690 --> 00:12:16,650
+we can change it.
+
+133
+00:12:16,670 --> 00:12:26,030
+So basically when we put visualization parameters here, we can specify the range while we can put it
+
+134
+00:12:26,180 --> 00:12:28,730
+maybe from minus one to one.
+
+135
+00:12:28,880 --> 00:12:40,580
+And we can also use either we can apply, we can use either grayscale or we can also use a palette.
+
+136
+00:12:41,000 --> 00:12:49,420
+Maybe palette is nicer so we can, for example, for minus values, select red color because it's not
+
+137
+00:12:49,430 --> 00:12:52,190
+vegetation is there and.
+
+138
+00:12:54,920 --> 00:13:03,560
+For zero values, we can use neutral, like white and for green we can use.
+
+139
+00:13:05,790 --> 00:13:10,810
+Four for one and have one, we can use dark green.
+
+140
+00:13:11,400 --> 00:13:14,680
+Yeah, apply that, see the result.
+
+141
+00:13:16,110 --> 00:13:16,770
+OK.
+
+142
+00:13:18,120 --> 00:13:27,390
+And as I as I said, if you want to use this palette again, maybe just let me reduce it to.
+
+143
+00:13:32,490 --> 00:13:39,430
+You can experimental, it'll be here to make what is to to see what is more visually appealing for you.
+
+144
+00:13:40,230 --> 00:13:44,130
+So let's maybe keep this where loose.
+
+145
+00:13:44,610 --> 00:13:52,650
+And then if you want to have to use, again this palette later on, you can just select this part.
+
+146
+00:13:57,240 --> 00:14:03,840
+And we close this and here you can see that we have an important new resolution, viz. parameters,
+
+147
+00:14:04,230 --> 00:14:17,160
+I will call them parameter two and here in our end, NDB, we can just add this visualization parameter
+
+148
+00:14:17,610 --> 00:14:26,010
+and we can also and add the name for this layer that let me run again this.
+
+149
+00:14:28,720 --> 00:14:35,710
+And what you see automatically when visualisations parameter was created, we have we can see here in
+
+150
+00:14:35,710 --> 00:14:44,080
+our layers at least that we have now and DBI not layer two, but then divide as well as we can nicely
+
+151
+00:14:44,080 --> 00:14:44,410
+see.
+
+152
+00:14:44,410 --> 00:14:49,060
+And Astarita visualization for this parameter, which is also quite nice.
+
+153
+00:14:49,110 --> 00:14:49,320
+Yeah.
+
+154
+00:14:49,690 --> 00:14:59,380
+So basically what you can see now that all the vegetated areas in our image received is green, you
+
+155
+00:14:59,400 --> 00:15:11,290
+so well just above zero red values in our image shows rivers so surface water surface areas which correspond
+
+156
+00:15:11,440 --> 00:15:15,670
+to our knowledge and the desert areas just.
+
+157
+00:15:16,470 --> 00:15:20,470
+I have a slightly negative value, there is it's bare soil.
+
+158
+00:15:20,500 --> 00:15:32,110
+Yeah, so it's between or if if you have a look on the inspector tab, we can see that the values for
+
+159
+00:15:32,290 --> 00:15:36,430
+individual over of a desert is around zero.
+
+160
+00:15:36,670 --> 00:15:39,460
+Therefore, it has this pinkish color.
+
+161
+00:15:39,970 --> 00:15:46,110
+OK, this was the first way how you can calculate and divide.
+
+162
+00:15:46,540 --> 00:15:55,240
+But there is a second method, the second method, which is basically creating an expression.
+
+163
+00:15:56,170 --> 00:16:09,010
+And this method is more elegant and it's actually more suggestible to use this method.
+
+164
+00:16:09,010 --> 00:16:16,930
+When you are familiar with scripting in Java, in Google Earth engine with JavaScript, because declaring
+
+165
+00:16:17,500 --> 00:16:25,840
+so many new arrivals is always kind of time consuming and it's kind of difficult to keep track on all
+
+166
+00:16:25,840 --> 00:16:29,370
+the variables in your script if you have many of them.
+
+167
+00:16:29,430 --> 00:16:29,550
+Yeah.
+
+168
+00:16:29,580 --> 00:16:31,150
+So in our example, it's easier.
+
+169
+00:16:31,180 --> 00:16:38,410
+So for easy examples, not a problem, but can you imagine if you have many of those variables and the
+
+170
+00:16:38,410 --> 00:16:41,920
+formula is complex, it could be quite tedious.
+
+171
+00:16:42,460 --> 00:16:48,440
+So basically the second method is to create a function.
+
+172
+00:16:48,460 --> 00:16:56,450
+So first of all, you have to name the function and you're using too much expression this.
+
+173
+00:16:56,470 --> 00:16:58,060
+So the input is very much.
+
+174
+00:16:58,060 --> 00:17:04,720
+And then you have to in the in their brackets, you have to first.
+
+175
+00:17:05,170 --> 00:17:13,180
+Rydex, the expression that you want to use this Nean Fred, minus redivided of near infrared plus red.
+
+176
+00:17:14,980 --> 00:17:28,660
+And here we have to open the alkyl library and provided the library and provided the keys to the, to
+
+177
+00:17:28,660 --> 00:17:33,820
+the infrared and and read in our library.
+
+178
+00:17:33,830 --> 00:17:34,290
+Yes.
+
+179
+00:17:34,300 --> 00:17:37,570
+On the infrared stands funny infrared paint and red for it.
+
+180
+00:17:38,740 --> 00:17:42,960
+Call this parameter not in Dubai but in Dubai too.
+
+181
+00:17:42,970 --> 00:17:47,680
+And here we will have in Dubai and I will just.
+
+182
+00:17:52,960 --> 00:17:57,310
+Comment, everything that you will see map.
+
+183
+00:18:10,340 --> 00:18:18,920
+So you will see that the result of this manipulation will be absolutely the same you have created again
+
+184
+00:18:18,920 --> 00:18:23,330
+and divide you much using this second method.
+
+185
+00:18:23,360 --> 00:18:26,120
+Yeah, well, we just created the function.
+
+186
+00:18:26,150 --> 00:18:26,480
+Yeah.
+
+187
+00:18:26,630 --> 00:18:35,930
+But again, we we this requires declaring variables, red, variable, red and infrared beforehand.
+
+188
+00:18:37,740 --> 00:18:49,290
+And maybe the easiest way is to then to make it more elegant and to write again image expression, so
+
+189
+00:18:49,290 --> 00:18:57,480
+basically it's the same method as here on the top, but basically writing everything together.
+
+190
+00:18:57,510 --> 00:18:57,800
+Yeah.
+
+191
+00:18:58,080 --> 00:18:58,650
+So.
+
+192
+00:19:00,660 --> 00:19:02,640
+In here, but what is it?
+
+193
+00:19:02,940 --> 00:19:13,200
+There's a difference between this part of the code and this part of the code is that I directly in I
+
+194
+00:19:13,200 --> 00:19:21,300
+don't use this image expression and don't specify a library indentation and keys for the library, but
+
+195
+00:19:21,300 --> 00:19:23,910
+I directly input the image.
+
+196
+00:19:23,910 --> 00:19:24,450
+Bance.
+
+197
+00:19:24,450 --> 00:19:24,800
+Yes.
+
+198
+00:19:24,800 --> 00:19:30,660
+So that this is our known formula already, which is here in the brackets.
+
+199
+00:19:30,930 --> 00:19:41,580
+And I already say to my to to this state in image expression, what kind of bands should be inputted
+
+200
+00:19:41,940 --> 00:19:42,750
+into
+
+201
+00:19:45,220 --> 00:19:47,750
+into this expression.
+
+202
+00:19:48,090 --> 00:19:57,410
+So here what is important here is basically I say retrieve Bent five, even though he is band for.
+
+203
+00:19:57,420 --> 00:20:04,470
+But as you remember, we start the engine, start counting from zero.
+
+204
+00:20:04,470 --> 00:20:08,000
+Sorbent four is actually band five.
+
+205
+00:20:08,040 --> 00:20:08,490
+Yeah.
+
+206
+00:20:09,900 --> 00:20:12,990
+Our band form minus band three.
+
+207
+00:20:14,730 --> 00:20:22,140
+Over band four plus band three, so this is basically the same way of writing this this function.
+
+208
+00:20:22,170 --> 00:20:31,560
+It's also the same way, the same basic thing functions here correspond function.
+
+209
+00:20:31,580 --> 00:20:38,850
+There was a difference only that here I don't declare the variables that don't have a library of music
+
+210
+00:20:38,850 --> 00:20:44,070
+is I directly access the bands I provide to the code a piece of the code.
+
+211
+00:20:45,030 --> 00:20:54,570
+They're basically the names of the bands that I want to use in calculation of ENTYVIO and let me run
+
+212
+00:20:54,570 --> 00:20:54,780
+it.
+
+213
+00:20:55,050 --> 00:21:00,790
+Basically, I run and it produce absolutely the same result here.
+
+214
+00:21:00,810 --> 00:21:10,830
+So if if you can see it's the same, what is more, you can also use the same visualization parameters
+
+215
+00:21:10,830 --> 00:21:13,590
+as for the first in the I.
+
+216
+00:21:21,000 --> 00:21:29,670
+Which will allow you better comparison between the three images and then you don't you don't just take
+
+217
+00:21:29,670 --> 00:21:37,080
+my word by granted, but you will see that they then did absolutely the same.
+
+218
+00:21:44,000 --> 00:21:46,760
+So basically, this is our first image.
+
+219
+00:21:47,720 --> 00:21:54,120
+That we created by first normalized difference vegetation index that we created using the first method.
+
+220
+00:21:55,940 --> 00:22:01,370
+This is our second image and this is the third image and they are absolutely the same.
+
+221
+00:22:02,000 --> 00:22:05,840
+OK, that basically was it.
+
+222
+00:22:06,000 --> 00:22:12,800
+And in the next video, I'm going to show you how to calculate and DBI of image composite.

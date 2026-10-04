@@ -1,0 +1,235 @@
+1
+00:00:00,150 --> 00:00:02,490
+Hi and welcome back to this week.
+
+2
+00:00:02,940 --> 00:00:09,060
+In the last video, you have seen how to perform calculations with the images, but this method on the
+
+3
+00:00:09,060 --> 00:00:15,750
+work, on single mean images, when you want to perform a certain calculation or an entire image collection,
+
+4
+00:00:16,470 --> 00:00:23,340
+you have to create a JavaScript function and map that function of a collection and that this is what
+
+5
+00:00:23,340 --> 00:00:25,690
+we are going to do in this short video.
+
+6
+00:00:26,700 --> 00:00:31,470
+First of all, we need to import our data to work with the images.
+
+7
+00:00:31,470 --> 00:00:40,620
+And for this we use the same study area of Egypt in the delta of the Nile River.
+
+8
+00:00:41,320 --> 00:00:48,390
+And basically this is the same image collection from LANSAT that we have inputted in our previous video
+
+9
+00:00:49,500 --> 00:00:50,000
+here.
+
+10
+00:00:51,210 --> 00:00:54,640
+What I'm doing, I'm filtering by bounce bounce.
+
+11
+00:00:54,650 --> 00:01:01,250
+So my polygon, as in the previous video and also I have added filtering by date.
+
+12
+00:01:01,590 --> 00:01:10,020
+So, for example, when you don't want really to to work with the whole archive of LANSAT, of your
+
+13
+00:01:10,020 --> 00:01:17,090
+study area, you can specify the date that you are interested in and then basically you will be then
+
+14
+00:01:17,100 --> 00:01:20,430
+working with a few images.
+
+15
+00:01:20,460 --> 00:01:24,690
+So here I am really working with a few of them.
+
+16
+00:01:24,960 --> 00:01:33,480
+As you can see, I have also printed the size of of my image collection and I have only two images.
+
+17
+00:01:33,510 --> 00:01:39,420
+Yeah, well, uh, then we are starting with create and function.
+
+18
+00:01:40,530 --> 00:01:45,480
+JavaScript function maps that function over the collection.
+
+19
+00:01:46,350 --> 00:01:49,980
+Let us first start with a function created in JavaScript.
+
+20
+00:01:49,990 --> 00:01:57,120
+It's done like this for first of Wheelwright function and then we give a name for function.
+
+21
+00:01:57,510 --> 00:01:59,850
+The input to the function is image.
+
+22
+00:02:00,030 --> 00:02:02,280
+So here we do not specify which image.
+
+23
+00:02:02,280 --> 00:02:10,560
+We just write image and then we open curly, curly brackets where we basically are going to write our
+
+24
+00:02:10,560 --> 00:02:11,190
+function.
+
+25
+00:02:12,710 --> 00:02:15,890
+That we are going to map our collection.
+
+26
+00:02:17,500 --> 00:02:27,280
+So here, the first thing, what we have to do is, again, to select bands over which we are going
+
+27
+00:02:27,280 --> 00:02:29,440
+to use for our calculation.
+
+28
+00:02:29,460 --> 00:02:35,760
+So in order to make this example understandable, I'm going to use again example of Devi.
+
+29
+00:02:36,130 --> 00:02:44,820
+So in in this example, in this video, we are going to calculate and divide over our entire image collection.
+
+30
+00:02:45,040 --> 00:02:51,160
+So basically in the previous video, we have done it only with one image and here our entire collection.
+
+31
+00:02:51,160 --> 00:02:56,050
+But in our case, it's two images and then I'm going to change this value here.
+
+32
+00:02:56,920 --> 00:03:04,930
+OK, so the first thing what we have to do inside of this function is to select bands based on which
+
+33
+00:03:04,930 --> 00:03:11,590
+we are going to calculate and divide the suspense four and five red and then for it, then we create
+
+34
+00:03:11,590 --> 00:03:18,540
+another variable which called and divide and we have to specify expression.
+
+35
+00:03:18,940 --> 00:03:22,270
+So this expression is applied to the selected bands.
+
+36
+00:03:22,270 --> 00:03:29,110
+And basically now, as we from all our bands, we have only selected two bands.
+
+37
+00:03:29,140 --> 00:03:33,970
+Band four will have a position of zero, a band five, position one.
+
+38
+00:03:34,240 --> 00:03:39,760
+So this is a formula for device that we have already launched with you in the previous videos.
+
+39
+00:03:40,180 --> 00:03:42,550
+And this function is going to return.
+
+40
+00:03:42,550 --> 00:03:53,520
+And Devi, basically, that said, we are close curly brackets and, uh, we we can actually try whether
+
+41
+00:03:53,530 --> 00:03:58,710
+our function works and we have correctly created it.
+
+42
+00:03:58,720 --> 00:03:59,050
+Yes.
+
+43
+00:03:59,050 --> 00:04:03,170
+You see, there is no error messages and everything is OK.
+
+44
+00:04:03,640 --> 00:04:12,670
+The next step is actually apply the functions that we have specified here to over our collection.
+
+45
+00:04:12,690 --> 00:04:24,040
+So basically we we what we do, we input, we apply our function, we map our function over our image
+
+46
+00:04:24,040 --> 00:04:24,570
+collection.
+
+47
+00:04:24,580 --> 00:04:27,730
+So here image is a variable image.
+
+48
+00:04:28,060 --> 00:04:38,080
+So our image collection over our study area, a specified time and we map this function of our image
+
+49
+00:04:38,080 --> 00:04:38,710
+collection.
+
+50
+00:04:40,210 --> 00:04:47,590
+Let's print this result that you would see what what will be the result?
+
+51
+00:04:47,590 --> 00:04:56,370
+The result is an image collection because we mapped a function with over the image, over image collection.
+
+52
+00:04:56,380 --> 00:05:09,550
+So the return which will return also image collection, which has two basically two images of individual.
+
+53
+00:05:11,280 --> 00:05:20,790
+Let me see, let me show you how we can increase this number, for example, in for the simplicity in
+
+54
+00:05:20,790 --> 00:05:31,260
+my example was to Imagists, if I just change the date, the period from 2001 to 2000 nine and run it
+
+55
+00:05:31,270 --> 00:05:42,060
+over, you see how now I have 90 images and I have created 90 in Dubai images for each of these Landsat
+
+56
+00:05:42,060 --> 00:05:46,050
+images that was retrieved from Landsat eight collection.
+
+57
+00:05:46,320 --> 00:05:47,970
+So this is just a few clicks.
+
+58
+00:05:47,970 --> 00:05:58,860
+And you have learned how with this you can basically map image function of an image collection and create
+
+59
+00:05:59,400 --> 00:06:04,020
+an output which you can use for later on for other analysis on maps.

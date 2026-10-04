@@ -1,0 +1,563 @@
+1
+00:00:00,210 --> 00:00:03,580
+Welcome back, students, in this lecture.
+
+2
+00:00:03,600 --> 00:00:10,900
+I'm going to show you how to apply unsupervised image classification for Landsat images.
+
+3
+00:00:11,250 --> 00:00:18,600
+Basically, this could give you a possibility to perform unsupervised clustering or Kamins classification
+
+4
+00:00:18,840 --> 00:00:24,100
+to basically do any kind of images because the principle is the same.
+
+5
+00:00:24,390 --> 00:00:27,440
+I hope you looked at the theoretical questions.
+
+6
+00:00:27,450 --> 00:00:34,770
+And by the way, if you are really interested to learn more about land use and land classification machine
+
+7
+00:00:34,770 --> 00:00:41,700
+learning algorithms available for this task, I have a specific course on Google Earth engine for land
+
+8
+00:00:41,700 --> 00:00:42,960
+use and then carbamazepine.
+
+9
+00:00:43,230 --> 00:00:46,450
+The reason behind is that this is really a huge topic.
+
+10
+00:00:46,470 --> 00:00:51,000
+It's one of the most demanding topic in remote sensing.
+
+11
+00:00:51,000 --> 00:00:55,440
+So land use land cover analysis is mostly what is mine.
+
+12
+00:00:55,440 --> 00:00:59,160
+Mainly users want to do and want to know how to do so.
+
+13
+00:00:59,160 --> 00:01:05,790
+In case you are really interested to learn more than this short introduction, you could consider looking
+
+14
+00:01:05,790 --> 00:01:07,920
+at my another course on Google Earth engine.
+
+15
+00:01:07,920 --> 00:01:13,020
+But here I'm going to provide you with the basics of this tasks.
+
+16
+00:01:13,080 --> 00:01:19,890
+And if you want to see to know about a theory behind it, look at the previous lecture.
+
+17
+00:01:19,920 --> 00:01:27,390
+I actually explained the main steps and now we are going to work with unsupervised image classification,
+
+18
+00:01:27,390 --> 00:01:29,330
+with Kamins clustering algorithm.
+
+19
+00:01:29,340 --> 00:01:39,280
+You can always go to come in here and see what basically is behind this algorithm.
+
+20
+00:01:39,300 --> 00:01:41,400
+There is also a really nice
+
+21
+00:01:44,040 --> 00:01:46,440
+publications that cited that.
+
+22
+00:01:46,440 --> 00:01:55,380
+You can see basically what based on which papers, Google Earth Engine guys have implemented this clustering
+
+23
+00:01:55,380 --> 00:01:56,070
+algorithm.
+
+24
+00:01:56,080 --> 00:01:56,280
+Yeah.
+
+25
+00:01:56,300 --> 00:02:04,470
+So I again, just encourage you to use Dock's top as much as you can because it's really give you a
+
+26
+00:02:04,470 --> 00:02:05,660
+lot of help.
+
+27
+00:02:05,670 --> 00:02:12,180
+Another way to ask for help if you're stuck and don't know how to work with your code is to ask in the
+
+28
+00:02:12,180 --> 00:02:15,150
+Google or send an email list for this.
+
+29
+00:02:15,150 --> 00:02:16,700
+You need to subscribe to it.
+
+30
+00:02:16,710 --> 00:02:19,680
+And basically, this is what we all do.
+
+31
+00:02:20,280 --> 00:02:21,700
+OK, now let's go.
+
+32
+00:02:21,720 --> 00:02:26,850
+So we are working in the area in Germany, over Berlin.
+
+33
+00:02:27,150 --> 00:02:38,040
+So where I actually live and what we want to do is to apply unsupervised clustering algorithm for the
+
+34
+00:02:38,040 --> 00:02:40,420
+area of the city of Berlin.
+
+35
+00:02:40,800 --> 00:02:48,420
+So this is a polygon, imports of polygon that you can basically just move wherever you want.
+
+36
+00:02:48,640 --> 00:02:53,370
+And here there is also a point which basically we don't need.
+
+37
+00:02:53,370 --> 00:02:55,680
+And you can delete the you if you want.
+
+38
+00:02:55,690 --> 00:03:00,650
+It's basically not really needed this function, you know, already.
+
+39
+00:03:00,660 --> 00:03:08,180
+And we first in which we know we need to do is to apply cloud maskin for Landsat images.
+
+40
+00:03:08,190 --> 00:03:15,780
+So later on you will see that we are going to work with Landsat eight images for the upper atmosphere
+
+41
+00:03:16,310 --> 00:03:25,770
+reflectance collection that you can always also just Google here and all the details will be available
+
+42
+00:03:25,770 --> 00:03:26,190
+for you.
+
+43
+00:03:26,190 --> 00:03:28,710
+But we already learned how to do it.
+
+44
+00:03:28,890 --> 00:03:32,190
+But what we didn't do is how to do cloud maskin.
+
+45
+00:03:32,200 --> 00:03:45,240
+So this is a function that basically describes how which we need, which bands we need, pixel quality
+
+46
+00:03:45,240 --> 00:03:50,290
+bands and which basically numbers we should select.
+
+47
+00:03:50,310 --> 00:03:56,370
+So if you're interested, what is behind those numbers?
+
+48
+00:03:56,640 --> 00:04:03,510
+You should go to the description of the landside collection, this cloud Maskin.
+
+49
+00:04:03,960 --> 00:04:09,840
+In the previous section, we were working with Sentinel, two images where we were also doing Cloud
+
+50
+00:04:09,840 --> 00:04:11,390
+Maskin for sending images.
+
+51
+00:04:11,400 --> 00:04:18,410
+So if you work with Sentinel data, please refer to that video for flood mapping where you can see a
+
+52
+00:04:18,660 --> 00:04:21,980
+piece of the code for Cloud Maskin Sentinel.
+
+53
+00:04:22,620 --> 00:04:33,180
+Then here we also want to not only use bands of LANSAT aid, but we also would like to calculate normalized
+
+54
+00:04:33,180 --> 00:04:37,620
+different vegetation index to add it to our classification.
+
+55
+00:04:37,920 --> 00:04:45,420
+This is very often done and not only and DBI is calculated, but many more other spectral indices could
+
+56
+00:04:45,420 --> 00:04:49,770
+be added to your classification to increase their performance.
+
+57
+00:04:50,340 --> 00:04:56,730
+Well, you already know very well the function that is behind and DBI, we have just launched it at
+
+58
+00:04:56,730 --> 00:04:59,900
+the beginning when we were just introduced into.
+
+59
+00:05:00,550 --> 00:05:02,140
+Ourselves to JavaScript.
+
+60
+00:05:02,500 --> 00:05:13,750
+So this is basically a function to calculate and divide and here we are, including importune alongside
+
+61
+00:05:13,750 --> 00:05:22,900
+a collection and filtering it by well here, but actually by point, not by region and by date.
+
+62
+00:05:23,680 --> 00:05:26,220
+We will return this in our next video.
+
+63
+00:05:26,230 --> 00:05:27,980
+In our tasks we do.
+
+64
+00:05:28,910 --> 00:05:41,740
+Then we map our function cloud maskin file on the function of LANSAT eight collection and also ADD and
+
+65
+00:05:41,740 --> 00:05:44,860
+DBI band to our new collection.
+
+66
+00:05:45,580 --> 00:05:54,820
+Then the next step, which we would like to do, we would like to to create Madian Composite from LANSAT
+
+67
+00:05:54,820 --> 00:06:04,180
+eight images, cloud masked man satellite images, as well as select specific bands of his which we
+
+68
+00:06:04,180 --> 00:06:05,090
+are going to work.
+
+69
+00:06:05,110 --> 00:06:06,280
+So we are going to work.
+
+70
+00:06:06,790 --> 00:06:11,140
+Let me start with the easiest thing is bands that we are selecting and spend.
+
+71
+00:06:11,140 --> 00:06:13,340
+Two, three, four, five, six, seven.
+
+72
+00:06:13,660 --> 00:06:21,280
+Again, if you don't remember, about eight bands either, go to the video where I was explaining about
+
+73
+00:06:21,280 --> 00:06:25,600
+LANSAT or you can simply just use him.
+
+74
+00:06:27,380 --> 00:06:38,270
+The help from Google Earth engine and select as a product we are using and which is this one and yeah,
+
+75
+00:06:38,270 --> 00:06:41,250
+and have a look on the bench and their description.
+
+76
+00:06:42,140 --> 00:06:50,600
+Well, composite in composite is a new trend, which is now is really done already for several years,
+
+77
+00:06:50,600 --> 00:06:51,560
+two or three years.
+
+78
+00:06:51,560 --> 00:06:59,180
+And it's extremely popular in our observation community is when we basically taken images for a certain
+
+79
+00:06:59,180 --> 00:07:06,550
+period of time and then create from them one image based on some mathematical function.
+
+80
+00:07:06,600 --> 00:07:12,680
+So basically we take an images from 1st of January 2017 till the end.
+
+81
+00:07:12,680 --> 00:07:17,780
+So for the whole year and create imagine you much from them.
+
+82
+00:07:17,780 --> 00:07:25,830
+But then we are using only cloud, free cloud, free observations within this period of time.
+
+83
+00:07:26,210 --> 00:07:28,640
+This is done for several reasons.
+
+84
+00:07:28,640 --> 00:07:35,330
+First, to reduce the amount of the data that we are working with, which basically otherwise we would
+
+85
+00:07:35,480 --> 00:07:38,900
+have to deal with really a lot of images.
+
+86
+00:07:39,200 --> 00:07:48,650
+And in this kind of manipulation, we have only one image and also it gives good results that give you
+
+87
+00:07:49,280 --> 00:07:53,480
+gives a representative of values for the whole year.
+
+88
+00:07:53,510 --> 00:07:58,820
+So basically depends on your application, what you are looking at to some application composite and
+
+89
+00:07:58,820 --> 00:07:59,590
+is now go.
+
+90
+00:07:59,960 --> 00:08:05,570
+But for other applications like Langoulant cover mapping, it could be a good alternative.
+
+91
+00:08:06,290 --> 00:08:06,990
+All right.
+
+92
+00:08:07,040 --> 00:08:15,440
+Um, then this basically tells at this point we were just dealing with data importune, preprocessing
+
+93
+00:08:15,440 --> 00:08:16,670
+filter in collections.
+
+94
+00:08:16,910 --> 00:08:23,010
+And here this part is starting of the algorithm itself of commune's algorithm.
+
+95
+00:08:23,450 --> 00:08:32,300
+So if you are familiar with supervised and supervised classification, you probably know that if you
+
+96
+00:08:32,300 --> 00:08:38,780
+do, for example, unsupervised classification in case you don't have to define any training, this
+
+97
+00:08:38,780 --> 00:08:43,780
+is, um, basically not absolutely correct.
+
+98
+00:08:43,790 --> 00:08:47,030
+It's still done, but in background and we don't see it.
+
+99
+00:08:47,300 --> 00:08:55,310
+But in Google or Engine, since we are program it, we are writing a script, we have to provide a training
+
+100
+00:08:55,490 --> 00:08:56,420
+for our data.
+
+101
+00:08:56,420 --> 00:09:00,200
+And this piece of function here is actually does this.
+
+102
+00:09:00,200 --> 00:09:10,610
+We say that we would like to sample 100 pixels from our region and this data is going to train our cumins
+
+103
+00:09:10,610 --> 00:09:13,250
+unsuppressed algorithm.
+
+104
+00:09:13,250 --> 00:09:17,540
+And it's basically an algorithm itself.
+
+105
+00:09:17,810 --> 00:09:20,820
+It's a number of classes that we would like to get.
+
+106
+00:09:20,870 --> 00:09:32,630
+You can always also just look at this algorithm here and see what what are the options that you have.
+
+107
+00:09:33,680 --> 00:09:36,920
+So basically arguments of this function is different.
+
+108
+00:09:36,930 --> 00:09:44,450
+So you can either keep all the different default or you can really specify each of these arguments.
+
+109
+00:09:44,450 --> 00:09:46,080
+You can see there's many of them.
+
+110
+00:09:46,520 --> 00:09:50,240
+So up to you how complex you want to do it.
+
+111
+00:09:50,840 --> 00:09:56,770
+And basically, we apply this function to our result to generate an image.
+
+112
+00:09:57,780 --> 00:09:59,270
+This is a visualization.
+
+113
+00:09:59,270 --> 00:10:02,260
+We talked about visualization many times here.
+
+114
+00:10:02,260 --> 00:10:03,230
+I provide for you.
+
+115
+00:10:03,230 --> 00:10:07,580
+You can always do it by yourself on output and then import.
+
+116
+00:10:07,580 --> 00:10:09,860
+You've already learned how to do.
+
+117
+00:10:10,280 --> 00:10:11,660
+Um, and, uh.
+
+118
+00:10:12,260 --> 00:10:12,710
+Yeah.
+
+119
+00:10:22,420 --> 00:10:32,090
+So here we are adding our Madeon Landsat eight composite and what we are doing here is adding our a
+
+120
+00:10:32,110 --> 00:10:34,810
+result of comment classification.
+
+121
+00:10:34,820 --> 00:10:37,170
+So let's have a look on the results.
+
+122
+00:10:44,670 --> 00:10:49,770
+So this is the output of Kamins classification algorithm with a 15 classis.
+
+123
+00:10:53,800 --> 00:11:03,700
+For Berlin City, you can see that here probably so this is a difficult surfaces depicted by the yellow
+
+124
+00:11:03,700 --> 00:11:04,600
+and orange
+
+125
+00:11:07,240 --> 00:11:08,700
+colors on this map.
+
+126
+00:11:09,040 --> 00:11:16,200
+So basically we can also see some waterboardings, some vegetation in the city.
+
+127
+00:11:16,390 --> 00:11:21,610
+So I think it looks like a like a first try for classification.
+
+128
+00:11:21,610 --> 00:11:22,630
+Quite nice.
+
+129
+00:11:23,050 --> 00:11:31,110
+You'll also remember that we don't use unsupervised classification for really four tasks, usually of
+
+130
+00:11:31,300 --> 00:11:33,180
+creating a real map.
+
+131
+00:11:33,190 --> 00:11:38,650
+So so rather, this is the first step for classification to explore the data, to see the clustering
+
+132
+00:11:39,010 --> 00:11:42,930
+of your natural groupings and clustering within your images.
+
+133
+00:11:42,940 --> 00:11:45,520
+But I think it looks quite, quite well.
+
+134
+00:11:45,520 --> 00:11:49,120
+Of course, the resolution is not a perfect setup.
+
+135
+00:11:49,120 --> 00:11:56,740
+For example, here, blue areas, but this all you can always experts to see much and work in a more
+
+136
+00:11:56,920 --> 00:12:01,450
+user friendly environment like garbagey as huge areas for visualization.
+
+137
+00:12:01,480 --> 00:12:10,180
+Yeah, and this is a modern composite from LANSAT image that we have created with also, as you can
+
+138
+00:12:10,180 --> 00:12:11,200
+see nicely here.
+
+139
+00:12:11,200 --> 00:12:16,640
+So we have some masks applied for cloud mask.
+
+140
+00:12:16,690 --> 00:12:19,040
+What a mask and shadow mask.
+
+141
+00:12:19,420 --> 00:12:24,520
+So this is cloud free lansat composite maddin composite for one year.

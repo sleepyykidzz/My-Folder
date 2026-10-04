@@ -1,0 +1,483 @@
+1
+00:00:00,390 --> 00:00:01,600
+Welcome back, students.
+
+2
+00:00:01,680 --> 00:00:08,590
+The topic of this video is satellite images and their characteristics in this lecture.
+
+3
+00:00:08,610 --> 00:00:15,070
+We are going to learn what is exactly digital image as well as what are the main characteristics that's
+
+4
+00:00:15,120 --> 00:00:22,470
+going to talk about different resolutions of the images, such a special spectral, temporal and radiometric.
+
+5
+00:00:23,160 --> 00:00:27,420
+So what does a digital image, digital image consist of?
+
+6
+00:00:27,420 --> 00:00:30,180
+Descript picture elements called pixels.
+
+7
+00:00:30,780 --> 00:00:37,740
+The intensity of each pixel correspond to the average brightness Regence measured electronically over
+
+8
+00:00:37,740 --> 00:00:40,620
+the ground area, corresponding to each pixel.
+
+9
+00:00:41,070 --> 00:00:44,850
+It consist of columns and rows.
+
+10
+00:00:46,940 --> 00:00:54,440
+The digital no DNA also refers to as a brightness, value or pixel value corresponding to the average
+
+11
+00:00:54,440 --> 00:00:58,320
+reddin's measured in each pixel shown in the figure.
+
+12
+00:00:58,940 --> 00:01:06,110
+This values result from Quent design, the original electrical signal from center into positive integer
+
+13
+00:01:06,110 --> 00:01:13,160
+value using a process called analog analog to digital, a 2D signaled conversion.
+
+14
+00:01:13,820 --> 00:01:19,760
+Whether an image is acquired electronically or photographically, it may contain data from a single
+
+15
+00:01:19,760 --> 00:01:22,580
+spectral band or from multiple spectral bands.
+
+16
+00:01:23,120 --> 00:01:26,080
+The image shown in the slide has four bands.
+
+17
+00:01:26,510 --> 00:01:33,230
+In the case of a digital multispectral image, each pixel includes multiple digital numbers, one for
+
+18
+00:01:33,230 --> 00:01:41,000
+each spectral band, so one digital number for each picked for this pixel on the band, one then the
+
+19
+00:01:41,000 --> 00:01:47,760
+corresponding value, which is differs from the band one or the band two, band three and band four.
+
+20
+00:01:48,800 --> 00:01:54,650
+In the case of digital multispectral images, each pixel includes this multiple digital numbers.
+
+21
+00:01:55,550 --> 00:02:02,510
+For example, as shown in figure one pixel in a digital image might have values of 10 in the first PacTel
+
+22
+00:02:02,510 --> 00:02:11,270
+band representing Blue Waveland's number 54 in the second band, which is Green 27 in the third, which
+
+23
+00:02:11,270 --> 00:02:16,220
+is a red band and 15 in the fourth band, which is usually in infrared band.
+
+24
+00:02:20,840 --> 00:02:21,860
+An example
+
+25
+00:02:25,370 --> 00:02:32,190
+in each image, we can zoom into the level of the individual pixel and retrieve its value.
+
+26
+00:02:33,320 --> 00:02:39,470
+In this example, we are zooming into the pixel located in the column three thousand two hundred fifty
+
+27
+00:02:39,470 --> 00:02:48,230
+six and roll to 1980 with digital no value or pixel value of 76.
+
+28
+00:02:50,360 --> 00:02:56,270
+When you select an images from your land use land cover map, the terms that you will hear would be
+
+29
+00:02:56,270 --> 00:02:58,090
+different images, resolutions.
+
+30
+00:02:58,430 --> 00:03:04,640
+So let's review them that you know what is what it means as it is also affects the choice of satellite
+
+31
+00:03:04,640 --> 00:03:06,380
+data and its application.
+
+32
+00:03:07,160 --> 00:03:13,100
+The first one is special resolution, special resolution that specifies the pixel size of satellite
+
+33
+00:03:13,100 --> 00:03:15,470
+image covering the Earth's surface.
+
+34
+00:03:16,310 --> 00:03:23,390
+Temporal resolution specifies the revisiting frequency of a satellite sensor for a specific location.
+
+35
+00:03:24,080 --> 00:03:25,280
+Spectral resolution.
+
+36
+00:03:25,610 --> 00:03:32,840
+Spectral resolution specifies the number of spectral bands in which the sensor can collect reflectance
+
+37
+00:03:32,840 --> 00:03:33,470
+regence.
+
+38
+00:03:34,070 --> 00:03:38,500
+But the number of bands is not the only important aspect of spectral resolution.
+
+39
+00:03:38,780 --> 00:03:44,030
+The position of bands in the electromagnetic spectrum is also important to remember.
+
+40
+00:03:44,030 --> 00:03:50,690
+From the previous videos, we were saying that there are band chromatic multispectral and hyperspectral
+
+41
+00:03:51,140 --> 00:03:59,030
+sensors and correspondingly multispectral hyperspace hyperspectral and programatic images which Rafaat
+
+42
+00:03:59,030 --> 00:04:09,140
+of always to the spectral resolution radiometric resolution corresponds to the sensitivity of a sensor
+
+43
+00:04:09,560 --> 00:04:17,330
+or its stability, to its ability to measure and to enable distinction within the same spectral bands
+
+44
+00:04:17,600 --> 00:04:23,960
+of differences in the electromagnetic energy reflected by the elementary ground surfaces.
+
+45
+00:04:24,350 --> 00:04:28,030
+Now let's have a look on their correspondant example.
+
+46
+00:04:28,640 --> 00:04:34,790
+The first example is a special resolution, which is a simply a size of a picture of your image.
+
+47
+00:04:35,330 --> 00:04:41,810
+Here on the left, you can see an image of a Pentagon in the United States of America with a special
+
+48
+00:04:41,810 --> 00:04:43,730
+resolution of 30 meters.
+
+49
+00:04:45,140 --> 00:04:48,800
+While on the right is a special resolution is 10 meters.
+
+50
+00:04:49,070 --> 00:04:57,110
+It is obvious that the biggest pixel size, the more details we can retrieve from the image sometimes
+
+51
+00:04:57,290 --> 00:05:03,380
+that you often have to bear in mind something that you have often to bear in mind, that you are selecting
+
+52
+00:05:03,380 --> 00:05:06,440
+images when you are selecting images for classification.
+
+53
+00:05:06,740 --> 00:05:09,080
+That's often very important for you to think.
+
+54
+00:05:09,350 --> 00:05:16,190
+What is more important for you to have a very special resolution to retrieve each and every detail of
+
+55
+00:05:16,190 --> 00:05:22,410
+the surface that you are imaging, or you're more interested, for example, to cover a larger area.
+
+56
+00:05:22,520 --> 00:05:25,400
+But in what course with a make or special resolution?
+
+57
+00:05:26,360 --> 00:05:28,940
+Here is, for your reference, a subset of that.
+
+58
+00:05:28,940 --> 00:05:35,380
+Along with our special resolutions, you can see that the range is wide from six to centimetres with
+
+59
+00:05:35,480 --> 00:05:42,350
+quick broadband chromatic band to up to five kilometers, which is a matter of state stationary satellite
+
+60
+00:05:43,700 --> 00:05:45,320
+about spectral resolution.
+
+61
+00:05:45,530 --> 00:05:50,880
+We have talked about already in the previous video to remind you the images could be banned.
+
+62
+00:05:50,900 --> 00:05:57,920
+Chromatic multispectral and hyperspectral and correspondant correspondent is a band, dramatic multispectral
+
+63
+00:05:57,920 --> 00:06:00,230
+and hyperspectral images.
+
+64
+00:06:02,170 --> 00:06:08,350
+Multispectral Santurce typically provide less than 15 bands, while hyperspectral sensors can provide
+
+65
+00:06:08,350 --> 00:06:12,370
+more than 100 spectral bands, which explains its specific name.
+
+66
+00:06:13,360 --> 00:06:21,220
+Another important basic concept to understand Flinders Island car mapping is the much display when in
+
+67
+00:06:21,220 --> 00:06:28,510
+this multiband image, it is possible to view a single bed at a time, treating it as if it were a discrete
+
+68
+00:06:28,510 --> 00:06:28,960
+image.
+
+69
+00:06:29,380 --> 00:06:37,000
+Alternatively, and more commonly, three bands from the image can be selected and displayed simultaneously
+
+70
+00:06:37,000 --> 00:06:44,320
+in shades of red, green and blue to create a color composite image, whether on a computer monitor
+
+71
+00:06:44,470 --> 00:06:45,790
+in hard copy print.
+
+72
+00:06:46,270 --> 00:06:52,360
+If the three bance been displayed where original detected by the sensor in the red, green and blue
+
+73
+00:06:52,360 --> 00:06:59,860
+wavelength range of the visible spectrum, then this composite will be referred to as a true color image
+
+74
+00:06:59,860 --> 00:07:07,260
+because it will approximate the natural combination of colors that that would be seen by the human eye.
+
+75
+00:07:07,600 --> 00:07:10,960
+So you can see the example on the right here.
+
+76
+00:07:10,960 --> 00:07:19,360
+We have a true color composite and the resulting image will look for us as it could be seen by us,
+
+77
+00:07:19,360 --> 00:07:26,980
+by our human eye, and as a combination of bands, perhaps involving bands acquired in wavelengths outside
+
+78
+00:07:26,980 --> 00:07:34,150
+the visible spectrum, will be referred to us as a false color composite or false color image.
+
+79
+00:07:34,660 --> 00:07:41,920
+One common false color combination of spectral bands involves displaying near infrared red and green
+
+80
+00:07:41,920 --> 00:07:50,000
+bands from the sensor in red, green, in the red, green and blue respectively on the display device.
+
+81
+00:07:50,530 --> 00:07:58,090
+Note that in all classes, this three band composite image involved displaying some combination of bands
+
+82
+00:07:58,090 --> 00:08:04,330
+from the sensor in red, green and blue on the display device because a human eye perceives color as
+
+83
+00:08:04,330 --> 00:08:06,940
+a mixture of the three primary colors.
+
+84
+00:08:07,870 --> 00:08:11,380
+So here we have this false color composite.
+
+85
+00:08:11,380 --> 00:08:18,820
+And what you can see is since we have a sign near infrared to the red color, now, all the vegetation
+
+86
+00:08:18,820 --> 00:08:21,100
+is shown in the red in our image.
+
+87
+00:08:21,720 --> 00:08:23,060
+You may ask me why.
+
+88
+00:08:23,350 --> 00:08:27,860
+Well, then you have to remember spectral signatures that they have shown to you before.
+
+89
+00:08:28,150 --> 00:08:35,250
+So you have you probably remember that vegetation has a very strong reflectance values in near infrared.
+
+90
+00:08:35,410 --> 00:08:39,370
+And when we assign infrared to red car loans are banned.
+
+91
+00:08:39,520 --> 00:08:46,150
+All the vegetation, which has a strong reflectance in the red in the infrared, would be depicted in
+
+92
+00:08:46,150 --> 00:08:47,300
+red on your image.
+
+93
+00:08:47,620 --> 00:08:55,690
+Therefore, this kind of false color composite sometimes are used by expert our analysts to highlight
+
+94
+00:08:55,690 --> 00:09:03,040
+some features on the image that would be not visible to our human eyes as a bias in this Truecaller
+
+95
+00:09:03,040 --> 00:09:03,760
+composite.
+
+96
+00:09:06,830 --> 00:09:12,800
+Now, let's move to the radiometric resolution, radiometric resolution often referred to the number
+
+97
+00:09:12,800 --> 00:09:19,130
+of unique value that can be recorded by a sense of and measured, reflected or omitted electromagnetic
+
+98
+00:09:19,730 --> 00:09:20,570
+radiation.
+
+99
+00:09:21,710 --> 00:09:26,740
+It is usually quantified as a number and expressed in a bit.
+
+100
+00:09:27,410 --> 00:09:32,730
+The higher the radiometric resolution, the better is the quality of your data.
+
+101
+00:09:33,470 --> 00:09:37,910
+The bits are expressed as opposed to a number start from zero.
+
+102
+00:09:38,330 --> 00:09:44,510
+Similarly, an eight Besançon can record values from zero to to to 255.
+
+103
+00:09:45,050 --> 00:09:47,320
+So how does this look like?
+
+104
+00:09:47,330 --> 00:09:54,050
+Here we have an example of the same image which expressed in a different radiometric resolution.
+
+105
+00:09:54,050 --> 00:10:02,540
+The image on the left has only one bit, while the image on the right has six bit image.
+
+106
+00:10:02,550 --> 00:10:05,150
+So you can see the more values you can record.
+
+107
+00:10:05,150 --> 00:10:11,330
+So the higher a geometric resolution, the better quality is of your image.
+
+108
+00:10:11,330 --> 00:10:16,500
+Contemporarily sensors are usually record images in eight bits.
+
+109
+00:10:19,280 --> 00:10:21,080
+What is temporal resolution?
+
+110
+00:10:22,190 --> 00:10:27,760
+Temporal resolution show a time between two image acquisitions over the same region.
+
+111
+00:10:28,310 --> 00:10:35,890
+This figure on the slide shows the relationship between the special resolution and temporal resolution
+
+112
+00:10:36,260 --> 00:10:37,100
+in general.
+
+113
+00:10:37,250 --> 00:10:39,320
+The Law Special resolution.
+
+114
+00:10:41,070 --> 00:10:48,500
+Here, the hire is temporal temporal resolution, so the law is special, the resolution, the highest
+
+115
+00:10:48,510 --> 00:10:51,540
+temporal resolution, as you can see from this graph.
+
+116
+00:10:51,570 --> 00:10:59,770
+There are currently such centers as rapidly as Sentinel two that have high special and temporal resolutions.
+
+117
+00:10:59,790 --> 00:11:01,410
+So how is it actually achieved?
+
+118
+00:11:01,650 --> 00:11:06,020
+It is achieved by creating so-called satellite cancellations.
+
+119
+00:11:09,700 --> 00:11:15,220
+Now, as you are familiar with the main terms and image characteristics, we can move directly to the
+
+120
+00:11:15,220 --> 00:11:18,590
+topics of how to work with remote sensing images.
+
+121
+00:11:19,060 --> 00:11:21,790
+Stay with me and see you in the next video.

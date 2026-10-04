@@ -1,0 +1,151 @@
+1
+00:00:00,210 --> 00:00:06,270
+Welcome to my course on Google Earth engine for big geo data analysis, three courses in one.
+
+2
+00:00:06,270 --> 00:00:09,810
+I am happy that you have found my course and you know why.
+
+3
+00:00:09,810 --> 00:00:17,250
+This course is designed to take users who use Ge'ez for basic geospatial data analysis to perform geospatial
+
+4
+00:00:17,250 --> 00:00:20,610
+analysis and tasks with big data on the cloud.
+
+5
+00:00:20,610 --> 00:00:27,600
+And it includes more than five hours of video content, plenty of practical analysis and downloadable
+
+6
+00:00:27,600 --> 00:00:31,950
+materials implemented in Google Earth and Google Earth.
+
+7
+00:00:31,950 --> 00:00:38,850
+Engine combines a multi petabyte catalog of satellite imagery and geospatial data set with planetary
+
+8
+00:00:38,850 --> 00:00:45,900
+scale analysis capabilities and make it available for scientists, researchers and developers to detect
+
+9
+00:00:45,900 --> 00:00:51,120
+changes, map trends and quantified differences on the Earth's surface.
+
+10
+00:00:51,360 --> 00:00:58,590
+Earth Engine provides easy Web-Based access to an extensive catalog of satellite imagery and other geospatial
+
+11
+00:00:58,590 --> 00:01:01,610
+data in analysis ready format.
+
+12
+00:01:02,010 --> 00:01:07,440
+This enables cutting edge global scales and analysis and visualizations.
+
+13
+00:01:08,610 --> 00:01:14,490
+By the end of this course, in addition to improving your skills in JavaScript, it will make you proficient
+
+14
+00:01:14,490 --> 00:01:22,050
+in Google Earth engine for practical, real life geospatial analysis and tasks with a big data on the
+
+15
+00:01:22,050 --> 00:01:22,640
+cloud.
+
+16
+00:01:23,730 --> 00:01:30,570
+The topics covered in this course include introduction to JavaScript, JavaScript in geospatial analysis
+
+17
+00:01:30,570 --> 00:01:37,410
+in Google Earth engine, short introduction to special and satellite data, image calculations and mapping
+
+18
+00:01:37,410 --> 00:01:45,150
+functions in our search engine spectral indices, examples of practical applications as well as image
+
+19
+00:01:45,150 --> 00:01:46,290
+classification.
+
+20
+00:01:47,250 --> 00:01:53,100
+This course emphasized the importance of understanding the Google Earth engine platform and JavaScript
+
+21
+00:01:53,400 --> 00:01:57,150
+to be able to implement a special analysis on the cloud.
+
+22
+00:01:58,140 --> 00:02:05,190
+You will learn how compute such spectral indices as normalized difference vegetation index and normalize
+
+23
+00:02:05,190 --> 00:02:07,050
+difference water index.
+
+24
+00:02:08,440 --> 00:02:14,760
+You will learn how to use LANSAT them serious for drought monitoring and for flood mapping with the
+
+25
+00:02:14,770 --> 00:02:16,330
+Sentinel images.
+
+26
+00:02:17,270 --> 00:02:23,630
+As well as how to form, perform land use and then carbamazepine, illness engine using state of the
+
+27
+00:02:23,630 --> 00:02:30,380
+art machine learning algorithms, you may ask what if I don't know any programming?
+
+28
+00:02:32,720 --> 00:02:35,300
+Don't worry, you will learn.
+
+29
+00:02:36,320 --> 00:02:42,500
+How to program and I will take your hand by hand and walk through the main concept of JavaScript in
+
+30
+00:02:42,500 --> 00:02:46,450
+Google Earth Engine, and now it's time to introduce myself.
+
+31
+00:02:46,460 --> 00:02:53,260
+My name is Kate Assen and I'm a special expert in Destructive is over 10 years experience in the field.
+
+32
+00:02:53,570 --> 00:03:00,050
+I'm happy to teach you this exciting topic and share my skills and knowledge with you on this course
+
+33
+00:03:00,050 --> 00:03:05,900
+is ideal for professionals such as geographers, programmers, social scientists, geologists and all
+
+34
+00:03:05,910 --> 00:03:12,500
+other experts who need to use maps in the field and would like to learn more about your special analysis.
+
+35
+00:03:13,130 --> 00:03:16,820
+Why an important part of this course is the practical exercises.
+
+36
+00:03:17,090 --> 00:03:21,920
+You will be given Sampras's instructions and all codes will be provided to you.
+
+37
+00:03:22,220 --> 00:03:29,510
+So and role now and learn the exciting cutting edge skill in geospatial analysis on the cloud that will
+
+38
+00:03:29,510 --> 00:03:32,510
+definitely help you visit a special career.

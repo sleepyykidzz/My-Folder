@@ -1,0 +1,44 @@
+
+
+//Mapping_function_over_collection https://code.earthengine.google.com/27e4b353351ba3a6495081e21dcd9d20
+
+var L8 = ee.ImageCollection("LANDSAT/LC08/C01/T1_TOA"),
+    region = 
+    /* color: #98ff00 */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[29.998884936263188, 31.196782550141094],
+          [29.998884936263188, 30.508278930331983],
+          [30.938215990950688, 30.508278930331983],
+          [30.938215990950688, 31.196782550141094]]], null, false);
+
+//print(L8.size());
+
+var image = L8
+              .filterBounds(region)
+              .filterDate('2019-01-01', '2020-01-07');
+
+print(image.size());
+Map.centerObject(region);
+
+function calNDVI(image){
+   var selected = image.select('B4', 'B5');
+   var NDVI = selected.expression('(b(1)-b(0))/(b(1)+b(0))');
+   return NDVI;
+}
+
+var NDVIcollection = image.map(calNDVI)
+print(NDVIcollection);
+
+
+
+
+
+
+
+

@@ -1,0 +1,263 @@
+1
+00:00:00,120 --> 00:00:01,230
+Welcome back, students.
+
+2
+00:00:01,440 --> 00:00:08,540
+In this video, I'm going to show you how to work with geospatial analysis in Google Earth engine.
+
+3
+00:00:08,660 --> 00:00:17,800
+So now by far, we have learned do a lot of information about Google Earth engine, about remote sensing.
+
+4
+00:00:17,910 --> 00:00:18,480
+Yes.
+
+5
+00:00:19,290 --> 00:00:24,390
+Different data sets that are that you can work with in Google Earth Engine.
+
+6
+00:00:24,420 --> 00:00:32,400
+I have also talked to your basics and some intermediate introduction to JavaScript.
+
+7
+00:00:32,400 --> 00:00:39,810
+And you have now also a clear understanding how to work with remote sensing and as a special data set
+
+8
+00:00:40,650 --> 00:00:42,210
+for geospatial analysis.
+
+9
+00:00:42,210 --> 00:00:48,990
+We have also had a part of this analysis covered in our previous section.
+
+10
+00:00:49,350 --> 00:00:55,530
+And in this section, I'm going to show you how basically all that math, all the knowledge that we
+
+11
+00:00:55,530 --> 00:01:02,010
+have incorporated in the previous knowledge to apply for a particular application, geospatial application.
+
+12
+00:01:02,010 --> 00:01:04,040
+And we start with a flood mapping.
+
+13
+00:01:04,980 --> 00:01:15,960
+Well, basically, a flood mapping could be done using both optical and active radar data and such sensors,
+
+14
+00:01:15,960 --> 00:01:18,150
+radar sensors, Sentinel one are very good.
+
+15
+00:01:18,150 --> 00:01:22,770
+For example, have a good applications for these.
+
+16
+00:01:23,190 --> 00:01:31,620
+But Sentinel, too, from European Space Agency is also quite a good match for this analysis.
+
+17
+00:01:32,080 --> 00:01:41,430
+And in this exercises, we are going to use Sentinel to images, which is an Earth observation mission
+
+18
+00:01:41,910 --> 00:01:48,330
+which was developed by ESA to perform terrestrial observation in support of services such as forest
+
+19
+00:01:48,330 --> 00:01:52,470
+monitoring, land cover, change detection and natural disaster management.
+
+20
+00:01:53,340 --> 00:01:59,430
+And the complete archive is available also in Google Earth Engine, which makes our lives much easier
+
+21
+00:01:59,430 --> 00:02:05,400
+compared to the Sentinel HARP, because in Sentinel, hobbits are all in the archive, which means that
+
+22
+00:02:05,970 --> 00:02:09,000
+all the images are deleted.
+
+23
+00:02:09,000 --> 00:02:12,930
+But in Google Earth engine, all the images I ingested.
+
+24
+00:02:12,930 --> 00:02:14,460
+So that's good news for us.
+
+25
+00:02:15,570 --> 00:02:25,580
+So we what we are going to do, we are going to load Sentinel two images for specific time period over
+
+26
+00:02:25,590 --> 00:02:31,140
+an area in Southeast Asia for particular river basin.
+
+27
+00:02:31,680 --> 00:02:42,530
+And then we are going to calculate from those images so-called normalized different water index.
+
+28
+00:02:42,990 --> 00:02:48,610
+So this normalized different water index is another spectral index.
+
+29
+00:02:48,610 --> 00:02:58,620
+The index, which is a formula of which is very similar to NDB, so normalized different vegetation
+
+30
+00:02:58,620 --> 00:03:08,880
+index with the differences that we are looking at, the differences between near infrared and meet Mitchard
+
+31
+00:03:08,880 --> 00:03:11,230
+infrared or shortwave infrared.
+
+32
+00:03:11,520 --> 00:03:18,090
+So the formula Szczesny infrared minus while here you can read it.
+
+33
+00:03:18,090 --> 00:03:27,930
+I put it he has a nodine infrared minus meter infrared of infrared plus Meedan infrared.
+
+34
+00:03:28,420 --> 00:03:32,850
+There are different variations of the Ascendis indices I'm going to talk about later.
+
+35
+00:03:32,850 --> 00:03:36,350
+But what what is this index about there?
+
+36
+00:03:36,480 --> 00:03:44,310
+In India, eye is useful for water body mapping as water board is strongly absorb light, invisible
+
+37
+00:03:44,310 --> 00:03:52,440
+to infrared electromagnetic spectrum and the eye uses green and near infrared bands to highlight water
+
+38
+00:03:52,440 --> 00:03:53,010
+bodies.
+
+39
+00:03:53,310 --> 00:03:59,250
+It is sensitive to build up land and can result in overestimation of waterboardings.
+
+40
+00:04:01,010 --> 00:04:08,150
+Well, I just show you basically this page, because it's visual, there will be more appealing for
+
+41
+00:04:08,150 --> 00:04:11,770
+you and you can see the formula by yourself now on the screen.
+
+42
+00:04:11,780 --> 00:04:20,750
+So as I can say, there are two variations of this index is one is which is based on near infrared and
+
+43
+00:04:20,750 --> 00:04:26,090
+short wave infrared, which was proposed by Gore in 1996.
+
+44
+00:04:26,090 --> 00:04:35,110
+And another one is looking at the difference between green and and near infrared and was proposed by
+
+45
+00:04:35,120 --> 00:04:37,250
+Mark Fetus in 1996.
+
+46
+00:04:38,210 --> 00:04:44,230
+Usually index values are ranges between minus one to one.
+
+47
+00:04:44,240 --> 00:04:52,010
+So the same as with NDB and Index where there is greater than 2.5 usually correspond to waterboardings.
+
+48
+00:04:52,680 --> 00:04:59,870
+Vegetation usually correspond to much smaller values and build up areas to values between zero and point
+
+49
+00:04:59,900 --> 00:05:00,110
+two.
+
+50
+00:05:00,140 --> 00:05:06,770
+So all of those thresholds basically can be already used for land cover mapping.
+
+51
+00:05:06,770 --> 00:05:10,060
+Yeah, and here we have two examples.
+
+52
+00:05:10,280 --> 00:05:22,550
+The upper example shows and w I am a values forum acquired four in eight of October 2000 17 and then
+
+53
+00:05:22,550 --> 00:05:28,780
+we have another image for 2017.
+
+54
+00:05:29,120 --> 00:05:39,840
+So basically I think here somewhere should be in these two images somewhere should be different.
+
+55
+00:05:40,820 --> 00:05:41,780
+There is a mistake.
+
+56
+00:05:41,780 --> 00:05:46,240
+I one is from 2018 and another one is from 2017.
+
+57
+00:05:46,460 --> 00:05:48,650
+So we basically can see the water stress.
+
+58
+00:05:49,340 --> 00:05:56,070
+But in our case, we are going to use this in Dubai and I index for flood mapping.
+
+59
+00:05:56,120 --> 00:05:56,450
+Yeah.
+
+60
+00:05:56,660 --> 00:06:04,040
+So basically we are going to start to stress what we are going to calculate and degree and D.W.I for
+
+61
+00:06:04,040 --> 00:06:05,080
+our study area.
+
+62
+00:06:05,090 --> 00:06:12,750
+We are going to set a threshold and based on the threshold, we are going to identify the changes in
+
+63
+00:06:12,770 --> 00:06:13,580
+water basin.
+
+64
+00:06:13,590 --> 00:06:21,230
+So this basically quite straightforward exercise and typical geospatial analysis for flood monitoring.
+
+65
+00:06:21,620 --> 00:06:28,970
+So in the next video, you are going to we are going to start with preprocessing of Centinela two images.
+
+66
+00:06:29,540 --> 00:06:31,000
+So see you in the next video.

@@ -1,0 +1,311 @@
+1
+00:00:00,360 --> 00:00:02,590
+Welcome back, students, in this lecture.
+
+2
+00:00:02,610 --> 00:00:09,210
+I'm going to show you an interface of Google Earth engine, essentially the Google Earth Engine is a
+
+3
+00:00:09,210 --> 00:00:13,350
+website that you can access through your Web browser.
+
+4
+00:00:13,710 --> 00:00:21,030
+So for this, you have to type in this address or engine that Google dot com, or you can just simply
+
+5
+00:00:21,090 --> 00:00:26,190
+go to the Google and type urse engine.
+
+6
+00:00:28,050 --> 00:00:28,470
+Yeah.
+
+7
+00:00:28,500 --> 00:00:35,120
+Then the first thing which will come up will be the link to the website of Google Earth Engine.
+
+8
+00:00:35,400 --> 00:00:39,900
+So what exactly Google Earth engine is what.
+
+9
+00:00:39,900 --> 00:00:47,040
+The engine is a platform for scientific analysis and visualization of geospatial data set for academic,
+
+10
+00:00:47,040 --> 00:00:54,150
+non-profit, business and government users or engine host satellite imagery and started in the public
+
+11
+00:00:54,150 --> 00:00:59,310
+data archives that includes historical Earth images going back more than 40 years.
+
+12
+00:00:59,700 --> 00:01:06,520
+The images ingested on a daily basis are then made available for global scale data mining.
+
+13
+00:01:06,750 --> 00:01:16,290
+So basically Google Earth engine and its creation became a game changer in the way how we use and how
+
+14
+00:01:16,290 --> 00:01:18,080
+we perform geospatial analysis.
+
+15
+00:01:18,080 --> 00:01:24,780
+So beforehand we were doing the geospatial analysis mostly on our desktop computers, where we use,
+
+16
+00:01:24,780 --> 00:01:25,880
+for example, AACTA.
+
+17
+00:01:25,890 --> 00:01:27,230
+Yes, yes.
+
+18
+00:01:27,240 --> 00:01:35,460
+And where we would do analysis on one image, multiple images, Showtime series, but for select certain
+
+19
+00:01:35,460 --> 00:01:38,270
+limited areas.
+
+20
+00:01:38,640 --> 00:01:44,040
+But with a Google or search engine, it is now possible to do it on a global scale.
+
+21
+00:01:44,040 --> 00:01:47,040
+So basically scale now is not a limitation anymore.
+
+22
+00:01:47,040 --> 00:01:54,090
+So we can also run analysis in Google Earth engine for the whole planet, which previously would require
+
+23
+00:01:54,270 --> 00:02:01,470
+a really an enormous server computation power that nowadays is not needed if you use Google Earth engine.
+
+24
+00:02:02,190 --> 00:02:14,130
+Well, what is also interesting there, Google Earth Engine actually offers APIs in both Biton and JavaScript.
+
+25
+00:02:14,130 --> 00:02:24,420
+So those are good editing ed environment where we can actually be there with the help of the code that
+
+26
+00:02:25,150 --> 00:02:31,860
+you have to write by yourself or you have to search for them, can do different special geospatial analysis,
+
+27
+00:02:32,040 --> 00:02:35,100
+including remote sensing, SJS analysis.
+
+28
+00:02:35,280 --> 00:02:38,970
+And this is how code editor looks like.
+
+29
+00:02:38,970 --> 00:02:42,180
+But I'm going to talk about it also in detail.
+
+30
+00:02:42,450 --> 00:02:49,830
+And of course, there are different already case studies and the number of applications of Google Earth
+
+31
+00:02:49,830 --> 00:02:54,060
+engine is enormous and it's very popular nowadays.
+
+32
+00:02:54,570 --> 00:02:58,040
+Cloud computing environment for geospatial analysis.
+
+33
+00:02:58,590 --> 00:03:00,760
+What is interesting for you?
+
+34
+00:03:00,780 --> 00:03:07,290
+Well, basically, there is frequently ask questions that you can look through in by your own.
+
+35
+00:03:07,290 --> 00:03:16,020
+But there is also timelapse this is a kind of window where you can see different changes based on their
+
+36
+00:03:16,020 --> 00:03:19,530
+computed based on, I think, Landser data.
+
+37
+00:03:19,530 --> 00:03:25,970
+For example, we can hear the zoom in to Istanbul area.
+
+38
+00:03:25,970 --> 00:03:26,910
+Yeah, who knows?
+
+39
+00:03:26,950 --> 00:03:30,630
+This is the Istanbul metropolitan area like this.
+
+40
+00:03:30,960 --> 00:03:37,950
+And the core of the historical Istanbul is located here on the right on the European part.
+
+41
+00:03:38,370 --> 00:03:43,710
+We can go, for example, back to 40 years time.
+
+42
+00:03:44,490 --> 00:03:53,400
+And, uh, let's say we will start let's go to the minimum 1984 and we can start with animations.
+
+43
+00:03:53,400 --> 00:03:56,970
+And then you could see how the area was changing.
+
+44
+00:03:56,970 --> 00:04:00,780
+Yeah, we actually what we really can see what is a really nice example.
+
+45
+00:04:01,050 --> 00:04:09,420
+You can see how Istanbul was growing and became one of the mega mega cities of our planet.
+
+46
+00:04:13,050 --> 00:04:20,340
+Well, there are also some case studies that I encourage you to look at, it is also very interesting
+
+47
+00:04:20,340 --> 00:04:29,820
+because some of the first case studies have really made a big impact on scientific community and remote
+
+48
+00:04:29,820 --> 00:04:32,160
+sensing and environmental analysis.
+
+49
+00:04:32,160 --> 00:04:37,950
+So Global Forest Cover changed by Matt Hanson was released in 2013.
+
+50
+00:04:38,220 --> 00:04:46,470
+There is also a Global Forest Watch implementation with the help of of Google Earth engine and other
+
+51
+00:04:46,470 --> 00:04:50,910
+interesting studies which could make you inspired.
+
+52
+00:04:51,780 --> 00:04:54,500
+Then we have a platform.
+
+53
+00:04:54,510 --> 00:05:00,820
+This is basically what will be really interesting for us, and we are going to work with this, mind
+
+54
+00:05:01,260 --> 00:05:02,300
+you, quite a lot.
+
+55
+00:05:02,310 --> 00:05:10,530
+So if you are serious about getting proficient in Google or Sanjayan, this is the page which are going
+
+56
+00:05:10,530 --> 00:05:15,990
+to be one of your main addresses for the next weeks.
+
+57
+00:05:16,290 --> 00:05:26,100
+And what is it really I could suggest to you to look at the documentation to peer platform documentation
+
+58
+00:05:26,400 --> 00:05:26,670
+here?
+
+59
+00:05:26,670 --> 00:05:34,020
+You would find a very thoroughly designed and a step by step documentation for Google Assange.
+
+60
+00:05:34,020 --> 00:05:41,850
+And so for sure, after completing my course, you would be up and running with the basics skills which
+
+61
+00:05:41,850 --> 00:05:44,880
+are needed to do geospatial analysis.
+
+62
+00:05:44,880 --> 00:05:53,520
+But in order to go beyond what we will learn here in this course, you will definitely will consult
+
+63
+00:05:53,520 --> 00:05:54,690
+this page, not once.
+
+64
+00:05:55,440 --> 00:06:03,030
+And there is also an access to code editor and as well as to Explorer.
+
+65
+00:06:03,570 --> 00:06:12,630
+So there is a difference between Ed and Google Earth engine explorer in the Google Earth, engine explorer.
+
+66
+00:06:12,630 --> 00:06:21,360
+You can do in a quite and easy and software like manner machine learning and you can apply machine learning
+
+67
+00:06:21,600 --> 00:06:27,720
+analysis for different geospatial problems based on remote sensing imagery.
+
+68
+00:06:27,900 --> 00:06:33,600
+And for this year, we will have I have a special video on this and I'm going to provide you with this
+
+69
+00:06:33,600 --> 00:06:35,160
+video later in this course.
+
+70
+00:06:35,850 --> 00:06:44,660
+So and the code editor is their API, which we are going to work with you quite a lot.
+
+71
+00:06:44,670 --> 00:06:47,360
+I mean, most of this course is going to be about it.
+
+72
+00:06:47,610 --> 00:06:52,230
+So the next video is going to explain the interface of code editor.
+
+73
+00:06:52,410 --> 00:07:05,040
+So this is basically an API where we can write and edit our code to perform specific geospatial analysis.
+
+74
+00:07:06,840 --> 00:07:15,810
+Then there is a blog that you can read about Google Earth Engine with different interesting, exciting
+
+75
+00:07:16,080 --> 00:07:16,620
+news.
+
+76
+00:07:16,830 --> 00:07:24,030
+And finally, there is a very important link for you is the link for sign up how to send up the Google
+
+77
+00:07:24,030 --> 00:07:24,600
+Earth engine?
+
+78
+00:07:24,600 --> 00:07:27,320
+I'm going to explain in the next video.

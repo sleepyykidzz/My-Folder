@@ -1,0 +1,139 @@
+1
+00:00:00,150 --> 00:00:06,540
+Welcome back, students, in this short video, I'm going to show you how to rename.
+
+2
+00:00:08,250 --> 00:00:15,570
+To rename your newly created image collection to substitute the default name of the day to the name
+
+3
+00:00:15,570 --> 00:00:17,030
+of the player that you want to do.
+
+4
+00:00:17,050 --> 00:00:26,960
+So basically the same code that you have just seen in the previous video with one small addition here,
+
+5
+00:00:27,540 --> 00:00:32,580
+there is a function of calculating in Dubai over our image collection.
+
+6
+00:00:32,940 --> 00:00:40,500
+And we you remember we have provided created an expression for in Dubai calculation.
+
+7
+00:00:41,370 --> 00:00:44,780
+Well, here I just typed in a small addition.
+
+8
+00:00:44,790 --> 00:00:51,000
+So basically, if we don't have this, let me remind you, if you don't have this part of the code and
+
+9
+00:00:51,000 --> 00:01:02,250
+I'm going to run the code, the output of our image collection is four to five images of an Dubai.
+
+10
+00:01:06,570 --> 00:01:08,300
+Over our study area.
+
+11
+00:01:08,370 --> 00:01:19,290
+Yeah, if I click on, I have also at visualisations, they basically add to the map the first image
+
+12
+00:01:19,290 --> 00:01:20,360
+in our series.
+
+13
+00:01:20,370 --> 00:01:22,350
+And if I click on this.
+
+14
+00:01:23,680 --> 00:01:24,370
+Image.
+
+15
+00:01:26,030 --> 00:01:35,180
+We can say that the name of this image is Band five, so basically this is our in Dubai, it's a run
+
+16
+00:01:35,180 --> 00:01:40,970
+it's first band of the first band of the first image of the four to five image.
+
+17
+00:01:40,970 --> 00:01:47,660
+And its name is Band five, which is actually is not correct because Band five is named for a band to
+
+18
+00:01:47,660 --> 00:01:48,320
+fund that.
+
+19
+00:01:48,680 --> 00:01:50,300
+And we have great in Dubai.
+
+20
+00:01:50,300 --> 00:01:52,430
+So of course it's not crucial.
+
+21
+00:01:52,430 --> 00:01:54,260
+You can just keep it.
+
+22
+00:01:54,410 --> 00:02:01,310
+But if you have a big coat, it could be quite, you know, confusing if you would not if you would
+
+23
+00:02:02,030 --> 00:02:03,200
+keep the default names.
+
+24
+00:02:03,590 --> 00:02:13,820
+So basically what Google or Ascencion does when you provide this expression to you to to to their engine,
+
+25
+00:02:14,000 --> 00:02:22,670
+you basically take the name of the first band in your expression and automatically give the name of
+
+26
+00:02:22,670 --> 00:02:30,050
+the first input to arrive input band and the expression to the new returned image.
+
+27
+00:02:30,100 --> 00:02:30,400
+Yeah.
+
+28
+00:02:30,740 --> 00:02:33,890
+So since our first band is band five.
+
+29
+00:02:33,890 --> 00:02:34,220
+Yep.
+
+30
+00:02:34,220 --> 00:02:42,080
+And five, then automatically our newly created images received this name.
+
+31
+00:02:42,080 --> 00:02:48,040
+In order to change this we have to write in addition.
+
+32
+00:02:48,200 --> 00:02:51,410
+So we basically have to select Band five.
+
+33
+00:02:53,160 --> 00:03:02,220
+From the list and a band and you name to this to so so we substituted B five to end Devi.
+
+34
+00:03:02,250 --> 00:03:04,440
+And when I ran this called now.
+
+35
+00:03:07,690 --> 00:03:17,080
+And again, in an inspector on our image, you can see that the name has changed, now it is in Dubai.

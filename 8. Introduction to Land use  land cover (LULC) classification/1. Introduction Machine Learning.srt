@@ -1,0 +1,403 @@
+1
+00:00:00,070 --> 00:00:06,540
+Ex-students, during this lecture, I'm going to explain what machine learning is, the types of machine
+
+2
+00:00:06,540 --> 00:00:12,090
+learning algorithms and when you should use each of them, I particularly think that getting to know
+
+3
+00:00:12,090 --> 00:00:18,290
+the types of machine learning algorithms is like getting to see the big picture of artificial intelligence.
+
+4
+00:00:18,630 --> 00:00:24,540
+And what is the goal of all the scenes that have been done in the field of artificial intelligence and
+
+5
+00:00:24,540 --> 00:00:25,370
+machine learning?
+
+6
+00:00:25,650 --> 00:00:30,120
+And what is the goal of all of this since and why you should do this?
+
+7
+00:00:31,240 --> 00:00:38,110
+Broadly speaking, artificial intelligence is the ability of computers to perform a task that typically
+
+8
+00:00:38,110 --> 00:00:45,370
+requires some level of human intelligence, machine learning is one of the type of engines that makes
+
+9
+00:00:45,370 --> 00:00:46,280
+it possible.
+
+10
+00:00:46,720 --> 00:00:53,790
+It uses data driven algorithms to learn from the data to give you the answers that you need.
+
+11
+00:00:54,130 --> 00:01:01,750
+In other words, it's software that drives software instead of applying a prebuilt function.
+
+12
+00:01:01,750 --> 00:01:08,700
+Machine learning gains experience through repeated scene conditions and builds a model to apply in your
+
+13
+00:01:08,740 --> 00:01:09,700
+situations.
+
+14
+00:01:10,300 --> 00:01:16,210
+What type of machine gun that has emerged in recent years is deep learning, and it refers to the deep
+
+15
+00:01:16,210 --> 00:01:22,090
+neural networks that are inspired from and loosely resemble the human brain.
+
+16
+00:01:22,570 --> 00:01:27,670
+Now let me introduce you to a number of terms that is usually used in machine learning field.
+
+17
+00:01:29,630 --> 00:01:37,250
+Drums frequently used in this lecture about the already mentioned will be labeled data classification
+
+18
+00:01:37,250 --> 00:01:45,140
+and regression labeled data is data consisting of a set of training examples where each example is a
+
+19
+00:01:45,140 --> 00:01:49,820
+band consisting of an input and desired output value.
+
+20
+00:01:49,820 --> 00:01:54,290
+Osako, the supervisor, assign labels and so on.
+
+21
+00:01:55,530 --> 00:02:03,990
+The goal of classification is to predict discrete values based on input data, while regression apps
+
+22
+00:02:03,990 --> 00:02:07,890
+to predict continuous values, for example, home prices.
+
+23
+00:02:08,250 --> 00:02:15,860
+The example of classification would be to classify a binary data sets, for example, to predict whether
+
+24
+00:02:15,870 --> 00:02:18,690
+a client is going to click on the ADD or not.
+
+25
+00:02:18,720 --> 00:02:21,810
+Going quick to that in email marketing.
+
+26
+00:02:21,840 --> 00:02:22,410
+It should be.
+
+27
+00:02:22,560 --> 00:02:28,690
+It could be a prediction model where the email is spam or not spam in their tents and it could be aligned
+
+28
+00:02:28,920 --> 00:02:29,940
+with of maps.
+
+29
+00:02:31,750 --> 00:02:39,160
+Here is some variation of how to define the types of machine learning algorithms that commonly divide
+
+30
+00:02:39,370 --> 00:02:45,010
+it into categories according to that purpose, and the Menck categories are Qimonda slight.
+
+31
+00:02:45,970 --> 00:02:53,320
+They are supervised learning, also semi supervised learning, unsupervised learning and reinforcement
+
+32
+00:02:53,320 --> 00:02:55,700
+learning in supervised learning.
+
+33
+00:02:55,760 --> 00:03:03,010
+The human experts acts as a teacher, but if you feed the computer with a training data containing that
+
+34
+00:03:03,020 --> 00:03:11,320
+input predictors and you show it the correct answers, the output and from the data the computer should
+
+35
+00:03:11,320 --> 00:03:12,340
+be able to run.
+
+36
+00:03:12,340 --> 00:03:20,850
+Departments are going to do quite a lot of supervised learning during this course in unsupervised learning.
+
+37
+00:03:20,860 --> 00:03:22,500
+Here is no teacher at all.
+
+38
+00:03:22,870 --> 00:03:28,640
+Actually, the computer might be able to teach you new things after it learns patterns in data.
+
+39
+00:03:29,050 --> 00:03:36,790
+This algorithm was particularly useful in cases where the human expert doesn't know what to look for
+
+40
+00:03:36,790 --> 00:03:40,780
+in the data in the previous two types either.
+
+41
+00:03:40,840 --> 00:03:44,440
+There are no labels for observations in the data set.
+
+42
+00:03:44,580 --> 00:03:48,820
+Labels are present for all their observations.
+
+43
+00:03:49,820 --> 00:03:56,840
+Federal supervised learning falls in between this tour in many practical situations, the cost to labor
+
+44
+00:03:56,840 --> 00:04:01,490
+is quite high since it requires skilled human experts to do that.
+
+45
+00:04:01,850 --> 00:04:08,570
+So in the absence of labels, in the majority of observations but present in a few semi supervised algorithms
+
+46
+00:04:08,780 --> 00:04:17,210
+are the best candidates was a model built in this massive exposure idea that even though the group membership
+
+47
+00:04:17,210 --> 00:04:24,340
+of unlabeled data are unknown, this data carries important information about the group parameters.
+
+48
+00:04:24,840 --> 00:04:28,920
+Now, last but not least, is reinforcement learning.
+
+49
+00:04:29,540 --> 00:04:35,220
+It is a type of machine learning and thereby also branch of artificial intelligence.
+
+50
+00:04:35,630 --> 00:04:43,460
+It allows machines and software agents to automatically determine that ideal behavior within a specific
+
+51
+00:04:43,460 --> 00:04:46,340
+context in order to maximize its performance.
+
+52
+00:04:46,670 --> 00:04:53,390
+Supervised learning is most commonly used for special analysis, but not all for different, but for
+
+53
+00:04:53,390 --> 00:05:04,100
+different types of machine gun based predictions in bankin, email, marketing and finances, medicine
+
+54
+00:05:04,100 --> 00:05:06,770
+and so on and so on into alone.
+
+55
+00:05:06,770 --> 00:05:14,030
+And we train the machine using data which is well labeled, which means some data is already tagged
+
+56
+00:05:14,040 --> 00:05:15,540
+in the correct answer.
+
+57
+00:05:15,950 --> 00:05:22,520
+A supervised learning algorithm learns from labor training data, which helps to predict outcomes for
+
+58
+00:05:22,520 --> 00:05:23,600
+unforeseen data.
+
+59
+00:05:24,170 --> 00:05:29,030
+I would like to tell you an example to improve your understanding of unsupervised learning.
+
+60
+00:05:29,570 --> 00:05:36,540
+Just consider that we have a digital image that has a variety of different animals and birds like here
+
+61
+00:05:36,590 --> 00:05:37,610
+on on the right.
+
+62
+00:05:38,880 --> 00:05:45,750
+These animals and birds needed to be matched into groups according to that type and other classification
+
+63
+00:05:45,750 --> 00:05:52,490
+features or systems that follow supervised logging in the hall, this whole process is a bit too simple.
+
+64
+00:05:52,830 --> 00:05:59,070
+The procedure is extremely straightforward, as you just have to teach the computer all the details,
+
+65
+00:05:59,340 --> 00:06:05,460
+but trained into the birds and animals that the algorithm will grow with the animals and birds according
+
+66
+00:06:05,460 --> 00:06:08,220
+to the characteristics that you have specified.
+
+67
+00:06:08,730 --> 00:06:15,160
+Supervised learning allows you to collect data or produce data output from the previous experience.
+
+68
+00:06:15,660 --> 00:06:22,410
+It also helps to optimize performance criteria using previous experience to provide machine learning
+
+69
+00:06:22,410 --> 00:06:26,160
+how to solve various types of real world computation problems.
+
+70
+00:06:26,700 --> 00:06:34,210
+It is typically done in the context of classification when we want to map input to output labels or
+
+71
+00:06:34,210 --> 00:06:42,180
+regression machine learning based supervisor's regression, when we want to map input to a continuous
+
+72
+00:06:42,180 --> 00:06:42,890
+output.
+
+73
+00:06:42,900 --> 00:06:51,390
+So classification refers to that at discrete output losses and regression.
+
+74
+00:06:51,390 --> 00:06:58,310
+When we need to have an output as a continuous field in both regression and classification.
+
+75
+00:06:58,560 --> 00:07:05,550
+The goal is to find specific relationships or structure in the input data that allow us to effectively
+
+76
+00:07:05,550 --> 00:07:07,590
+produce correct output data.
+
+77
+00:07:09,850 --> 00:07:16,450
+Common algorithms in supervised learning include nearest neighbor, logistic regression decision trees,
+
+78
+00:07:16,450 --> 00:07:23,520
+linear regression, supporting actor machines, artificial neural networks, random forest and so on.
+
+79
+00:07:24,800 --> 00:07:28,970
+That's, you know, the basic details portrayed in the supervised learning.
+
+80
+00:07:29,000 --> 00:07:33,350
+It would be interesting to hop on towards unsupervised learning.
+
+81
+00:07:33,710 --> 00:07:38,680
+The concept of unsupervised learning is not as widespread and frequently used as a person.
+
+82
+00:07:38,690 --> 00:07:46,010
+And in fact, that concept has been put to use in only a limited amount of application.
+
+83
+00:07:46,010 --> 00:07:50,770
+As of yet, a type of unsupervised learning is clustering.
+
+84
+00:07:50,780 --> 00:07:57,310
+So sometimes people don't say unsupervised learning, but say clustering mean an unsupervised learning.
+
+85
+00:07:57,650 --> 00:08:03,170
+I would like to tell you an example and improve your understanding also of unsupervised learning.
+
+86
+00:08:03,470 --> 00:08:14,110
+Just consider that we have a digital image again with a variety of animals and we would like to look
+
+87
+00:08:14,130 --> 00:08:15,820
+them according to their features.
+
+88
+00:08:16,160 --> 00:08:23,840
+So but of course, have agreed for an unsupervised learning system, has the same input data as one
+
+89
+00:08:23,840 --> 00:08:29,450
+of the supervised counterparts that we have just had in our previous slide.
+
+90
+00:08:30,260 --> 00:08:37,940
+In our case, digital images show shapes and different colors and watch this unsupervised learning algorithm
+
+91
+00:08:37,970 --> 00:08:39,340
+has the input data.
+
+92
+00:08:39,440 --> 00:08:46,880
+So with images it can form the information and had in fact, the system works by itself to recognize
+
+93
+00:08:47,000 --> 00:08:51,890
+the problem of classification and also the difference in shapes and colors.
+
+94
+00:08:51,890 --> 00:08:57,050
+So different animals and birds with information related to the problem at hand.
+
+95
+00:08:57,380 --> 00:09:03,710
+Now, unsupervised learning system will then recognize all similar objects and grouped them together.
+
+96
+00:09:04,190 --> 00:09:10,340
+The length of that it will give to this objects will be designed by the machine itself and there is
+
+97
+00:09:10,340 --> 00:09:14,930
+no input, additional input or labeled data that is provided.
+
+98
+00:09:14,940 --> 00:09:19,820
+But what does the algorithms recommend?
+
+99
+00:09:19,820 --> 00:09:22,110
+Unsupervised learning algorithms.
+
+100
+00:09:22,130 --> 00:09:23,470
+Those are comments.
+
+101
+00:09:23,480 --> 00:09:27,500
+Clustering is a data clustering association.
